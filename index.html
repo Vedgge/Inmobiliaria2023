@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inmobiliaria Andes - Elige el lugar de tus sueños</title>
+
+  <!-- custom google fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap"
+    rel="stylesheet">
+
+  <!--- custom css -->
+  <link rel="stylesheet" href="./assets/style.css">
+
+  <!--- custom icons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!--- favicon -->
+  <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
+</head>
+
+<body>
+
+  <!-- header -->
+  <header class="header">
+
+    <!-- Sección superior del header -->
+    <div class="header-top">
+      <div class="data_header">
+        <div class="email">
+          <a href="#"><i class='bx bx-envelope'></i>info@andesinmobiliaria.com</a>
+        </div>
+        <div class="phone">
+          <a href="#"><i class='bx bx-phone'></i>(999) 999-9999</a>
+        </div>
+        <div class="social">
+          <a href=""><i class='bx bxl-whatsapp'></i></a>
+          <a href=""><i class='bx bxl-facebook'></i></a>
+          <a href=""><i class='bx bxl-instagram'></i></a>
+          <a href=""><i class='bx bxl-youtube'></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección inferior del header -->
+    <div class="header-bottom">
+      <div class="brand">
+        <a href="#"><img src="./img/andes_fontlogo.png" alt="logo inmobiliaria andes" class="logo"></a>
+      </div>
+      <div class="navbar_pc">
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="navbar_ul">
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li><a href="alquiler.html">Alquilar</a></li>
+          <li><a href="comprar.html">Comprar</a></li>
+          <li><a href="vender.html">Vender</a></li>
+          <li><a href="tasar.html">Tasar</a></li>
+        </ul>
+        <div class="btn_user">
+          <a href="#" class="iniciar_sesion">Iniciar sesión</a>
+          <a href="#" class="registrate">Registrate</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido main de la página -->
+  <main>
+    <section class="home">
+      <div class="contenido">
+        <h1>Descubre tu futuro hogar</h1>
+        <p>Descubre hogares desde la majestuosa Tierra del Fuego hasta la vibrante Buenos Aires</p>
+        <div class="form_contenedor">
+          <div class="busqueda">
+            <button class="input-box type-btn active" data-tab-btn>Alquilar</button>
+            <button class="input-box type-btn" data-tab-btn>Comprar</button>
+            <button class="type-btn" data-tab-btn>Vender</button>
+          </div>
+          <form action="">
+            <div class="input-box">
+              <span>Ubicación</span>
+              <input type="search" name="" id="ubicacion" placeholder="Busca por ubicación">
+            </div>
+            <div class="input-box">
+              <label for="" class="tipo_alquiler">Tipo de alquiler</label>
+              <select name="tipo_alquiler" id="tipo_alquiler" class="lista">
+                <option value="">Departamento</option>
+                <option value="">Casa</option>
+                <option value="">Oficina</option>
+                <option value="">Hotel</option>
+                <option value="">Edificio Comercial</option>
+              </select>
+            </div>
+            <div class="input-box">
+              <label for="" class="min_precio">Precio mínimo</label>
+              <select name="min_precio" id="min_precio" class="lista">
+                <option value="cualquier precio">Cualquier precio</option>
+                <option value="">1000</option>
+                <option value="">1500</option>
+                <option value="">2000</option>
+                <option value="">3000</option>
+                <option value="">4000</option>
+              </select>
+            </div>
+            <div class="input-box">
+              <label for="" class="max_precio">Precio máximo</label>
+              <select name="max_precio" id="max_precio" class="lista">
+                <option value="cualquier precio">Cualquier precio</option>
+                <option value="">1000</option>
+                <option value="">1500</option>
+                <option value="">2000</option>
+                <option value="">3000</option>
+                <option value="">4000</option>
+              </select>
+            </div>
+            <input type="submit" name="" id="" class="btn_submit">
+          </form>
+        </div>
+      </div>
+      </div>
+
+
+      </div>
+    </section>
+  </main>
+
+</body>
+
+</html>
