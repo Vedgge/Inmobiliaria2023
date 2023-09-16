@@ -262,15 +262,18 @@ header {
     padding: 16px;
 }
 
-.propiedades_pop {
+.propiedades_destacadas {
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    margin: 0 175px;
 }
-.propiedades_pop h2{
+
+.propiedades_destacadas h2{
     padding-top: 20px;
 }
+
 #first_desc {
     padding-bottom: 20px;
 }
@@ -292,11 +295,30 @@ header {
     height: 220px;
 }
 
-.desc_prop {
+#item_precio {
+    color: #FFF;
+    text-align: left;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 500;
+    margin: 0 0 7px;
+}
+
+.desc_prop h3{
+    font-weight: 500;
+}
+
+.desc_prop h3:is(:hover, :focus){
+    color: #de2c2f;
+    cursor: pointer;
+}
+
+.prop_interior {
     display: inline-flex;
     align-items: center;
 }
-.desc_prop span{
+
+.prop_interior span{
     margin: 10px;
 }
 /*--------------------FOOTER-------------------*/
