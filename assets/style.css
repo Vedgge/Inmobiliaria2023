@@ -152,10 +152,15 @@ header {
     padding: 10px;
 } 
 
+.contenido p {
+    padding-bottom: 30px;
+}
+
 /*BUSCADOR */
 .form_contenedor {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     color: #222;
 }
 
@@ -164,22 +169,21 @@ header {
     flex-wrap: wrap;
     align-items: center;
     gap: 16px;
-    position: absolute;
     background-color: #FFF;
     padding: 20px;
     border-radius: 8px;
-    bottom: 100px;
+    border-top-left-radius: 0;
 }
 
 .busqueda{
-    display: flex;
+    display: inline-flex;
+    align-items: center;
+    width: 380px;
     gap: 16px;
-    position: absolute;
     background-color: #FFF;
     padding: 10px;
-    border-radius: 8px;
-    bottom: 180px;
-    left: 510px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .type-btn {
@@ -256,6 +260,44 @@ header {
 
 .form-btn{
     padding: 16px;
+}
+
+.propiedades_pop {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.propiedades_pop h2{
+    padding-top: 20px;
+}
+#first_desc {
+    padding-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 10px;
+    background-color: blue;
+}
+
+.carta_prop {
+    background-color: rgb(255, 3, 3);
+    border-radius: 12px;
+}
+
+.carta_prop figure img {
+    height: 220px;
+}
+
+.desc_prop {
+    display: inline-flex;
+    align-items: center;
+}
+.desc_prop span{
+    margin: 10px;
 }
 /*--------------------FOOTER-------------------*/
 
