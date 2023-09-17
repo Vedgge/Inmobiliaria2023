@@ -280,19 +280,26 @@ header {
 
 .grid-container {
     display: grid;
+    justify-content: center;
     padding: 10px;
     grid-template-columns: repeat(3, auto);
     grid-gap: 10px;
-    background-color: blue;
+    background-color: transparent;
+    gap: 10px;
+
 }
 
 .carta_prop {
     background-color: rgb(255, 3, 3);
     border-radius: 12px;
+    width: 306.656px;
+    height: 510px;
 }
 
 .carta_prop figure img {
-    height: 220px;
+    height: 230px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
 }
 
 #item_precio {
@@ -316,6 +323,7 @@ header {
 .prop_interior {
     display: inline-flex;
     align-items: center;
+   
 }
 
 .prop_interior span{
