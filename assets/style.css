@@ -29,8 +29,7 @@ header {
     max-width: 100%;
     margin-left: 175px;
 }
-/*--------------------HEADER------------------*/
-
+/*--------------------HEADER TOP------------------*/
 .header-top {
     display: flex;
     justify-content: flex-end;
@@ -70,7 +69,7 @@ header {
     color: #222;
 }
 
-/*--------------------BARRA DE NAVEGACIÓN-------------------*/
+/*--------------------HEADER BOTTOM / BARRA DE NAVEGACIÓN-------------------*/
 .header-bottom {
     display: flex;
     width: 100%;
@@ -120,14 +119,7 @@ header {
     color: #222;
 }
 
-#menu-icon {
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 10001;
-    display: none;
-}
-
-/*--------------------HOME-------------------*/
+/*--------------------HOME o MAIN-------------------*/
 .contenido {
     padding: 0;
     background-image: url(/img/edificios_buscador.jpg);
@@ -156,7 +148,7 @@ header {
     padding-bottom: 30px;
 }
 
-/*BUSCADOR */
+/*BUSCADOR DE PROPIEDADES Y TITULO DE INICIO*/
 .form_contenedor {
     display: flex;
     justify-content: center;
@@ -262,6 +254,7 @@ header {
     padding: 16px;
 }
 
+/*PROPIEDADES DESTACADAS (DESCRIPCIÓN Y CARTAS)*/
 .propiedades_destacadas {
     display: flex;
     justify-content: center;
@@ -278,7 +271,7 @@ header {
     padding-bottom: 20px;
 }
 
-.grid-container {
+.grid-container_destac {
     display: grid;
     justify-content: center;
     padding: 10px;
