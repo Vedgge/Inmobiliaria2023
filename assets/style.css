@@ -27,7 +27,6 @@ header {
 .logo {
     max-height: 55px;
     max-width: 100%;
-    margin-left: 175px;
 }
 /*--------------------HEADER TOP------------------*/
 .header-top {
@@ -37,6 +36,7 @@ header {
     background: #ced4da;
     font-size: 17px;
     text-decoration: none;
+    padding-right: 175px;
 }
 
 .header-top a{
@@ -45,7 +45,7 @@ header {
 
 .data_header {
     display: inline-flex;
-    margin-right: 175px;
+    
 }
 
 .email a {
@@ -72,10 +72,9 @@ header {
 /*--------------------HEADER BOTTOM / BARRA DE NAVEGACIÓN-------------------*/
 .header-bottom {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    justify-content: space-around;
+    padding: 10px 0 10px;
     background: #eaeaea;
 }
 
@@ -83,7 +82,6 @@ header {
     display: flex;
     font-size: 16px;
     color: #222;
-    margin-right: 175px;
 }
 
 .navbar_pc ul li {
@@ -217,7 +215,7 @@ header {
     cursor: text;
 }
 
-.max_precio, .min_precio, .tipo_alquiler {
+.precio, .min_dorm, .tipo_alquiler {
     font-weight: 600;
 }
 
