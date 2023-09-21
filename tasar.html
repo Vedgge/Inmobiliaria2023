@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inmobiliaria Andes - Elige el lugar de tus sueños</title>
+
+  <!-- custom google fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap"
+    rel="stylesheet">
+
+  <!--- custom css -->
+  <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="./assets/styleTasar.css">
+
+  <!--- custom icons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!--- favicon -->
+  <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
+</head>
+
+<body>
+  <!--header-->
+  <header class="header">
+
+    <!--Sección superior del header con redes sociales y contacto-->
+    <div class="header-top">
+      <div class="data_header">
+        <div class="email">
+          <a href="#"><i class='bx bx-envelope'></i>info@andesinmobiliaria.com</a>
+        </div>
+        <div class="phone">
+          <a href="#"><i class='bx bx-phone'></i>(999) 999-9999</a>
+        </div>
+        <div class="social">
+          <a href=""><i class='bx bxl-whatsapp'></i></a>
+          <a href=""><i class='bx bxl-facebook'></i></a>
+          <a href=""><i class='bx bxl-instagram'></i></a>
+          <a href=""><i class='bx bxl-youtube'></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!--Sección inferior del header con botones de navegación / agregar diseño responsivo y estructura-->
+    <div class="header-bottom">
+      <div class="brand">
+        <a href="#"><img src="./img/andes_fontlogo.png" alt="logo inmobiliaria andes" class="logo"></a>
+      </div>
+      <div class="navbar_pc">
+        <ul class="navbar_ul">
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li><a href="alquilar.html">Alquilar</a></li>
+          <li><a href="comprar.html">Comprar</a></li>
+          <li><a href="vender.html">Vender</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="tasar.html">Tasar</a></li>
+        </ul>
+        <div class="btn_user">
+          <a href="#" class="iniciar_sesion">Iniciar sesión</a>
+          <a href="#" class="registrate">Registrate</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido main de la página -->
+  <main>
+    <section class="home">
+      <div class="contenido">
+        <h1>Cotizamos tu vivienda al mejor precio</h1>
+        <p>Ahora te podrás proyectar hacia el lugar de tus sueños</p>
+        <form action="agregar-vivienda" method="post" class="formulario">
+            <ul class="columna">
+                <li class="campo ciudad">
+                    <label for="ciudad">Ciudad</label>
+                    <br>
+                    <input type="text" id="ciudad" name="ciudad" required>
+                </li>
+                <li class="campo barrio">
+                    <label for="barrio">Barrio</label>
+                    <br>
+                    <input type="text" id="barrio" name="barrio" required>
+                </li>
+                <li class="campo calle">
+                    <label for="calle">Calle</label>
+                    <br>
+                    <input type="text" id="calle" name="calle" required>
+                </li>
+                <li class="campo numero">
+                    <label for="numero">Número</label>
+                    <br>
+                    <input type="text" id="numero" name="numero" required>
+                </li>
+                <li class="campo piso">
+                    <label for="piso">Piso</label>
+                    <br>
+                    <input type="text" id="piso" name="piso">
+                </li>
+                <li class="campo habitaciones">
+                    <label for="habitaciones">Habitaciones</label>
+                    <br>
+                    <input type="text" id="habitaciones" name="habitaciones" required>
+                </li>
+                <li class="campo banos">
+                    <label for="banos">Baños</label>
+                    <br>
+                    <input type="text" id="banos" name="banos" required>
+                </li>
+                <li class="campo area">
+                    <label for="area">Área (m2)</label>
+                    <br>
+                    <input type="text" id="area" name="area" required>
+                </li>
+                <li class="campo correo">
+                    <label for="correo">Correo electrónico</label>
+                    <br>
+                    <input type="email" id="correo" name="correo" required>
+                </li>
+                <li class="campo boton enviar">
+                    <button type="submit">Agregar Propiedad</button>
+                </li>
+                <li class="campo boton borrar">
+                    <button type="reset">Borrar Contenido</button>
+                </li>
+            </ul>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <!--Articulos que describan brevemente los servicios que se ofrecen-->
+    <article class="inicio_hipoteca">
+      <div class="hipoteca_desc">
+        <h2>¡Te consguimos tu hipoteca!</h2>
+        <img src="img/inicio_hipoteca.jpg" alt="" width="300px">
+      </div>
+    </article>
+    <article class="inicio_mudanza">
+      <div class="mudanza_desc">
+      <h2>¡Te acompañamos en todo tu proceso de mudanza!</h2>
+      <img src="img/inicio_mudanza.jpg" alt="" width="300px">
+    </div>
+    </article>
+    <article class="inicio_tasar">
+      <div class="tasar_desc">
+        <h2>¿Cuánto vale tu hogar?</h2>
+        <a href="tasar.html">
+          <img src="img/inicio_tasar.jpg" alt="Tasar" width="300px" >  
+        </a>
+        
+      </div>
+    </article>
+    <hr>
+    
+    <h1>FOOTER</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, est officiis qui eveniet quae unde. Excepturi quia iusto nulla ratione neque. Iusto, vel. Voluptate porro beatae est, officia a neque?</p>
+  </footer>
+
+</body>
+
+</html>
