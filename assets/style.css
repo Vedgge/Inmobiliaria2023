@@ -120,7 +120,7 @@ header {
 /*--------------------HOME o MAIN-------------------*/
 .contenido {
     padding: 0;
-    background-image: url(/img/edificios_buscador.jpg);
+    background-image: url(/InmobiliariaCAC2023/img/edificios_buscador.jpg);
     width: 1478px;
     height: 426px;
     width: 100%;
@@ -144,7 +144,6 @@ header {
 
 .contenido p {
     padding-bottom: 30px;
-    color: #de2c2f;
 }
 
 /*BUSCADOR DE PROPIEDADES Y TITULO DE INICIO*/
