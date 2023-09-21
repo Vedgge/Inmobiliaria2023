@@ -1,0 +1,109 @@
+li {
+    color: #de2c2f;
+}
+.columna {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "ciudad barrio calle numero"
+                        "habitaciones banos area piso"
+                        "correo correo correo correo"
+                        "enviar enviar borrar borrar";
+}
+form {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+li.campo.boton button {
+    font-family: 'Libre Baskerville', serif; 
+    font-size: medium;
+    background-color: #de2c2f;
+    color: #fff;
+    padding: 5px;
+}
+ul {
+    list-style: none;
+}
+
+.campo {
+    margin: 10px;
+}
+.ciudad {
+    grid-area: ciudad;
+}
+.barrio {
+    grid-area: barrio;
+}
+.calle {
+    grid-area: calle;
+}
+.numero {
+    grid-area: numero;
+}
+.piso {
+    grid-area: piso;
+}
+.habitaciones {
+    grid-area: habitaciones;
+}
+.banos {
+    grid-area: banos;
+}
+.area {
+    grid-area: area;
+}
+.correo {
+    grid-area: correo;
+}
+.enviar {
+    grid-area: enviar;
+}
+.reset {
+    grid-area: reset;
+}
+
+
+
+
+/* Media Queries */
+@media (max-width: 1000px) {
+    .columna {
+        grid-template-columns: 2fr 2fr 2fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: "ciudad barrio calle"
+                            "numero piso area "
+                            "habitaciones banos banos"
+                            "correo correo  correo"
+                            "enviar enviar  borrar";
+    }
+}  
+
+@media (max-width: 850px) {
+    .columna {
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas: "ciudad barrio"
+                            "calle numero"
+                            "piso area "
+                            "habitaciones banos"
+                            "correo correo"
+                            "enviar  borrar";
+    }
+}  
+@media (max-width: 500px) {
+    .columna {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+        grid-template-areas: "ciudad"
+                            "barrio"
+                            "calle"
+                            "numero"
+                            "piso"
+                            "area"
+                            "habitaciones"
+                            "banos"
+                            "correo"
+                            "enviar"
+                            "borrar";
+    }
+}  
