@@ -102,23 +102,28 @@ header {
     color: #de2c2f;
 }
 
-.dropdown_titulo {
-    padding-left: 10px;
-    padding: 10px;
-    font-weight: bold;
+.drowpdown_lista{ /*porque esto no funca? deberia poner tipos de propiedades y ciudades seguido uno del otro?*/
+    display: flex;
+    flex-direction: row;
 }
 
-.navbar_pc ul li:hover ul.drowpdown_alquilar{
+.navbar_pc ul li:hover ul.drowpdown_lista {
     display: block; /*NO SE COMO ME TRAE EL DROPDOWN? ??*/
 }
 
-.navbar_pc ul li ul.drowpdown_alquilar {
+.navbar_pc ul li ul.drowpdown_lista {
     position: absolute; /*ME PERMITE ESCONDER EL DROPDOWN DEBAJO DEL NAVBAR*/
     padding: 10px;
     background: #eaeaea;
     z-index: 999;
     display: none; /*tambien ayuda a esconder el dropdown, no sé como....*/
     border-radius: 8px;
+}
+
+.dropdown_titulo {
+    padding-left: 10px;
+    padding: 10px;
+    font-weight: bold;
 }
 
 .dropdown_prop{
@@ -383,9 +388,20 @@ header {
 }
 
 /* BREVE DESCRIPCIÓN DE SERVICIOS OFRECIDOS */
+article{
+    margin: 0 175px;
+}
 .contendor_hipoteca_desc{
     display: grid;
+    justify-content: center;
+    padding: 10px;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 10px;
+    background-color: transparent;
+    gap: 10px;
 }
 /*--------------------FOOTER-------------------*/
-
+footer{
+    margin: 0 175px;
+}
 /*--------------------MEDIA QUERIES-------------------*/
