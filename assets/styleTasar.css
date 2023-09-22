@@ -1,6 +1,9 @@
 li {
     color: #de2c2f;
 }
+.dropdown_titulo {
+    color: #222;
+}
 .columna {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr 2fr;
