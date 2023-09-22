@@ -79,6 +79,7 @@ header {
 }
 
 .navbar_pc {
+    position: relative; /*ME PERMITE ESCONDER EL DROPDOWN*/
     display: flex;
     font-size: 16px;
     color: #222;
@@ -95,6 +96,34 @@ header {
 
 .navbar_pc a:hover, .navbar_pc a.active {
     color: #de2c2f;
+}
+
+.navbar_pc ul li ul a:hover {
+    color: #de2c2f;
+}
+
+.dropdown_titulo {
+    padding-left: 10px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.navbar_pc ul li:hover ul.drowpdown_alquilar{
+    display: block; /*NO SE COMO ME TRAE EL DROPDOWN? ??*/
+}
+
+.navbar_pc ul li ul.drowpdown_alquilar {
+    position: absolute; /*ME PERMITE ESCONDER EL DROPDOWN DEBAJO DEL NAVBAR*/
+    padding: 10px;
+    background: #eaeaea;
+    z-index: 999;
+    display: none; /*tambien ayuda a esconder el dropdown, no sé como....*/
+    border-radius: 8px;
+}
+
+.dropdown_prop{
+    display: flex;
+    flex-direction: column;
 }
 
 .btn_user a {
@@ -119,17 +148,13 @@ header {
 
 /*--------------------HOME o MAIN-------------------*/
 .contenido {
-    padding: 0;
-    background-image: url(/InmobiliariaCAC2023/img/edificios_buscador.jpg);
-    width: 1478px;
+    background-image: url(/img/edificios_buscador.jpg);
     height: 426px;
     width: 100%;
     background-size: cover;
-    background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     color: #FFF;
     padding: 50px;
 }
@@ -156,7 +181,7 @@ header {
 
 .form_contenedor form {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*LE DA UN DISEÑO "RESPONSIVO" no sé como ... pero funca*/
     align-items: center;
     gap: 16px;
     background-color: #FFF;
@@ -282,7 +307,7 @@ header {
 .carta_prop {
     background-color: transparent;
     border-radius: 12px;
-    width: 306.656px;
+    width: 306.656px; /*n° magico que saque de no sé donde*/
     height: 510px;
     border: 1px solid rgb(209, 209, 209);
     overflow: hidden;
@@ -357,6 +382,10 @@ header {
     background: transparent; 
 }
 
+/* BREVE DESCRIPCIÓN DE SERVICIOS OFRECIDOS */
+.contendor_hipoteca_desc{
+    display: grid;
+}
 /*--------------------FOOTER-------------------*/
 
 /*--------------------MEDIA QUERIES-------------------*/

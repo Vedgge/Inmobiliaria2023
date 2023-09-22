@@ -50,10 +50,23 @@
       <div class="brand">
         <a href="#"><img src="./img/andes_fontlogo.png" alt="logo inmobiliaria andes" class="logo"></a>
       </div>
+      <!--Navbar-->
       <div class="navbar_pc">
         <ul class="navbar_ul">
           <li><a href="index.html" class="active">Inicio</a></li>
-          <li><a href="alquilar.html">Alquilar</a></li>
+          <li>
+            <a href="alquilar.html">Alquilar</a>
+            <ul class="drowpdown_alquilar">
+              <div class="dropdown_titulo">Tipo de propiedades</div>
+              <div class="dropdown_prop">
+                <a href="#">Edificios Comerciales (7.564)</a>
+                <a href="">Hoteles (3.465)</a>
+                <a href="#">Apartamentos (1.327)</a>
+                <a href="#">Casas (637)</a>
+                <a href="#">Oficinas (308)</a>
+              </div>
+            </ul>
+          </li>
           <li><a href="comprar.html">Comprar</a></li>
           <li><a href="vender.html">Vender</a></li>
           <li><a href="nosotros.html">Nosotros</a></li>
@@ -291,37 +304,43 @@
         </div>
       </div>
     </section>
-  </main>
-
-  <footer class="pie">
     <!--Articulos que describan brevemente los servicios que se ofrecen-->
     <article class="inicio_hipoteca">
-      <div class="hipoteca_desc">
-        <h2>¡Te consguimos tu hipoteca!</h2>
-        <img src="img/inicio_hipoteca.jpg" alt="" width="300px">
-      </div>
+        <div class="contendor_hipoteca_desc">
+          <div class="texto_hip_desc">
+            <h2>¡Te consguimos tu hipoteca!</h2>
+            <p>Nuestro equipo de expertos te guia en cada paso del proceso de préstamos hipotecarios, desde la evaluación de opciones de financiamiento hasta la obtención de tasas competitivas. Deja que nos encarguemos de las finanzas para que puedas enfocarte en tu nuevo hogar. ¡Y lo mejor de todo es que nuestro servicio es completamente GRATIS para ti!</p>
+          </div>
+          <img src="img/inicio_hipoteca.jpg" alt="" width="300px">
+        </div>
     </article>
     <article class="inicio_mudanza">
       <div class="mudanza_desc">
-      <h2>¡Te acompañamos en todo tu proceso de mudanza!</h2>
+        <div class="texto_mudanza_desc">
+        <h2>¡Te acompañamos en todo tu proceso de mudanza!</h2>
+        <p>A través de nuestra asociación con XXXXXXX, te ofrecemos un proceso de traslado sin complicaciones. Encuentra tu nuevo hogar con nosotros y deja que nos ocupemos de la mudanza.</p>
+    </div>
       <img src="img/inicio_mudanza.jpg" alt="" width="300px">
     </div>
     </article>
     <article class="inicio_tasar">
       <div class="tasar_desc">
-        <h2>¿Cuánto vale tu hogar?</h2>
+        <div class="texto_tasar_desc">
+         <h2>¿Cuánto vale tu hogar?</h2>
+         <p>Conoce el valor real de tu propiedad con nuestro equipo de expertos. Nuestro conocimiento y experiencia en el mercado inmobiliario te brindan una evaluación precisa y confiable.</p>
+        </div>
         <a href="tasar.html">
           <img src="img/inicio_tasar.jpg" alt="Tasar" width="300px" >  
         </a>
-        
       </div>
     </article>
+  </main>
+
+  <footer class="pie">
     <hr>
-    
     <h1>FOOTER</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, est officiis qui eveniet quae unde. Excepturi quia iusto nulla ratione neque. Iusto, vel. Voluptate porro beatae est, officia a neque?</p>
   </footer>
-
 </body>
 
 </html>
