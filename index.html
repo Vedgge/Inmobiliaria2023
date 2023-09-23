@@ -50,6 +50,7 @@
       <div class="brand">
         <a href="#"><img src="./img/andes_fontlogo.png" alt="logo inmobiliaria andes" class="logo"></a>
       </div>
+
       <!--Navbar-->
       <div class="navbar_pc">
         <ul class="navbar_ul">
@@ -57,45 +58,35 @@
           <li>
             <a href="alquilar.html">Alquilar</a>
             <ul class="drowpdown_lista">
-              <div>
+              <div class="dropdown_cont">
                 <div class="dropdown_titulo">Tipo de propiedades</div>
-                <div class="dropdown_prop">
-                  <a href="#">Edificios Comerciales (7.564)</a>
-                  <a href="#">Hoteles (3.465)</a>
-                  <a href="#">Apartamentos (1.327)</a>
-                  <a href="#">Casas (637)</a>
-                  <a href="#">Oficinas (308)</a>
-               </div>
+                <ul class="dropdown_prop">
+                  <li><a href="#">Edificios Comerciales</a></li>
+                  <li><a href="#">Hoteles</a></li>
+                  <li><a href="#">Apartamentos</a></li>
+                  <li><a href="#">Casas</a></li>
+                  <li><a href="#">Oficinas</a></li>
+                </ul>
               </div>
-              <div>
+              <div class="dropdown_cont">
                 <div class="dropdown_titulo">Provincia</div>
-                <div class="dropdown_prop">
-                  <a href="#">Buenos Aires</a>
-                  <a href="#">Córdoba</a>
-                  <a href="#">Santa Fe</a>
-                  <a href="#">Mendoza</a>
-                  <a href="#">Neuquén</a>
-               </div>
+                <ul class="dropdown_prop">
+                  <li><a href="#">Buenos Aires</a></li>
+                  <li><a href="#">Córdoba</a></li>
+                  <li><a href="#">Tierra del Fuego</a></li>
+                  <li><a href="#">Neuquén</a></li>
+                  <li><a href="#">Santa Fe</a></li>
+                </ul>
               </div>
-              <div>
+              <div class="dropdown_cont">
                 <div class="dropdown_titulo">Ciudades</div>
-                <div class="dropdown_prop">
-                  <a href="#">Capital Federal</a>
-                  <a href="#">Córdoba Capital</a>
-                  <a href="#">Rosario</a>
-                  <a href="#">Mar del Plata</a>
-                  <a href="#">Nuequén Capital</a>
-               </div>
-              </div>
-              <div>
-                <div class="dropdown_titulo">Zonas populares</div>
-                <div class="dropdown_prop">
-                  <a href="#">Recoleta</a>
-                  <a href="#">San Telmo</a>
-                  <a href="#">Retiro</a>
-                  <a href="#">Caballito</a>
-                  <a href="#">Belgrano Residencial</a>
-               </div>
+                <ul class="dropdown_prop">
+                  <li><a href="#">Capital Federal</a></li>
+                  <li><a href="#">Córdoba Capital</a></li>
+                  <li><a href="#">Rosario</a></li>
+                  <li><a href="#">Mar del Plata</a></li>
+                  <li><a href="#">Neuquén Capital</a></li>
+                </ul>
               </div>
             </ul>
           </li>
@@ -153,15 +144,26 @@
               </select>
             </div>
             <div class="input-box">
-              <label for="" class="precio">Precio máximo</label>
+              <label for="" class="precio">Precio máximo en $</label>
               <select name="precio" id="precio" class="lista">
                 <option value="cualquier precio">Cualquier precio</option>
-                <option value="">1000</option>
-                <option value="">1500</option>
-                <option value="">2000</option>
-                <option value="">3000</option>
-                <option value="">4000</option>
-              </select>
+                <option value="">25.000$</option>
+                <option value="">50.000$</option>
+                <option value="">75.000$</option>
+                <option value="">100.000$</option>
+                <option value="">125.000$</option>
+                <option value="">150.000$</option>
+                <option value="">175.000$</option>
+                <option value="">200.000$</option>
+                <option value="">225.000$</option>
+                <option value="">250.000$</option>
+                <option value="">275.000$</option>
+                <option value="">300.000$</option>
+                <option value="">325.000$</option>
+                <option value="">350.000$</option>
+                <option value="">375.000$</option>
+                <option value="">400.000$</option>
+              </select> 
             </div>
             <input type="submit" name="" id="" class="btn_submit">
           </form>
@@ -337,38 +339,52 @@
       </div>
     </section>
     <!--Articulos que describan brevemente los servicios que se ofrecen-->
+    <div class="espaciador"></div>
     <article class="inicio_hipoteca">
-        <div class="contendor_hipoteca_desc">
-          <div class="texto_hip_desc">
+        <div class="contendor_hipoteca_desc contendor_servicios_desc">
+          <div class="texto_serv_desc">
             <h2>¡Te conseguimos tu hipoteca!</h2>
             <p>Nuestro equipo de expertos te guia en cada paso del proceso de préstamos hipotecarios, desde la evaluación de opciones de financiamiento hasta la obtención de tasas competitivas. Deja que nos encarguemos de las finanzas para que puedas enfocarte en tu nuevo hogar. ¡Y lo mejor de todo es que nuestro servicio es completamente GRATIS para ti!</p>
           </div>
-          <div class="img_hipoteca"><img src="img/inicio_hipoteca.jpg" alt="" width="300px"></div>
+          <div class="img_hipoteca"><img src="img/inicio_hipoteca.jpg" alt="" height="450px"></div>
         </div>
     </article>
+    <div class="espaciador"></div>
     <article class="inicio_mudanza">
-      <div class="mudanza_desc">
-        <div class="texto_mudanza_desc">
+      <div class="mudanza_desc contendor_servicios_desc">
+        <img src="img/inicio_mudanza.jpg" alt="" height="400px">
+        <div class="texto_serv_desc">
         <h2>¡Te acompañamos en tu proceso de mudanza!</h2>
         <p>A través de nuestra asociación con XXXXXXX, te ofrecemos un proceso de traslado sin complicaciones. Encuentra tu nuevo hogar con nosotros y deja que nos ocupemos de la mudanza.</p>
-    </div>
-      <img src="img/inicio_mudanza.jpg" alt="" width="300px">
-    </div>
+        </div>
+      
+      </div>
     </article>
+    <div class="espaciador"></div>
     <article class="inicio_tasar">
-      <div class="tasar_desc">
-        <div class="texto_tasar_desc">
+      <div class="tasar_desc contendor_servicios_desc">
+        <div class="texto_serv_desc">
          <h2>¿Cuánto vale tu hogar?</h2>
          <p>Conoce el valor real de tu propiedad con nuestro equipo de expertos. Nuestro conocimiento y experiencia en el mercado inmobiliario te brindan una evaluación precisa y confiable.</p>
         </div>
         <a href="tasar.html">
-          <img src="img/inicio_tasar.jpg" alt="Tasar" width="300px" >  
+          <img src="img/inicio_tasar.jpg" alt="Tasar" width="500px" >  
         </a>
       </div>
     </article>
+    <div class="espaciador"></div>
+    <article class="blog_inicio">
+      <h2>El blog más importante del mundo inmobiliario argentino</h2>
+      <div class="blog_lista"></div>
+      <div class="blog_lista"></div>
+      <div class="blog_lista"></div>
+      <div class="blog_lista"></div>
+      <div class="blog_lista"></div>
+      <div class="blog_lista"></div>
+    </article>
   </main>
 
-  <footer class="pie">
+  <footer>
     <hr>
     <h1>FOOTER</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, est officiis qui eveniet quae unde. Excepturi quia iusto nulla ratione neque. Iusto, vel. Voluptate porro beatae est, officia a neque?</p>

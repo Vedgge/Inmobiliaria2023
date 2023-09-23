@@ -2,9 +2,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    scroll-padding: 2rem;
-    scroll-behavior: smooth;
     list-style: none;
     text-decoration: none;
     font-family: 'Raleway', sans-serif;
@@ -21,13 +18,14 @@ main {
 header {
     z-index: 1000;
 }
+
 /*--------------------PRELOAD-------------------*/
 
 /*--------------------LOGO-------------------*/
 .logo {
     max-height: 55px;
-    max-width: 100%;
 }
+
 /*--------------------HEADER TOP------------------*/
 .header-top {
     display: flex;
@@ -39,13 +37,13 @@ header {
     padding-right: 175px;
 }
 
-.header-top a{
+.header-top a {
     padding: 5px;
 }
 
 .data_header {
     display: inline-flex;
-    
+
 }
 
 .email a {
@@ -59,11 +57,12 @@ header {
     color: #222;
 }
 
-.email a:hover, .phone a:hover {
+.email a:hover,
+.phone a:hover {
     color: #de2c2f;
 }
 
-.social .bx{
+.social .bx {
     font-size: 23px;
     display: inline-block;
     color: #222;
@@ -74,12 +73,14 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    /*no sé como pero da un diseño + responsivo que space-between, agregar navbar en una hamburguesa*/
     padding: 10px 0 10px;
     background: #eaeaea;
 }
 
 .navbar_pc {
-    position: relative; /*ME PERMITE ESCONDER EL DROPDOWN*/
+    position: relative;
+    /*ME PERMITE ESCONDER EL DROPDOWN*/
     display: flex;
     font-size: 16px;
     color: #222;
@@ -94,7 +95,8 @@ header {
     color: #222;
 }
 
-.navbar_pc a:hover, .navbar_pc a.active {
+.navbar_pc a:hover,
+.navbar_pc a.active {
     color: #de2c2f;
 }
 
@@ -102,33 +104,43 @@ header {
     color: #de2c2f;
 }
 
-.drowpdown_lista{ /*porque esto no funca? deberia poner tipos de propiedades y ciudades seguido uno del otro?*/
-    display: flex;
-    flex-direction: row;
-}
-
 .navbar_pc ul li:hover ul.drowpdown_lista {
-    display: block; /*NO SE COMO ME TRAE EL DROPDOWN? ??*/
+    display: block;
+    /*NO SE COMO ME TRAE EL DROPDOWN? ??*/
+    /*me vi un video y creo que entendí como...*/
 }
 
 .navbar_pc ul li ul.drowpdown_lista {
-    position: absolute; /*ME PERMITE ESCONDER EL DROPDOWN DEBAJO DEL NAVBAR*/
-    padding: 10px;
+    position: absolute;
+    /*ME PERMITE ESCONDER EL DROPDOWN DEBAJO DEL NAVBAR*/
+    padding: 20px;
     background: #eaeaea;
     z-index: 999;
-    display: none; /*tambien ayuda a esconder el dropdown, no sé como....*/
+    display: none;
+    /*tambien ayuda a esconder el dropdown, no sé como....*/
     border-radius: 8px;
 }
 
 .dropdown_titulo {
-    padding-left: 10px;
-    padding: 10px;
+    padding: 10px 0 10px;
     font-weight: bold;
+    font-size: 17px;
 }
 
-.dropdown_prop{
+.dropdown_prop {
     display: flex;
+    justify-content: flex-start;
     flex-direction: column;
+    line-height: 1.8;
+}
+
+.dropdown_prop li a{
+    padding: 0;
+}
+
+.dropdown_cont {
+    display: inline-block;
+    padding: 0 10px;
 }
 
 .btn_user a {
@@ -139,27 +151,37 @@ header {
     color: #222;
 }
 
-.btn_user .registrate{
+.btn_user .registrate {
     color: #FFF;
     background: #de2c2f;
     border: 2px solid #de2c2f;
     border-radius: 8px;
     transition: 0.3s;
 }
-.btn_user .registrate:hover{
+
+.btn_user .registrate:hover {
     background: transparent;
     color: #222;
 }
 
 /*--------------------HOME o MAIN-------------------*/
+.home h2 {
+    font-size: 27px;
+}
+
+article h2 {
+    font-size: 27px;
+}
+
 .contenido {
-    background-image: url(/img/edificios_buscador.jpg);
-    height: 426px;
-    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
+    background-image: url(/img/edificios_buscador.jpg);
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 426px;
     color: #FFF;
     padding: 50px;
 }
@@ -170,7 +192,7 @@ header {
     font-weight: bold;
     filter: drop-shadow(0px 0px 5px #000);
     padding: 10px;
-} 
+}
 
 .contenido p {
     padding-bottom: 30px;
@@ -186,7 +208,8 @@ header {
 
 .form_contenedor form {
     display: flex;
-    flex-wrap: wrap; /*LE DA UN DISEÑO "RESPONSIVO" no sé como ... pero funca*/
+    flex-wrap: wrap;
+    /*LE DA UN DISEÑO "RESPONSIVO" no sé como ... pero funca*/
     align-items: center;
     gap: 16px;
     background-color: #FFF;
@@ -195,7 +218,7 @@ header {
     border-top-left-radius: 0;
 }
 
-.busqueda{
+.busqueda {
     display: inline-flex;
     align-items: center;
     width: 380px;
@@ -216,7 +239,7 @@ header {
     transition: 0.25s ease;
 }
 
-.type-btn:is(:hover, :focus){
+.type-btn:is(:hover, :focus) {
     color: #de2c2f;
     cursor: pointer;
 }
@@ -231,7 +254,7 @@ header {
     font-weight: 600;
 }
 
-.input-box input{
+.input-box input {
     padding: 7px;
     outline: none;
     border: none;
@@ -245,7 +268,9 @@ header {
     cursor: text;
 }
 
-.precio, .min_dorm, .tipo_alquiler {
+.precio,
+.min_dorm,
+.tipo_alquiler {
     font-weight: 600;
 }
 
@@ -272,31 +297,29 @@ header {
     transition: 0.3s;
 }
 
-.form_contenedor form .btn_submit:hover{
+.form_contenedor form .btn_submit:hover {
     background: transparent;
     color: #222;
     cursor: pointer;
-} 
+}
 
-.form-btn{
+.form-btn {
     padding: 16px;
 }
 
 /*PROPIEDADES DESTACADAS (DESCRIPCIÓN Y CARTAS)*/
 .propiedades_destacadas {
     display: flex;
-    justify-content: center;
     flex-direction: column;
     text-align: center;
-    margin: 0 175px;
 }
 
-.propiedades_destacadas h2{
+.propiedades_destacadas h2 {
     padding-top: 20px;
 }
 
 #first_desc {
-    padding-bottom: 20px;
+    padding: 10px 0 20px;
 }
 
 .grid-container_destac {
@@ -304,7 +327,6 @@ header {
     justify-content: center;
     padding: 10px;
     grid-template-columns: repeat(3, auto);
-    grid-gap: 10px;
     background-color: transparent;
     gap: 10px;
 }
@@ -312,7 +334,8 @@ header {
 .carta_prop {
     background-color: transparent;
     border-radius: 12px;
-    width: 306.656px; /*n° magico que saque de no sé donde*/
+    width: 306.656px;
+    /*n° magico que saque de no sé donde*/
     height: 510px;
     border: 1px solid rgb(209, 209, 209);
     overflow: hidden;
@@ -329,7 +352,7 @@ header {
     padding: 20px;
 }
 
-.desc_prop h3{
+.desc_prop h3 {
     text-align: left;
     font-weight: bold;
     padding-bottom: 10px;
@@ -344,37 +367,36 @@ header {
     padding-bottom: 10px;
 }
 
-.desc_prop h3:is(:hover, :focus){
+.desc_prop h3:is(:hover, :focus) {
     color: #de2c2f;
     cursor: pointer;
 }
 
 .prop_interior {
     display: inline-flex;
-    align-items: center;
     padding: 15px 0 15px;
 }
 
-.prop_interior span{
+.prop_interior span {
     margin: 2px;
 }
 
-.precio_btn{
+.precio_btn {
     padding: 20px;
     display: flex;
     justify-content: space-between;
 }
 
 #item_precio {
-    text-align: left;
     font-weight: bold;
 }
-.precio_btn .detalles_btn a {
-    padding: 20px;
+
+.detalles_btn a {
+    padding: 30px;
     text-decoration: none;
     color: #FFF;
 }
-
+ /*NO ENTIENDO PQ NO QUEDA IGUAL QUE EL BOTÓN REGRISTROOOOOOOOO*/
 .detalles_btn {
     background: #de2c2f;
     border: 2px solid #de2c2f;
@@ -382,26 +404,60 @@ header {
     transition: 0.3s;
 }
 
-.detalles_btn a:hover{
+.detalles_btn a:hover {
     color: #222;
-    background: transparent; 
+    background: #FFF;
 }
 
 /* BREVE DESCRIPCIÓN DE SERVICIOS OFRECIDOS */
-article{
-    margin: 0 175px;
+.espaciador {
+    display: block;
+    margin: 90px auto;
+    width: 170px;
+    height: 2px;
+    background-color: #de2c2f;
 }
-.contendor_hipoteca_desc{
+
+.contendor_servicios_desc {
     display: grid;
     justify-content: center;
-    padding: 10px;
     grid-template-columns: repeat(2, auto);
-    grid-gap: 10px;
     background-color: transparent;
-    gap: 10px;
+    gap: 30px;
+    /*gap entre texto e img*/
 }
+
+.contendor_hipoteca_desc .img_hipoteca img {
+    border: 1px solid red;
+    border-radius: 8px;
+}
+
+.texto_serv_desc {
+    max-width: 600px;
+    border: 1px solid red;
+    padding: 10px 0;
+}
+
+.contendor_servicios_desc h2 {
+    font-size: 35px;
+    padding-bottom: 30px;
+}
+
+.contendor_servicios_desc p {
+    line-height: 1.5;
+}
+
 /*--------------------FOOTER-------------------*/
-footer{
-    margin: 0 175px;
+footer {
+    background: #d1d1d1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
+
+footer p {
+    display: flex;
+    justify-content: space-around;
+}
+
 /*--------------------MEDIA QUERIES-------------------*/
