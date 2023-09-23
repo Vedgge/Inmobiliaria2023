@@ -339,6 +339,7 @@ article h2 {
     height: 510px;
     border: 1px solid rgb(209, 209, 209);
     overflow: hidden;
+    padding-bottom: 15px;
 }
 
 .carta_prop figure img {
@@ -385,29 +386,13 @@ article h2 {
     padding: 20px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 #item_precio {
     font-weight: bold;
 }
-
-.detalles_btn a {
-    padding: 30px;
-    text-decoration: none;
-    color: #FFF;
-}
  /*NO ENTIENDO PQ NO QUEDA IGUAL QUE EL BOTÓN REGRISTROOOOOOOOO*/
-.detalles_btn {
-    background: #de2c2f;
-    border: 2px solid #de2c2f;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-.detalles_btn a:hover {
-    color: #222;
-    background: #FFF;
-}
 
 /* BREVE DESCRIPCIÓN DE SERVICIOS OFRECIDOS */
 .espaciador {
