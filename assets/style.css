@@ -328,32 +328,36 @@ article h2 {
     padding: 10px;
     grid-template-columns: repeat(3, auto);
     background-color: transparent;
-    gap: 10px;
+    gap: 20px;
 }
 
 .carta_prop {
     background-color: transparent;
     border-radius: 12px;
-    width: 306.656px;
+    width: 307px;
     /*n° magico que saque de no sé donde*/
-    height: 510px;
+    min-height: 510px;
     border: 1px solid rgb(209, 209, 209);
     overflow: hidden;
-    padding-bottom: 15px;
 }
 
 .carta_prop figure img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
     min-height: 232.47px;
 }
 
-.desc_prop {
+.desc_prop { /*ARREGLAR ESTO NO FUNCIONA JUSTIFY CONTENT, LA IDEA DE ESTO ES QUE DIV TITULO Y DESC ESTEN SEPARADOS UNO ARRIBA Y OTRO DEBAJO.*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 307.53px;
+}
+
+.titulo_carta_prop {
     padding: 20px;
 }
 
-.desc_prop h3 {
+.titulo_carta_prop h3 {
     text-align: left;
     font-weight: bold;
     padding-bottom: 10px;
@@ -361,14 +365,17 @@ article h2 {
 
 #ubicacion_carta {
     text-align: left;
-    padding-bottom: 10px;
+}
+
+.int_desc_prop {
+    padding: 0 20px;
 }
 
 #tipo_prop_carta {
     padding-bottom: 10px;
 }
 
-.desc_prop h3:is(:hover, :focus) {
+.titulo_carta_prop h3:is(:hover, :focus) {
     color: #de2c2f;
     cursor: pointer;
 }
