@@ -98,6 +98,7 @@ header {
 .navbar_pc a:hover,
 .navbar_pc a.active {
     color: #de2c2f;
+    transition: 0.3s;
 }
 
 .navbar_pc ul li ul a:hover {
@@ -339,6 +340,7 @@ article h2 {
     min-height: 510px;
     border: 1px solid rgb(209, 209, 209);
     overflow: hidden;
+    box-shadow: 0 40px 40px 0 rgba(0,0,0,.1);
 }
 
 .carta_prop figure img {
@@ -346,7 +348,7 @@ article h2 {
     min-height: 232.47px;
 }
 
-.desc_prop { /*ARREGLAR ESTO NO FUNCIONA JUSTIFY CONTENT, LA IDEA DE ESTO ES QUE DIV TITULO Y DESC ESTEN SEPARADOS UNO ARRIBA Y OTRO DEBAJO.*/
+.desc_prop { /*YA FUNCIONA ESTO LETS GOOOOO, por alguna razón la descripción de la carta no ocupada el resto inferior de carta_prop*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -419,9 +421,10 @@ article h2 {
     /*gap entre texto e img*/
 }
 
-.contendor_hipoteca_desc .img_hipoteca img {
+.img_contenido img {
     border: 1px solid red;
     border-radius: 8px;
+    box-shadow: 0 40px 40px 0 rgba(0,0,0,.15);
 }
 
 .texto_serv_desc {
@@ -436,20 +439,72 @@ article h2 {
 }
 
 .contendor_servicios_desc p {
-    line-height: 1.5;
+    line-height: 28px;
+}
+.nosotros_inicio{
+    max-width: 1420px;
+}
+.titulo_nosotros_inicio {
+    display: flex;
+    justify-content: space-between;
 }
 
 /*--------------------FOOTER-------------------*/
 footer {
     background: #d1d1d1;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
 }
 
-footer p {
-    display: flex;
-    justify-content: space-around;
+.footer_contenedor{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+    gap: 100px;
+    padding: 30px;
 }
 
+.titulo_cf h3{
+    padding-bottom: 10px;
+}
+
+.lista_footer li a{
+    line-height: 24px;
+    text-decoration: none;
+    color: #222;
+    transition: 0.3s;
+}
+
+.lista_footer li a:is(:hover, :focus) {
+    color: #de2c2f;
+}
+
+.form_newsletter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.email_newsletter input{
+    width: 300px;
+    height: 48px;
+    border-radius: 8px;
+    border: 1px solid #dce0e0;
+    background-color:#FFF;
+}
+
+.btn_newsletter button {
+    width: 175px;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+    color: #FFF;
+    background: #de2c2f;
+    border: 2px solid #de2c2f;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn_newsletter button:hover {
+    background: transparent;
+    color: #222;
+}
 /*--------------------MEDIA QUERIES-------------------*/
