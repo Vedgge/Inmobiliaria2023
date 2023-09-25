@@ -34,37 +34,26 @@ header {
     background: #ced4da;
     font-size: 17px;
     text-decoration: none;
-    padding-right: 175px;
-}
-
-.header-top a {
-    padding: 5px;
+    padding: 5px 175px 5px;
 }
 
 .data_header {
     display: inline-flex;
-
+    align-items: center;
 }
 
-.email a {
-    text-decoration: none;
+.cto_header_top a {
     color: #222;
     padding: 5px;
+    transition: 0.3s;
 }
 
-.phone a {
-    text-decoration: none;
-    color: #222;
-}
-
-.email a:hover,
-.phone a:hover {
+.cto_header_top a:hover, .np_nosotros a:hover {
     color: #de2c2f;
 }
 
 .social .bx {
     font-size: 23px;
-    display: inline-block;
     color: #222;
 }
 
@@ -441,14 +430,74 @@ article h2 {
 .contendor_servicios_desc p {
     line-height: 28px;
 }
-.nosotros_inicio{
+
+.contenedor_nosotros {
     max-width: 1420px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
 }
+
 .titulo_nosotros_inicio {
     display: flex;
     justify-content: space-between;
+    padding: 0 10px;
 }
 
+.titulo_nosotros_inicio > div a {
+    color: #222;
+    font-size: 18px;
+}
+
+.contendor_tarjetas_nosotros {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    padding: 10px;
+    gap: 30px;
+}
+
+.tarjetas_ind_nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ececec;
+    border-radius: 8px;
+    box-shadow: 0 40px 40px 0 rgba(0,0,0,.1);
+    height: 380px;
+    width: 328px;
+}
+
+.foto_experto_inicio {
+    padding: 20px;
+}
+
+.foto_experto_inicio img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+}
+
+.np_nosotros {
+    padding-bottom: 10px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.np_nosotros a {
+    color: #222;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.detalles_expertos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+}
 /*--------------------FOOTER-------------------*/
 footer {
     background: #d1d1d1;
@@ -481,11 +530,12 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
 .email_newsletter input{
     width: 300px;
-    height: 48px;
+    height: 45px;
     border-radius: 8px;
     border: 1px solid #dce0e0;
     background-color:#FFF;
@@ -507,4 +557,6 @@ footer {
     background: transparent;
     color: #222;
 }
+
+
 /*--------------------MEDIA QUERIES-------------------*/
