@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inmobiliaria Andes - Elige el lugar de tus sueños</title>
+
+  <!-- custom google fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap"
+    rel="stylesheet">
+
+  <!--- custom css -->
+  <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="./assets/contacto.css">
+
+  <!--- custom icons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!--- favicon -->
+  <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
+</head>
+<body>
+      <!--header-->
+  <header class="header">
+
+    <!--Sección superior del header con redes sociales y contacto-->
+    <div class="header-top">
+      <div class="data_header">
+        <div class="email">
+          <a href="#"><i class='bx bx-envelope'></i>info@andesinmobiliaria.com</a>
+        </div>
+        <div class="phone">
+          <a href="#"><i class='bx bx-phone'></i>(999) 999-9999</a>
+        </div>
+        <div class="social">
+          <a href=""><i class='bx bxl-whatsapp'></i></a>
+          <a href=""><i class='bx bxl-facebook'></i></a>
+          <a href=""><i class='bx bxl-instagram'></i></a>
+          <a href=""><i class='bx bxl-youtube'></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!--Sección inferior del header con botones de navegación / agregar diseño responsivo y estructura-->
+    <div class="header-bottom">
+      <div class="brand">
+        <a href="index.html"><img src="./img/andes_fontlogo.png" alt="logo inmobiliaria andes" class="logo"></a>
+      </div>
+      <!--Navbar-->
+      <div class="navbar_pc">
+        <ul class="navbar_ul">
+          <li><a href="index.html">Inicio</a></li>
+          <li>
+            <a href="alquilar.html">Alquilar</a>
+            <ul class="drowpdown_lista">
+              <div>
+                <div class="dropdown_titulo">Tipo de propiedades</div>
+                <div class="dropdown_prop">
+                  <a href="#">Edificios Comerciales (7.564)</a>
+                  <a href="#">Hoteles (3.465)</a>
+                  <a href="#">Apartamentos (1.327)</a>
+                  <a href="#">Casas (637)</a>
+                  <a href="#">Oficinas (308)</a>
+               </div>
+              </div>
+             
+              <div>
+                <div class="dropdown_titulo">Ciudades</div>
+                <div class="dropdown_prop">
+                  <a href="#">Capital Federal</a>
+                  <a href="#">Córdoba Capital</a>
+                  <a href="#">Rosario</a>
+                  <a href="#">Mar del Plata</a>
+                  <a href="#">Nuequén Capital</a>
+               </div>
+              </div>
+            </ul>
+          </li>
+          <li><a href="comprar.html">Comprar</a></li>
+          <li><a href="vender.html">Vender</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html" class="active">Contacto</a></li>
+          <li><a href="tasar.html">Tasar</a></li>
+        </ul>
+        <div class="btn_user">
+          <a href="#" class="iniciar_sesion">Iniciar sesión</a>
+          <a href="#" class="registrate">Registrate</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="home">
+      <div class="contenido">
+        <div class="nosotros_titulo">
+          <h1>Contáctese con nosotros</h1>
+        </div>
+        <div class="nosotros_texto">
+          <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda saepe aut neque! Illum nihil, repudiandae cumque est corrupti beatae eum quod tempore maxime officiis, molestiae rerum alias hic ut laboriosam!</h2>
+        </div>
+      </div>
+    </section>
+    <br>
+
+    <section class="form_section">
+        <h2>Formulario de contacto</h2>
+        <p>Complete el formulario y nos pondremos en contacto con usted a la brevedad.</p>
+        <br>
+        <form action="" class="contact_form">
+            <div class="form_label">
+                <label for="nombre">Nombre: </label>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+            </div>
+
+            <div class="form_label">
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email" placeholder="Email">
+            </div>
+
+            <div class="form_label">
+                <label for="telefono">Teléfono: </label>
+                <input type="tel" name="telefono" id="telefono" placeholder="Teléfono">
+            </div>
+
+            <div class="form_label">
+                <label for="preferencia">Método preferido de contacto:</label>
+                <div>
+                    <input type="radio" name="preferencia" id="preferencia" value="email">Email
+                    <input type="radio" name="preferencia" id="preferencia" value="telefono">Teléfono
+                </div>
+            </div>
+
+            <div class="form_label">
+                <label for="mensaje">Mensaje: </label>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea>
+            </div>
+
+            <input type="submit" value="Enviar" class="btn_enviar">
+            
+        </form>
+    </section>
+    <br>
+    <section class="contacto">
+        <div>
+            <h2>Otras vías de contacto</h2>
+            <div class="contacto_primario">
+                <a href="#"><i class='bx bx-envelope'></i>info@andesinmobiliaria.com</a>
+                <a href="#"><i class='bx bx-phone'></i>(999) 999-9999</a>
+            </div>
+            <h2>Encontranos en redes</h2>
+            <div class="contacto_redes">
+                <a href="#"><i class='bx bxl-whatsapp'></i></a>
+                <a href="#"><i class='bx bxl-facebook-square'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+    </section>
+  </main>
+
+  <footer>
+    <hr>
+    <div class="footer_contenedor">
+      <div>
+        <div class="titulo_cf">
+          <h3>Navegación</h3>
+        </div>
+        <div class="lista_footer">
+          <ul>
+            <li><a href="">Inicio</a></li>
+            <li><a href="">Alquilar</a></li>
+            <li><a href="">Comprar</a></li>
+            <li><a href="">Vender</a></li>
+            <li><a href="">Nosotros</a></li>
+            <li><a href="">Tasar</a></li>
+            <li><a href="">Registrate</a></li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="titulo_cf">
+          <h3>Ayuda</h3>
+        </div>
+        <div class="lista_footer">
+          <ul>
+            <li><a href="#">Preguntas frecuentes (FAQ)</a></li>
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Política de cookies</a></li>
+            <li><a href="#">Condiciones generales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="titulo_cf">
+          <h3>Inmobiliaria Andes</h3>
+        </div>
+        <div class="lista_footer">
+          <ul>
+            <li><a href="nosotros.html">Acerca de nosotros</a></li>
+            <li><a href="contacto.html">Contáctanos</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">¡Trabaja con nosotros!</a></li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="titulo_cf">
+          <h3>¡Se el primero en recibir noticias de las mejores propiedades!</h3>
+        </div>
+        <div class="newsletter_social">
+          <form action="#">
+            <div class="form_newsletter">
+              <div class="email_newsletter">
+                <input type="email" name="EMAIL" required placeholder="Escribe tu email aquí">
+              </div>
+              <div class="btn_newsletter">
+                <button>Enviar</button>
+              </div>
+            </div>
+          </form>
+          <div class="social_footer">
+            <a href="#"><i class='bx bxl-whatsapp'></i></a>
+            <a href="#"><i class='bx bxl-facebook-square'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-youtube'></i></a>
+            <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    
+</body>
+</html>
