@@ -507,7 +507,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(4, auto);
     justify-content: center;
-    gap: 100px;
+    gap: 160px;
     padding: 30px;
 }
 
