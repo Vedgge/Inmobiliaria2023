@@ -18,7 +18,21 @@ main {
 header {
     z-index: 1000;
 }
+/*--------------------ANIMATION-------------------*/
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
+article {
+    animation: fade linear both;
+    animation-timeline: view(block);
+    animation-range: cover 0% cover 27%;
+}
 /*--------------------PRELOAD-------------------*/
 
 /*--------------------LOGO-------------------*/
@@ -37,11 +51,9 @@ header {
     padding: 5px 0 5px;
 }
 
-
 .data_header {
     display: inline-flex;
     margin-right: 145px;
-   
 }
 
 .cto_header_top a {
@@ -169,7 +181,7 @@ article h2 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(/InmobiliariaCAC2023/img/edificios_buscador.jpg);
+    background-image: url(/img/edificios_buscador.jpg);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -334,10 +346,18 @@ article h2 {
     overflow: hidden;
     box-shadow: 0 40px 40px 0 rgba(0,0,0,.1);
 }
+.carta_prop figure {
+    overflow: hidden;
+}
 
 .carta_prop figure img {
     width: 100%;
     min-height: 232.47px;
+    transition: .2s linear;
+}
+
+.carta_prop figure img:hover {
+    transform: scale(1.1);
 }
 
 .desc_prop { /*YA FUNCIONA ESTO LETS GOOOOO, por alguna razón la descripción de la carta no ocupada el resto inferior de carta_prop*/
@@ -424,6 +444,24 @@ article h2 {
     border: 1px solid red;
     padding: 10px 0;
 }
+.texto_serv_desc ul {
+    padding-top: 20px;
+}
+.texto_serv_desc ul li {
+    padding: 10px;
+    font-weight: bold;
+}
+
+#check_list {
+    padding-right: 10px;
+    color: #de2c2f;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.texto_serv_desc ul li a{
+    color: #333333;
+}
 
 .contendor_servicios_desc h2 {
     font-size: 35px;
@@ -444,7 +482,13 @@ article h2 {
 .titulo_div_grid {
     display: flex;
     justify-content: space-between;
-    padding: 0 10px;
+    padding: 0 10px 10px;
+    align-items: center;
+}
+
+.titulo_div_grid h1 {
+    border-left: 4px solid #de2c2f;
+    padding: 0 0 0 50px;
 }
 
 .titulo_div_grid > div a {
