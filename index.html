@@ -16,6 +16,9 @@
   <!--- custom css -->
   <link rel="stylesheet" href="./assets/style.css">
 
+  <!--- custom js -->
+  <script src="script.js" defer></script>
+
   <!--- custom icons -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -30,29 +33,37 @@
     <!--Sección superior del header con redes sociales y contacto-->
     <div class="header-top">
       <div class="data_header">
-        <div class="cto_header_top">
-          <a href="#"><i class='bx bx-envelope'></i>info@andesinmobiliaria.com</a>
-        </div>
-        <div class="cto_header_top">
-          <a href="#"><i class='bx bx-phone'></i>(999) 999-9999</a>
-        </div>
-        <div class="social">
-          <a href="#"><i class='bx bxl-whatsapp'></i></a>
-          <a href="#"><i class='bx bxl-facebook-square'></i></a>
-          <a href="#"><i class='bx bxl-instagram'></i></a>
-          <a href="#"><i class='bx bxl-youtube'></i></a>
+        <div class="contendor_data_header">
+          <div class="cto_header_top">
+            <a href="#"><i class='bx bx-envelope'></i>info@andesinmobiliaria.com</a>
+          </div>
+          <div class="cto_header_top">
+            <a href="#"><i class='bx bx-phone'></i>(999) 999-9999</a>
+          </div>
+          <div class="social">
+            <a href="#"><i class='bx bxl-whatsapp'></i></a>
+            <a href="#"><i class='bx bxl-facebook-square'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-youtube'></i></a>
+          </div>
         </div>
       </div>
     </div>
 
     <!--Sección inferior del header con botones de navegación / agregar diseño responsivo y estructura-->
-    <div class="header-bottom">
+    <nav class="header-bottom">
       <div class="brand">
         <a href="index.html"><img src="./img/andes_fontlogo.png" alt="logo inmobiliaria andes" class="logo"></a>
       </div>
 
       <!--Navbar-->
-      <div class="navbar_pc">
+      <a href="#" class="toggle_button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+
+      <div class="navbar_link">
         <ul class="navbar_ul">
           <li><a href="index.html" class="active">Inicio</a></li>
           <li>
@@ -101,7 +112,7 @@
           <a href="#" class="registrate">Registrate</a>
         </div>
       </div>
-    </div>
+    </nav>
   </header>
 
   <!-- Contenido main de la página -->
@@ -429,7 +440,8 @@
         </div>
         <div class="contendor_tarjetas_nosotros">
           <div class="tarjetas_ind_nosotros">
-            <div class="foto_experto_inicio"><a href="#"><img src="./img/integrantes/int1.jpg" alt="foto experto"></a></div>
+            <div class="foto_experto_inicio"><a href="#"><img src="./img/integrantes/int1.jpg" alt="foto experto"></a>
+            </div>
             <div class="np_nosotros">
               <a href="#">Facundo Savanco</a>
               <div class="prof_nosotros">
@@ -445,7 +457,8 @@
             </div>
           </div>
           <div class="tarjetas_ind_nosotros">
-            <div class="foto_experto_inicio"><a href="#"><img src="./img/integrantes/int2.jpg" alt="foto experto"></a></div>
+            <div class="foto_experto_inicio"><a href="#"><img src="./img/integrantes/int2.jpg" alt="foto experto"></a>
+            </div>
             <div class="np_nosotros">
               <a href="#">Zebastian</a>
               <div class="prof_nosotros">
@@ -461,7 +474,8 @@
             </div>
           </div>
           <div class="tarjetas_ind_nosotros">
-            <div class="foto_experto_inicio"><a href="#"><img src="./img/integrantes/int3.jpg" alt="foto experto"></a></div>
+            <div class="foto_experto_inicio"><a href="#"><img src="./img/integrantes/int3.jpg" alt="foto experto"></a>
+            </div>
             <div class="np_nosotros">
               <a href="#">Agustín Pincheira</a>
               <div class="prof_nosotros">
@@ -477,7 +491,8 @@
             </div>
           </div>
           <div class="tarjetas_ind_nosotros">
-            <div class="foto_experto_inicio"><a href="#"><img src="./img/integrantes/int4.jpg" alt="foto experto"></a></div>
+            <div class="foto_experto_inicio"><a href="#"><img src="./img/integrantes/int4.jpg" alt="foto experto"></a>
+            </div>
             <div class="np_nosotros">
               <a href="#">Isaac Farache</a>
               <div class="prof_nosotros">
