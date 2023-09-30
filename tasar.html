@@ -17,6 +17,9 @@
   <link rel="stylesheet" href="./assets/style.css">
   <link rel="stylesheet" href="./assets/styleTasar.css">
 
+  <!--- custom js -->
+  <script src="script.js" defer></script>
+
   <!--- custom icons -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -31,53 +34,86 @@
     <!--Sección superior del header con redes sociales y contacto-->
     <div class="header-top">
       <div class="data_header">
-        <div class="email">
-          <a href="#"><i class='bx bx-envelope'></i>info@andesinmobiliaria.com</a>
-        </div>
-        <div class="phone">
-          <a href="#"><i class='bx bx-phone'></i>(999) 999-9999</a>
-        </div>
-        <div class="social">
-          <a href=""><i class='bx bxl-whatsapp'></i></a>
-          <a href=""><i class='bx bxl-facebook'></i></a>
-          <a href=""><i class='bx bxl-instagram'></i></a>
-          <a href=""><i class='bx bxl-youtube'></i></a>
+        <div class="contendor_data_header">
+          <div class="cto_header_top">
+            <a href="#"><i class='bx bx-envelope'></i>info@andesinmobiliaria.com</a>
+          </div>
+          <div class="cto_header_top">
+            <a href="#"><i class='bx bx-phone'></i>(999) 999-9999</a>
+          </div>
+          <div class="social">
+            <a href="#"><i class='bx bxl-whatsapp'></i></a>
+            <a href="#"><i class='bx bxl-facebook-square'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-youtube'></i></a>
+          </div>
         </div>
       </div>
     </div>
 
     <!--Sección inferior del header con botones de navegación / agregar diseño responsivo y estructura-->
-    <div class="header-bottom">
+    <nav class="header-bottom">
       <div class="brand">
-        <a href="#"><img src="./img/andes_fontlogo.png" alt="logo inmobiliaria andes" class="logo"></a>
+        <a href="index.html"><img src="./img/andes_fontlogo.png" alt="logo inmobiliaria andes" class="logo"></a>
       </div>
-      <div class="navbar_pc">
+
+      <!--Navbar-->
+      <a href="#" class="toggle_button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+
+      <div class="navbar_link">
         <ul class="navbar_ul">
-          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html" class="active">Inicio</a></li>
           <li>
             <a href="alquilar.html">Alquilar</a>
             <ul class="drowpdown_lista">
-              <div class="dropdown_titulo">Tipo de propiedades</div>
-              <div class="dropdown_prop">
-                <a href="#">Edificios Comerciales (7.564)</a>
-                <a href="">Hoteles (3.465)</a>
-                <a href="#">Apartamentos (1.327)</a>
-                <a href="#">Casas (637)</a>
-                <a href="#">Oficinas (308)</a>
+              <div class="dropdown_cont">
+                <div class="dropdown_titulo">Tipo de propiedades</div>
+                <ul class="dropdown_prop">
+                  <li><a href="#">Edificios Comerciales</a></li>
+                  <li><a href="#">Hoteles</a></li>
+                  <li><a href="#">Apartamentos</a></li>
+                  <li><a href="#">Casas</a></li>
+                  <li><a href="#">Oficinas</a></li>
+                </ul>
+              </div>
+              <div class="dropdown_cont">
+                <div class="dropdown_titulo">Provincia</div>
+                <ul class="dropdown_prop">
+                  <li><a href="#">Buenos Aires</a></li>
+                  <li><a href="#">Córdoba</a></li>
+                  <li><a href="#">Tierra del Fuego</a></li>
+                  <li><a href="#">Neuquén</a></li>
+                  <li><a href="#">Santa Fe</a></li>
+                </ul>
+              </div>
+              <div class="dropdown_cont">
+                <div class="dropdown_titulo">Ciudades</div>
+                <ul class="dropdown_prop">
+                  <li><a href="#">Capital Federal</a></li>
+                  <li><a href="#">Córdoba Capital</a></li>
+                  <li><a href="#">Rosario</a></li>
+                  <li><a href="#">Mar del Plata</a></li>
+                  <li><a href="#">Neuquén Capital</a></li>
+                </ul>
               </div>
             </ul>
           </li>
           <li><a href="comprar.html">Comprar</a></li>
           <li><a href="vender.html">Vender</a></li>
           <li><a href="nosotros.html">Nosotros</a></li>
-          <li><a href="tasar.html" class="active">Tasar</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="tasar.html">Tasar</a></li>
         </ul>
         <div class="btn_user">
           <a href="#" class="iniciar_sesion">Iniciar sesión</a>
           <a href="#" class="registrate">Registrate</a>
         </div>
       </div>
-    </div>
+    </nav>
   </header>
 
   <!-- Contenido main de la página -->
@@ -145,35 +181,77 @@
     </section>
   </main>
 
-  <footer class="pie">
-    <!--Articulos que describan brevemente los servicios que se ofrecen-->
-    <article class="inicio_hipoteca">
-      <div class="hipoteca_desc">
-        <h2>¡Te conseguimos tu hipoteca!</h2>
-        <img src="img/inicio_hipoteca.jpg" alt="" width="300px">
-      </div>
-    </article>
-    <article class="inicio_mudanza">
-      <div class="mudanza_desc">
-      <h2>¡Te acompañamos en todo tu proceso de mudanza!</h2>
-      <img src="img/inicio_mudanza.jpg" alt="" width="300px">
-    </div>
-    </article>
-    <article class="inicio_tasar">
-      <div class="tasar_desc">
-        <h2>¿Cuánto vale tu hogar?</h2>
-        <a href="tasar.html">
-          <img src="img/inicio_tasar.jpg" alt="Tasar" width="300px" >  
-        </a>
-        
-      </div>
-    </article>
+  <footer>
     <hr>
-    
-    <h1>FOOTER</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, est officiis qui eveniet quae unde. Excepturi quia iusto nulla ratione neque. Iusto, vel. Voluptate porro beatae est, officia a neque?</p>
+    <div class="footer_contenedor">
+      <div>
+        <div class="titulo_cf">
+          <h3>Navegación</h3>
+        </div>
+        <div class="lista_footer">
+          <ul>
+            <li><a href="">Inicio</a></li>
+            <li><a href="">Alquilar</a></li>
+            <li><a href="">Comprar</a></li>
+            <li><a href="">Vender</a></li>
+            <li><a href="">Nosotros</a></li>
+            <li><a href="">Tasar</a></li>
+            <li><a href="">Registrate</a></li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="titulo_cf">
+          <h3>Ayuda</h3>
+        </div>
+        <div class="lista_footer">
+          <ul>
+            <li><a href="#">Preguntas frecuentes (FAQ)</a></li>
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Política de cookies</a></li>
+            <li><a href="#">Condiciones generales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="titulo_cf">
+          <h3>Inmobiliaria Andes</h3>
+        </div>
+        <div class="lista_footer">
+          <ul>
+            <li><a href="nosotros.html">Acerca de nosotros</a></li>
+            <li><a href="contacto.html">Contáctanos</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">¡Trabaja con nosotros!</a></li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="titulo_cf">
+          <h3>¡Se el primero en recibir noticias de las mejores propiedades!</h3>
+        </div>
+        <div class="newsletter_social">
+          <form action="#">
+            <div class="form_newsletter">
+              <div class="email_newsletter">
+                <input type="email" name="EMAIL" required placeholder="Escribe tu email aquí">
+              </div>
+              <div class="btn_newsletter">
+                <button>Enviar</button>
+              </div>
+            </div>
+          </form>
+          <div class="social_footer">
+            <a href="#"><i class='bx bxl-whatsapp'></i></a>
+            <a href="#"><i class='bx bxl-facebook-square'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-youtube'></i></a>
+            <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
-
 </body>
 
 </html>
