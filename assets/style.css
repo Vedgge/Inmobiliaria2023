@@ -31,9 +31,11 @@ header {
 article {
     animation: fade linear both;
     animation-timeline: view(block);
-    animation-range: cover 0% cover 27%;
+    animation-range: cover 0% cover 30%;
 }
 /*--------------------PRELOAD-------------------*/
+
+/*--------------------PRUEBAS-----------------*/
 
 /*--------------------LOGO-------------------*/
 .logo {
@@ -396,7 +398,8 @@ article h2 {
     padding: 20px;
 }
 
-.titulo_carta_prop h3 {
+.titulo_carta_prop a h3 {
+    color: #333333;
     text-align: left;
     font-weight: bold;
     padding-bottom: 10px;
@@ -416,7 +419,6 @@ article h2 {
 
 .titulo_carta_prop h3:is(:hover, :focus) {
     color: #de2c2f;
-    cursor: pointer;
     transition: .3s;
 }
 
@@ -437,6 +439,7 @@ article h2 {
 }
 
 #item_precio {
+    font-size: 19px;
     font-weight: bold;
 }
 
@@ -522,12 +525,12 @@ article h2 {
 }
 
 .contendor_tarjetas_nosotros {
+    padding: 10px;
     display: grid;
     grid-template-columns: repeat(4, auto);
-    
-    padding: 10px;
     gap: 30px;
 }
+
 
 .tarjetas_ind_nosotros {
     display: flex;
@@ -662,6 +665,9 @@ footer {
 
 /*--------------------MEDIA QUERIES-------------------*/
 
+@media (max-width: 1430px) {
+    
+}
 @media (max-width: 1167px) {
     .toggle_button {
         display: flex;
