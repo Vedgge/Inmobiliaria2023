@@ -27,62 +27,82 @@
 <body>
   <!--header-->
   <header class="header">
+
     <!--Sección superior del header con redes sociales y contacto-->
     <div class="header-top">
       <div class="data_header">
-        <div class="email">
-          <a href="#"><i class='bx bx-envelope'></i>info@andesinmobiliaria.com</a>
-        </div>
-        <div class="phone">
-          <a href="#"><i class='bx bx-phone'></i>(999) 999-9999</a>
-        </div>
-        <div class="social">
-          <a href=""><i class='bx bxl-whatsapp'></i></a>
-          <a href=""><i class='bx bxl-facebook'></i></a>
-          <a href=""><i class='bx bxl-instagram'></i></a>
-          <a href=""><i class='bx bxl-youtube'></i></a>
+        <div class="contendor_data_header">
+          <div class="cto_header_top">
+            <a href="#"><i class='bx bx-envelope'></i>info@andesinmobiliaria.com</a>
+          </div>
+          <div class="cto_header_top">
+            <a href="#"><i class='bx bx-phone'></i>(999) 999-9999</a>
+          </div>
+          <div class="social">
+            <a href="#"><i class='bx bxl-whatsapp'></i></a>
+            <a href="#"><i class='bx bxl-facebook-square'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-youtube'></i></a>
+          </div>
         </div>
       </div>
     </div>
 
     <!--Sección inferior del header con botones de navegación / agregar diseño responsivo y estructura-->
-    <div class="header-bottom">
+    <nav class="header-bottom">
       <div class="brand">
-        <a href="#"><img src="./img/andes_fontlogo.png" alt="logo inmobiliaria andes" class="logo"></a>
+        <a href="index.html"><img src="./img/andes_fontlogo.png" alt="logo inmobiliaria andes" class="logo"></a>
       </div>
+
       <!--Navbar-->
-      <div class="navbar_pc">
+      <a href="#" class="toggle_button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+
+      <div class="navbar_link">
         <ul class="navbar_ul">
-          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html" class="active">Inicio</a></li>
           <li>
-            <a href="alquilar.html" class="active">Alquilar</a>
+            <a href="alquilar.html">Alquilar</a>
             <ul class="drowpdown_lista">
-              <div>
+              <div class="dropdown_cont">
                 <div class="dropdown_titulo">Tipo de propiedades</div>
-                <div class="dropdown_prop">
-                  <a href="#">Edificios Comerciales (7.564)</a>
-                  <a href="#">Hoteles (3.465)</a>
-                  <a href="#">Apartamentos (1.327)</a>
-                  <a href="#">Casas (637)</a>
-                  <a href="#">Oficinas (308)</a>
-               </div>
+                <ul class="dropdown_prop">
+                  <li><a href="#">Edificios Comerciales</a></li>
+                  <li><a href="#">Hoteles</a></li>
+                  <li><a href="#">Apartamentos</a></li>
+                  <li><a href="#">Casas</a></li>
+                  <li><a href="#">Oficinas</a></li>
+                </ul>
               </div>
-             
-              <div>
+              <div class="dropdown_cont">
+                <div class="dropdown_titulo">Provincia</div>
+                <ul class="dropdown_prop">
+                  <li><a href="#">Buenos Aires</a></li>
+                  <li><a href="#">Córdoba</a></li>
+                  <li><a href="#">Tierra del Fuego</a></li>
+                  <li><a href="#">Neuquén</a></li>
+                  <li><a href="#">Santa Fe</a></li>
+                </ul>
+              </div>
+              <div class="dropdown_cont">
                 <div class="dropdown_titulo">Ciudades</div>
-                <div class="dropdown_prop">
-                  <a href="#">Capital Federal</a>
-                  <a href="#">Córdoba Capital</a>
-                  <a href="#">Rosario</a>
-                  <a href="#">Mar del Plata</a>
-                  <a href="#">Nuequén Capital</a>
-               </div>
+                <ul class="dropdown_prop">
+                  <li><a href="#">Capital Federal</a></li>
+                  <li><a href="#">Córdoba Capital</a></li>
+                  <li><a href="#">Rosario</a></li>
+                  <li><a href="#">Mar del Plata</a></li>
+                  <li><a href="#">Neuquén Capital</a></li>
+                </ul>
               </div>
             </ul>
           </li>
           <li><a href="comprar.html">Comprar</a></li>
           <li><a href="vender.html">Vender</a></li>
           <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
           <li><a href="tasar.html">Tasar</a></li>
         </ul>
         <div class="btn_user">
@@ -90,7 +110,7 @@
           <a href="#" class="registrate">Registrate</a>
         </div>
       </div>
-    </div>
+    </nav>
   </header>
 </body>
 </html>
