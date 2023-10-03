@@ -524,13 +524,15 @@ article h2 {
     font-size: 18px;
 }
 
+
+
 .contendor_tarjetas_nosotros {
     padding: 10px;
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: auto auto auto auto;
     gap: 30px;
+    justify-content: center;
 }
-
 
 .tarjetas_ind_nosotros {
     display: flex;
@@ -573,6 +575,7 @@ article h2 {
     text-align: center;
     gap: 30px;
 }
+
 
 .contenedor_blog_art {
     display: grid;
@@ -664,6 +667,43 @@ footer {
 }
 
 /*--------------------MEDIA QUERIES-------------------*/
+
+.uno {
+    grid-area: uno
+}
+.dos {
+    grid-area: dos
+}
+.tres {
+    grid-area: tres
+}
+.cuato {
+    grid-area: cuatro
+}
+
+
+@media (max-width: 1500px) {
+    .contendor_tarjetas_nosotros {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "uno dos"
+                            "tres cuatro";
+    }
+}  
+
+@media (max-width: 800px) {
+    .contendor_tarjetas_nosotros {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "uno"
+                            "dos"
+                            "tres"
+                            "cuatro";
+
+    }
+}  
+
+
 
 @media (max-width: 1430px) {
     
