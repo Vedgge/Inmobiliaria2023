@@ -1,3 +1,6 @@
+.nosotros_texto {
+    text-align: justify;
+}
 .form_section {
     display: flex;
     flex-direction: column;

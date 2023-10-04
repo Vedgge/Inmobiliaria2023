@@ -206,7 +206,7 @@ article h2 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(/img/edificios_buscador.jpg);
+    background-image: url("../img/edificios_buscador.jpg");
     display: flex;
     flex-direction: column;
     align-items: center;
