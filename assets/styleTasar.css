@@ -1,6 +1,3 @@
-li {
-    color: #de2c2f;
-}
 .dropdown_titulo {
     color: #222;
 }
@@ -20,8 +17,7 @@ form {
 li.campo.boton button {
     font-family: 'Libre Baskerville', serif; 
     font-size: medium;
-    background-color: #de2c2f;
-    color: #fff;
+    background-color: #fff;
     padding: 5px;
 }
 ul {

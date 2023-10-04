@@ -206,7 +206,7 @@ article h2 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(/img/edificios_buscador.jpg);
+    background-image: url("../img/edificios_buscador.jpg");
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -461,10 +461,13 @@ article h2 {
     /*gap entre texto e img*/
 }
 
+
 .img_contenido img {
     border: 1px solid red;
     border-radius: 8px;
     box-shadow: 0 40px 40px 0 rgba(0,0,0,.15);
+    max-width: 450px;
+    max-height: 400px;
 }
 
 .texto_serv_desc {
@@ -773,4 +776,20 @@ footer {
     .contendor_servicios_desc h2 {
         font-size: 30px;
     }
+}
+@media (max-width: 850px) {
+    .texto_serv_desc {
+        max-width: 450px;
+    }
+    .img_contenido {
+        grid-area: img_c;
+        
+    }
+    .contendor_servicios_desc {
+        grid-template-rows: auto;
+        grid-template-columns: auto auto;
+        grid-template-areas: "texto_s"
+                            "img_c";
+    }
+    
 }
