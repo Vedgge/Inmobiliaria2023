@@ -778,11 +778,18 @@ footer {
     }
 }
 @media (max-width: 850px) {
-    .contendor_servicios_desc {
-        grid-template-rows: auto;
-        grid-template-areas: texto_s;
+    .texto_serv_desc {
+        max-width: 450px;
     }
     .img_contenido {
-        display: none;
+        grid-area: img_c;
+        
     }
+    .contendor_servicios_desc {
+        grid-template-rows: auto;
+        grid-template-columns: auto auto;
+        grid-template-areas: "texto_s"
+                            "img_c";
+    }
+    
 }
