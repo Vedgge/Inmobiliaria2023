@@ -529,7 +529,6 @@ article h2 {
 .contendor_tarjetas_nosotros {
     padding: 10px;
     display: grid;
-    grid-template-columns: auto auto auto auto;
     gap: 30px;
     justify-content: center;
 }
@@ -681,6 +680,10 @@ footer {
     grid-area: cuatro
 }
 
+.contendor_tarjetas_nosotros {
+    grid-template-columns: auto auto auto auto;
+    grid-template-areas: "uno dos tres cuatro";
+}
 
 @media (max-width: 1500px) {
     .contendor_tarjetas_nosotros {
