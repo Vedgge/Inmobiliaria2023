@@ -15,14 +15,12 @@ main {
     position: relative;
 }
 
-header {
-    z-index: 1000;
-}
-/*--------------------ANIMATION-------------------*/
+/*--------------------ANIMACION SCROLL-------------------*/
 @keyframes fade {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -33,9 +31,8 @@ article {
     animation-timeline: view(block);
     animation-range: cover 0% cover 30%;
 }
-/*--------------------PRELOAD-------------------*/
 
-/*--------------------PRUEBAS-----------------*/
+/*--------------------PRELOAD-------------------*/
 
 /*--------------------LOGO-------------------*/
 .logo {
@@ -69,7 +66,8 @@ article {
     transition: 0.3s;
 }
 
-.cto_header_top a:hover, .np_nosotros a:hover {
+.cto_header_top a:hover,
+.np_nosotros a:hover {
     color: #de2c2f;
 }
 
@@ -86,7 +84,7 @@ article {
     /*no sé como pero da un diseño + responsivo que space-between, agregar navbar en una hamburguesa*/
     padding: 10px 0 10px;
     background: #eaeaea;
-    
+
 }
 
 .navbar_link {
@@ -127,7 +125,7 @@ article {
     /*ME PERMITE ESCONDER EL DROPDOWN DEBAJO DEL NAVBAR*/
     padding: 20px;
     background: #eaeaea;
-    z-index: 999;
+    z-index: 10;
     display: none;
     /*tambien ayuda a esconder el dropdown, no sé como....*/
     border-radius: 8px;
@@ -146,7 +144,7 @@ article {
     line-height: 1.8;
 }
 
-.dropdown_prop li a{
+.dropdown_prop li a {
     padding: 0;
 }
 
@@ -159,8 +157,11 @@ article {
     padding: 10px;
 }
 
-.btn_user .iniciar_sesion {
+#mostrar_popup {
     color: #333333;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
 }
 
 .btn_user .registrate {
@@ -175,6 +176,7 @@ article {
     background: transparent;
     color: #333333;
 }
+
 
 .toggle_button {
     position: absolute;
@@ -193,6 +195,160 @@ article {
     background-color: #333333;
     border-radius: 10px;
 }
+
+/*--------------------POPUP INICIO DE SESIÓN-----------------*/
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /*color de fondo oscuro semitransparente*/
+    z-index: 999;
+    /*me asegura que este por encima de todo menos el popup*/
+}
+
+.overlay.active {
+    display: block;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, .15);
+    border-radius: 10px;
+}
+
+.popup.active {
+    display: block;
+    z-index: 1000;
+}
+
+.popup .cerrar_btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    background: #de2c2f;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #de2c2f;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.popup .cerrar_btn:hover {
+    background: transparent;
+    color: #333333;
+}
+
+.popup .form h2 {
+    text-align: center;
+    color: #222;
+    margin: 10px 0px 10px;
+    font-size: 25px;
+}
+
+.popup .form p {
+    text-align: center;
+    color: #222;
+    margin: 10px 0px 10px;
+    font-size: 15px;
+    font-style: italic;
+}
+
+#registrar {
+    color: #1a79ca;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.popup .form .elementos_form {
+    margin: 15px 0px;
+}
+
+.popup .form .elementos_form label {
+    font-size: 16px;
+    color: #222;
+}
+
+.popup .form .elementos_form input[type="text"],
+.popup .form .elementos_form input[type="password"] {
+    display: block;
+    width: 356px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.popup .form .elementos_form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.popup .form .elementos_form button {
+    width: 100%;
+}
+
+.popup .form .elementos_form a {
+    display: block;
+    text-align: right;
+    font-size: 16px;
+    color: #1a79ca;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.popup.active,
+.overlay.active {
+    animation: fade-in 500ms forwards;
+}
+
+.popup.closing, .overlay.closing {
+    animation: fade-out 500ms forwards;
+}
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
 /*--------------------HOME o MAIN-------------------*/
 .home h2 {
     font-size: 30px;
@@ -219,9 +375,25 @@ article h2 {
 .contenido h1 {
     color: #FFF;
     font-size: 50px;
-    font-weight: 500;
+    font-weight: 550;
     filter: drop-shadow(0px 0px 5px #000);
     padding-bottom: 10px;
+}
+
+#cursor {
+    font-size: 45px !important;
+    font-weight: 400 !important;
+    animation: parpadeo 1s linear infinite;
+}
+
+@keyframes parpadeo {
+    0% {
+        opacity: 100%;
+    }
+
+    50% {
+        opacity: 0%;
+    }
 }
 
 .contenido p {
@@ -316,7 +488,7 @@ article h2 {
     cursor: pointer;
 }
 
-.form_contenedor form .btn_submit {
+.btn_submit {
     flex: 16 16 112px;
     padding: 10px 34px;
     border: none;
@@ -329,7 +501,7 @@ article h2 {
     transition: 0.3s;
 }
 
-.form_contenedor form .btn_submit:hover {
+.btn_submit:hover {
     background: transparent;
     color: #333333;
     cursor: pointer;
@@ -371,8 +543,9 @@ article h2 {
     min-height: 510px;
     border: 1px solid rgb(209, 209, 209);
     overflow: hidden;
-    box-shadow: 0 40px 40px 0 rgba(0,0,0,.1);
+    box-shadow: 0 40px 40px 0 rgba(0, 0, 0, .1);
 }
+
 .carta_prop figure {
     overflow: hidden;
 }
@@ -387,7 +560,8 @@ article h2 {
     transform: scale(1.1);
 }
 
-.desc_prop { /*YA FUNCIONA ESTO LETS GOOOOO, por alguna razón la descripción de la carta no ocupada el resto inferior de carta_prop*/
+.desc_prop {
+    /*YA FUNCIONA ESTO LETS GOOOOO, por alguna razón la descripción de la carta no ocupada el resto inferior de carta_prop*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -465,7 +639,7 @@ article h2 {
 .img_contenido img {
     border: 1px solid red;
     border-radius: 8px;
-    box-shadow: 0 40px 40px 0 rgba(0,0,0,.15);
+    box-shadow: 0 40px 40px 0 rgba(0, 0, 0, .15);
     max-width: 450px;
     max-height: 400px;
 }
@@ -475,9 +649,11 @@ article h2 {
     border: 1px solid red;
     padding: 10px 0;
 }
+
 .texto_serv_desc ul {
     padding-top: 20px;
 }
+
 .texto_serv_desc ul li {
     padding: 10px;
     font-weight: bold;
@@ -490,7 +666,7 @@ article h2 {
     font-weight: bold;
 }
 
-.texto_serv_desc ul li a{
+.texto_serv_desc ul li a {
     color: #333333;
 }
 
@@ -522,12 +698,10 @@ article h2 {
     padding: 0 0 0 50px;
 }
 
-.titulo_div_grid > div a {
+.titulo_div_grid>div a {
     color: #333333;
     font-size: 18px;
 }
-
-
 
 .contendor_tarjetas_nosotros {
     padding: 10px;
@@ -543,7 +717,7 @@ article h2 {
     background-color: #e9e9e9;
     border: 1px solid #d8d8d8;
     border-radius: 8px;
-    box-shadow: 0 30px 30px 0 rgba(0,0,0,.1);
+    box-shadow: 0 30px 30px 0 rgba(0, 0, 0, .1);
     height: 380px;
     width: 328px;
 }
@@ -591,6 +765,7 @@ article h2 {
     width: 240px;
     background-color: red;
 }
+
 .text_blog {
     height: 160px;
     width: 700px;
@@ -600,12 +775,13 @@ article h2 {
 #articulo_final {
     padding-bottom: 90px;
 }
+
 /*--------------------FOOTER-------------------*/
 footer {
     background: #d1d1d1;
 }
 
-.footer_contenedor{
+.footer_contenedor {
     display: grid;
     grid-template-columns: repeat(4, auto);
     justify-content: center;
@@ -613,11 +789,11 @@ footer {
     padding: 30px;
 }
 
-.titulo_cf h3{
+.titulo_cf h3 {
     padding-bottom: 10px;
 }
 
-.lista_footer li a{
+.lista_footer li a {
     line-height: 24px;
     text-decoration: none;
     color: #333333;
@@ -635,35 +811,24 @@ footer {
     gap: 20px;
 }
 
-.email_newsletter input{
+.email_newsletter input {
     width: 300px;
-    height: 43px;
-    border-radius: 8px;
-    border: 1px solid #dce0e0;
-    background-color:#FFF;
-}
-
-.btn_newsletter button {
-    width: 175px;
+    height: 41px;
+    background-color: #FFF;
+    display: block;
+    width: 356px;
+    padding-left: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
     font-size: 16px;
-    padding: 10px;
-    cursor: pointer;
-    color: #FFF;
-    background: #de2c2f;
-    border: 2px solid #de2c2f;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-.btn_newsletter button:hover {
-    background: transparent;
-    color: #333333;
 }
 
 .social_footer {
     padding: 10px 0 10px;
 }
-.social_footer a{
+
+.social_footer a {
     font-size: 35px;
     color: #333333;
 }
@@ -673,12 +838,15 @@ footer {
 .uno {
     grid-area: uno
 }
+
 .dos {
     grid-area: dos
 }
+
 .tres {
     grid-area: tres
 }
+
 .cuato {
     grid-area: cuatro
 }
@@ -693,38 +861,34 @@ footer {
         grid-template-columns: auto auto;
         grid-template-rows: auto auto;
         grid-template-areas: "uno dos"
-                            "tres cuatro";
+            "tres cuatro";
     }
-}  
+}
 
 @media (max-width: 800px) {
     .contendor_tarjetas_nosotros {
         grid-template-columns: auto;
         grid-template-rows: auto auto auto auto;
         grid-template-areas: "uno"
-                            "dos"
-                            "tres"
-                            "cuatro";
-
+            "dos"
+            "tres"
+            "cuatro";
     }
-}  
-
-
-
-@media (max-width: 1430px) {
-    
 }
-@media (max-width: 1167px) {
+
+@media (max-width: 1430px) {}
+
+@media (max-width: 1184px) {
     .toggle_button {
         display: flex;
     }
-
     .navbar_link {
         display: none;
         flex-direction: column-reverse;
         width: 100%;
         justify-content: center;
     }
+
     .navbar_link .btn_user {
         display: flex;
         flex-direction: column;
@@ -736,60 +900,74 @@ footer {
         align-items: flex-start;
     }
 
-    .navbar_ul {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        padding: 12px 0;
+    #mostrar_popup{
+        padding: 10px;
     }
 
-    .btn_user {
+    .navbar_link .btn_user {
+        align-items: center !important;
         border-bottom: 1px solid rgb(203, 214, 220);
         padding-bottom: 12px;
     }
 
-    .navbar_link li {
-        text-align: center;
+    .navbar_link .btn_user .registrate {
+        width: 90%;
     }
 
-    .navbar_link li a {
-        padding: 0.5rem 1rem;
+    .navbar_ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center !important;
+        width: 100%;
+        padding: 12px 0;
+    }
+   
+    .navbar_link li {
+        text-align: center;
+        padding: 5px 1rem;
     }
 
     .navbar_link.active {
         display: flex;
     }
-    
+
     .logo {
         padding-left: 40px;
     }
+
     .contendor_data_header {
         padding-right: 40px;
     }
+
     .img_contenido img {
         height: 340px;
         width: auto;
     }
+
     .contendor_servicios_desc {
         font-size: 90%;
     }
+
     .contendor_servicios_desc h2 {
         font-size: 30px;
     }
 }
+
 @media (max-width: 850px) {
     .texto_serv_desc {
         max-width: 450px;
     }
+
     .img_contenido {
         grid-area: img_c;
-        
+
     }
+
     .contendor_servicios_desc {
         grid-template-rows: auto;
         grid-template-columns: auto auto;
         grid-template-areas: "texto_s"
-                            "img_c";
+            "img_c";
     }
-    
+
 }

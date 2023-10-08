@@ -108,8 +108,35 @@
           <li><a href="tasar.html">Tasar</a></li>
         </ul>
         <div class="btn_user">
-          <a href="#" class="iniciar_sesion">Iniciar sesión</a>
+          <button id="mostrar_popup"><a>Iniciar sesión</a></button>
           <a href="#" class="registrate">Registrate</a>
+        </div>
+        <div class="overlay"></div>
+        <div class="popup">
+          <div class="cerrar_btn">&times;</div>
+          <div class="form">
+            <h2>Iniciar sesión</h2>
+            <p>Guarde búsquedas, sus propiedades favoritas y más</p>
+            <p>¿Nuevo en el sitio? <a href="#" id="registrar">Registra una cuenta</a></p>
+            <div class="elementos_form">
+              <label for="email">Email</label>
+              <input type="text" id="email" placeholder="Ingresa tu email">
+            </div>
+            <div class="elementos_form">
+              <label for="contraseña">Contraseña</label>
+              <input type="password" id="contraseña" placeholder="Ingresa tu contraseña">
+            </div>
+            <div class="elementos_form">
+              <input type="checkbox" id="recordarme">
+              <label for="recordarme">Recordar mis datos</label>
+            </div>
+            <div class="elementos_form">
+              <button class="btn_submit">Iniciar sesión</button>
+            </div>
+            <div class="elementos_form">
+              <a href="#">Olvide mi contraseña</a>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
@@ -119,7 +146,7 @@
   <main>
     <section class="home">
       <div class="contenido">
-        <h1>Descubre tu futuro hogar</h1>
+        <h1>Descubre tu futuro <span id="escritura"></span><span id="cursor">|</span></h1>
         <p>Descubre hogares desde la majestuosa Tierra del Fuego hasta la vibrante Buenos Aires</p>
         <!--Botones del buscador de propiedades-->
         <div class="form_contenedor">
@@ -132,11 +159,11 @@
           <form action="">
             <div class="input-box">
               <span>Ubicación</span>
-              <input type="search" name="" id="ubicacion" placeholder="Busca por ubicación">
+              <input type="search" name="ubicacion" placeholder="Busca por ubicación">
             </div>
             <div class="input-box">
               <label for="" class="tipo_alquiler">Tipo de alquiler</label>
-              <select name="tipo_alquiler" id="tipo_alquiler" class="lista">
+              <select name="tipo_alquiler" class="lista">
                 <option value="">Departamento</option>
                 <option value="">Casa</option>
                 <option value="">Oficina</option>
@@ -146,7 +173,7 @@
             </div>
             <div class="input-box">
               <label for="" class="min_dorm">Dormitorios</label>
-              <select name="min_dorm" id="min_dorm" class="lista">
+              <select name="min_dorm" class="lista">
                 <option value="sin dormitorios min">Sin dormitorios min</option>
                 <option value="">1+</option>
                 <option value="">2+</option>
@@ -157,7 +184,7 @@
             </div>
             <div class="input-box">
               <label for="" class="precio">Precio máximo en $</label>
-              <select name="precio" id="precio" class="lista">
+              <select name="precio" class="lista">
                 <option value="cualquier precio">Cualquier precio</option>
                 <option value="">25.000$</option>
                 <option value="">50.000$</option>
@@ -177,7 +204,7 @@
                 <option value="">400.000$</option>
               </select>
             </div>
-            <input type="submit" name="" id="" class="btn_submit">
+            <input type="submit" name="enviar" class="btn_submit">
           </form>
         </div>
       </div>
@@ -200,8 +227,10 @@
             </figure>
             <div class="desc_prop">
               <div class="titulo_carta_prop">
-                <a href="#"><h3>Semipiso 4 Ambientes Cochera Doble</h3></a>
-                <p id="ubicacion_carta">Palermo, Capital Federal</p>
+                <a href="#">
+                  <h3>Semipiso 4 Ambientes Cochera Doble</h3>
+                </a>
+                <p id="ubicacion_carta"><i class='bx bx-map'></i>Palermo, Capital Federal</p>
               </div>
               <div class="int_desc_prop">
                 <p id="tipo_prop_carta"><span><i class='bx bx-buildings'></i>Departamento</span></p>
@@ -230,8 +259,10 @@
             </figure>
             <div class="desc_prop">
               <div class="titulo_carta_prop">
-                <a href="#"><h3>Casa - Las Tipas</h3></a>
-                <p id="ubicacion_carta">Palermo, Capital Federal</p>
+                <a href="#">
+                  <h3>Casa - Las Tipas</h3>
+                </a>
+                <p id="ubicacion_carta"><i class='bx bx-map'></i>Palermo, Capital Federal</p>
               </div>
               <div class="int_desc_prop">
                 <p id="tipo_prop_carta"><span><i class='bx bx-home-heart'></i>Casa</span></p>
@@ -245,7 +276,7 @@
                 </div>
                 <hr>
                 <div class="precio_btn btn_user">
-                  <p id="item_precio"><span>USD 1.200</span></p>
+                  <p id="item_precio"><span>USD 2.500</span></p>
                   <a href="#" class="registrate">Detalles</a>
                 </div>
               </div>
@@ -260,22 +291,24 @@
             </figure>
             <div class="desc_prop">
               <div class="titulo_carta_prop">
-                <a href="#"><h3>Distrito Audiovisual! Edificio Comporativo de Categoría</h3></a>
-                <p id="ubicacion_carta">Alvarez Thomas, Colegiales, Capital Federal</p>
+                <a href="#">
+                  <h3>Distrito Audiovisual! Edificio Comporativo de Categoría</h3>
+                </a>
+                <p id="ubicacion_carta"><i class='bx bx-map'></i>Alvarez Thomas, Colegiales, Capital Federal</p>
               </div>
               <div class="int_desc_prop">
                 <p id="tipo_prop_carta"><span><i class='bx bx-buildings'></i>Oficina Comercial</span></p>
                 <hr>
                 <div class="prop_interior">
                   <p>
-                    <span><i class='bx bx-bed'></i>1 Ambi</span>
+                    <span><i class='bx bx-door-open'></i>1 Ambi</span>
                     <span><i class='bx bx-bath'></i>3 Baño</span>
                     <span><i class='bx bx-area'></i>231 m²</span>
                   </p>
                 </div>
                 <hr>
                 <div class="precio_btn btn_user">
-                  <p id="item_precio"><span>USD 1.200</span></p>
+                  <p id="item_precio"><span>USD 3.100</span></p>
                   <a href="#" class="registrate">Detalles</a>
                 </div>
               </div>
@@ -283,29 +316,31 @@
           </div>
           <div class="carta_prop">
             <figure>
-              <a href="#"><img src="./img/depto_4dorm/ejemplo_propiedad.jpg" alt=""></a>
+              <a href="#"><img src="./img/depto_4dorm/ejemplo_edificiocomercial" alt=""></a>
               <div class="fav_dest">
                 <!--Corazón de favorito en esquina superior izquierda-->
               </div>
             </figure>
             <div class="desc_prop">
               <div class="titulo_carta_prop">
-                <a href="#"><h3>Semipiso 4 Ambientes Cochera Doble</h3></a>
-                <p id="ubicacion_carta">Palermo, Capital Federal</p>
+                <a href="#">
+                  <h3>Local Frente a La Universidad Austral E Iae - Distrito Campus</h3>
+                </a>
+                <p id="ubicacion_carta"><i class='bx bx-map'></i>Frente a Universidad Austral, Pilar, Pilar</p>
               </div>
               <div class="int_desc_prop">
-                <p id="tipo_prop_carta"><span><i class='bx bx-buildings'></i>Departamento</span></p>
+                <p id="tipo_prop_carta"><span><i class='bx bx-buildings'></i>Edificio Comercial</span></p>
                 <hr>
                 <div class="prop_interior">
                   <p>
-                    <span><i class='bx bx-bed'></i>2 Dorm</span>
+                    <span><i class='bx bx-door-open'></i>1 Amb</span>
                     <span><i class='bx bx-bath'></i>1 Baño</span>
-                    <span><i class='bx bx-area'></i>97 m²</span>
+                    <span><i class='bx bx-area'></i>65 m²</span>
                   </p>
                 </div>
                 <hr>
                 <div class="precio_btn btn_user">
-                  <p id="item_precio"><span>USD 1.200</span></p>
+                  <p id="item_precio"><span>USD 1.300</span></p>
                   <a href="#" class="registrate">Detalles</a>
                 </div>
               </div>
@@ -313,29 +348,31 @@
           </div>
           <div class="carta_prop">
             <figure>
-              <a href="#"><img src="./img/depto_4dorm/ejemplo_propiedad.jpg" alt=""></a>
+              <a href="#"><img src="./img/depto_4dorm/ejemplo_casa(2) 1.jpg" alt=""></a>
               <div class="fav_dest">
                 <!--Corazón de favorito en esquina superior izquierda-->
               </div>
             </figure>
             <div class="desc_prop">
               <div class="titulo_carta_prop">
-                <a href="#"><h3>Semipiso 4 Ambientes Cochera Doble</h3></a>
-                <p id="ubicacion_carta">Palermo, Capital Federal</p>
+                <a href="#">
+                  <h3>Casa de Tres Dorm. con Amarra</h3>
+                </a>
+                <p id="ubicacion_carta"><i class='bx bx-map'></i>Boatcenter al 100, Tigre, Tigre</p>
               </div>
               <div class="int_desc_prop">
-                <p id="tipo_prop_carta"><span><i class='bx bx-buildings'></i>Departamento</span></p>
+                <p id="tipo_prop_carta"><span><i class='bx bx-home-heart'></i>Casa</span></p>
                 <hr>
                 <div class="prop_interior">
                   <p>
-                    <span><i class='bx bx-bed'></i>2 Dorm</span>
+                    <span><i class='bx bx-bed'></i>3 Dorm</span>
                     <span><i class='bx bx-bath'></i>1 Baño</span>
-                    <span><i class='bx bx-area'></i>97 m²</span>
+                    <span><i class='bx bx-area'></i>190 m²</span>
                   </p>
                 </div>
                 <hr>
                 <div class="precio_btn btn_user">
-                  <p id="item_precio"><span>USD 1.200</span></p>
+                  <p id="item_precio"><span>USD 1.800</span></p>
                   <a href="#" class="registrate">Detalles</a>
                 </div>
               </div>
@@ -343,29 +380,31 @@
           </div>
           <div class="carta_prop">
             <figure>
-              <a href="#"><img src="./img/depto_4dorm/ejemplo_propiedad.jpg" alt=""></a>
+              <a href="#"><img src="./img/depto_4dorm/ejemplo_casa(3) 1.jpg" alt=""></a>
               <div class="fav_dest">
                 <!--Corazón de favorito en esquina superior izquierda-->
               </div>
             </figure>
             <div class="desc_prop">
               <div class="titulo_carta_prop">
-                <a href="#"><h3>Semipiso 4 Ambientes Cochera Doble</h3></a>
-                <p id="ubicacion_carta">Palermo, Capital Federal</p>
+                <a href="#">
+                  <h3>Casa Al Rio en Venta y Alquiler - Barrio Santa Maria de Tigre</h3>
+                </a>
+                <p id="ubicacion_carta"><i class='bx bx-map'></i>Santa María de Tigre, Rincón de Milberg</p>
               </div>
               <div class="int_desc_prop">
-                <p id="tipo_prop_carta"><span><i class='bx bx-buildings'></i>Departamento</span></p>
+                <p id="tipo_prop_carta"><span><i class='bx bx-home-heart'></i>Casa</span></p>
                 <hr>
                 <div class="prop_interior">
                   <p>
-                    <span><i class='bx bx-bed'></i>2 Dorm</span>
-                    <span><i class='bx bx-bath'></i>1 Baño</span>
-                    <span><i class='bx bx-area'></i>97 m²</span>
+                    <span><i class='bx bx-door-open'></i>5 Amb</span>
+                    <span><i class='bx bx-bath'></i>6 Baño</span>
+                    <span><i class='bx bx-area'></i>480 m²</span>
                   </p>
                 </div>
                 <hr>
                 <div class="precio_btn btn_user">
-                  <p id="item_precio"><span>USD 1.200</span></p>
+                  <p id="item_precio"><span>USD 4.100</span></p>
                   <a href="#" class="registrate">Detalles</a>
                 </div>
               </div>
@@ -414,7 +453,8 @@
     <div class="espaciador"></div>
     <article>
       <div class="contendor_servicios_desc">
-        <div class="img_contenido"><a href="#"><img src="./img/inicio_otros.jpg" alt="foto casa otros servicios"></a></div>
+        <div class="img_contenido"><a href="#"><img src="./img/inicio_otros.jpg" alt="foto casa otros servicios"></a>
+        </div>
         <div class="texto_serv_desc">
           <h2>Otros servicios destacados</h2>
           <p>Descubre todos los servicios que ofrecemos para hacer que tu experiencia inmobiliaria sea excelente.</p>
@@ -436,8 +476,6 @@
             <a href="#"><i class='bx bx-phone'></i>(999) 999-9999</a>
           </div>
         </div>
-
-
 
         <div class="contendor_tarjetas_nosotros">
 
@@ -512,11 +550,7 @@
               <div class="btn_user"><a href="#" class="registrate">Contactar agente</a></div>
             </div>
           </div>
-
         </div>
-
-
-
       </div>
     </article>
     <div class="espaciador"></div>
@@ -546,13 +580,12 @@
         </div>
         <div class="lista_footer">
           <ul>
-            <li><a href="">Inicio</a></li>
-            <li><a href="">Alquilar</a></li>
-            <li><a href="">Comprar</a></li>
-            <li><a href="">Vender</a></li>
-            <li><a href="">Nosotros</a></li>
-            <li><a href="">Tasar</a></li>
-            <li><a href="">Registrate</a></li>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="alquilar.html">Alquilar</a></li>
+            <li><a href="comprar.html">Comprar</a></li>
+            <li><a href="vender.html">Vender</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="tasar.html">Tasar</a></li>
           </ul>
         </div>
       </div>
@@ -592,9 +625,7 @@
               <div class="email_newsletter">
                 <input type="email" name="EMAIL" required placeholder="Escribe tu email aquí">
               </div>
-              <div class="btn_newsletter">
-                <button>Enviar</button>
-              </div>
+                <button class="btn_submit">Enviar</button>
             </div>
           </form>
           <div class="social_footer">
