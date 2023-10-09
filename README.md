@@ -55,7 +55,7 @@ El repositorio contiene los siguientes archivos y carpetas:
 
 [ ] Sincronizar el código en un repositorio Git y compartir el enlace con el instructor.
 
-[ ] Aplicar diseño integral, incluyendo maquetación, tipografía, imágenes, colores, logo, e íconos.
+[x] Aplicar diseño integral, incluyendo maquetación, tipografía, imágenes, colores, logo, e íconos.
 
 [ ] Preparar un archivo de documentación preliminar en PDF que describa el proyecto.
 
