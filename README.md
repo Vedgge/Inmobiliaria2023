@@ -43,7 +43,7 @@ El repositorio contiene los siguientes archivos y carpetas:
 
 [x] Hacer al menos una página completamente adaptable a tres tamaños de dispositivos (Mobile, Tablet, Escritorio).
 
-[ ] Agregar una animación, transformación o transición en alguna parte del sitio.
+[x] Agregar una animación, transformación o transición en alguna parte del sitio.
 
 [x] Utilizar Flexbox y/o CSS Grid para la maquetación.
 
