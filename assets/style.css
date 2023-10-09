@@ -16,6 +16,12 @@ main {
 }
 
 /*--------------------ANIMACION SCROLL-------------------*/
+article {
+    animation: fade linear both;
+    animation-timeline: view(block);
+    animation-range: cover 0% cover 30%;
+}
+
 @keyframes fade {
     from {
         opacity: 0;
@@ -24,12 +30,6 @@ main {
     to {
         opacity: 1;
     }
-}
-
-article {
-    animation: fade linear both;
-    animation-timeline: view(block);
-    animation-range: cover 0% cover 30%;
 }
 
 /*--------------------PRELOAD-------------------*/
@@ -71,9 +71,13 @@ article {
     color: #de2c2f;
 }
 
-.social .bx {
-    font-size: 23px;
+.social a .bx{
+    font-size: 22px;
     color: #333333;
+    transition: 0.3s;
+}
+.social a .bx:hover {
+    color: #de2c2f;
 }
 
 /*--------------------HEADER BOTTOM / BARRA DE NAVEGACIÓN-------------------*/
@@ -84,7 +88,6 @@ article {
     /*no sé como pero da un diseño + responsivo que space-between, agregar navbar en una hamburguesa*/
     padding: 10px 0 10px;
     background: #eaeaea;
-
 }
 
 .navbar_link {
@@ -178,7 +181,6 @@ article {
     color: #333333;
 }
 
-
 .toggle_button {
     position: absolute;
     top: 56px;
@@ -195,8 +197,24 @@ article {
     width: 100%;
     background-color: #333333;
     border-radius: 10px;
+    transition: all 0.3s ease-in-out;
 }
 
+.x:nth-of-type(1) {
+    transform: rotate(45deg);
+    transform-origin: top left;
+    width: 45px;
+  }
+  
+  .x:nth-of-type(2) {
+    opacity: 0;
+  }
+  
+  .x:nth-of-type(3) {
+    transform: rotate(-45deg);
+    transform-origin: bottom left;
+    width: 45px;
+  } 
 /*--------------------POPUP INICIO DE SESIÓN-----------------*/
 .overlay {
     display: none;
@@ -228,6 +246,32 @@ article {
     border-radius: 10px;
 }
 
+.signup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, .15);
+    border-radius: 10px;
+}
+#term_cond{
+    display: flex;
+    align-items: center; 
+}
+
+#term_cond label {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+#term_cond label a{
+    margin-left: 5px;
+    font-size: 15px;
+}
 .popup.active {
     display: block;
     z-index: 1000;
@@ -636,7 +680,6 @@ article h2 {
     /*gap entre texto e img*/
 }
 
-
 .img_contenido img {
     border: 1px solid red;
     border-radius: 8px;
@@ -688,6 +731,7 @@ article h2 {
 }
 
 .titulo_div_grid {
+    max-width: 1420px;
     display: flex;
     justify-content: space-between;
     padding: 0 10px 10px;
@@ -832,8 +876,11 @@ footer {
 .social_footer a {
     font-size: 35px;
     color: #333333;
+    transition: 0.3s;
 }
-
+.social_footer a:hover {
+    color: #de2c2f;
+}
 /*--------------------MEDIA QUERIES-------------------*/
 
 .uno {
@@ -890,6 +937,7 @@ footer {
     .toggle_button {
         display: flex;
     }
+
     .navbar_link {
         display: none;
         flex-direction: column-reverse;
@@ -897,6 +945,10 @@ footer {
         justify-content: center;
     }
 
+    .navbar_link.active {
+        display: flex;
+    }
+   
     .navbar_link .btn_user {
         display: flex;
         flex-direction: column;
@@ -917,6 +969,7 @@ footer {
         border-bottom: 1px solid rgb(203, 214, 220);
         border-top: 1px solid rgb(203, 214, 220);
         padding-bottom: 12px;
+        margin-top: 10px;
     }
 
     .navbar_link .btn_user .registrate {
@@ -936,10 +989,7 @@ footer {
         padding: 5px 1rem;
     }
 
-    .navbar_link.active {
-        display: flex;
-    }
-
+    
     .logo {
         padding-left: 40px;
     }

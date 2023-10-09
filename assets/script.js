@@ -1,25 +1,61 @@
 //INICIAR SESIÓN MODAL POPUP Y OVERLAY GRIS
-const mostrarPopup = document.querySelector("#mostrar_popup");
-const popup = document.querySelector(".popup");
-const overlay = document.querySelector(".overlay");
+const mostrarPopup = document.querySelector("#mostrar_popup"),
+      popupLogin = document.querySelector(".login"),
+      overlay = document.querySelector(".overlay"),
+      popupSignup = document.querySelector(".signup");
 
 mostrarPopup.addEventListener("click", function(){
-  popup.classList.add("active");
+  popupLogin.classList.add("active");
   overlay.classList.add("active");
 });
 
-document.querySelector(".popup .cerrar_btn").addEventListener("click", function(){
-  popup.classList.add("closing");
+document.querySelector(".login .cerrar_btn").addEventListener("click", function(){
+  popupLogin.classList.add("closing");
+  popupSignup.classList.add("closing");
   overlay.classList.add("closing");
   setTimeout(function() {
-    popup.classList.remove("active");
-    overlay.classList.remove("active");
-    popup.classList.remove("closing");
+    popupLogin.classList.remove("active");
+    popupSignup.classList.remove("active");
+    overlay.classList.remove("active"); //Elimina la clase active
+    popupLogin.classList.remove("closing");
+    popupSignup.classList.remove("closing");
     overlay.classList.remove("closing"); //Elimina la clase de cierre después de la animación
   }, 500); 
 });
 
-//SCRIPT PARA AGREGAR CLASE DE NAVBAR_LINK
+document.querySelector("#registrar").addEventListener("click", function(){
+  popupLogin.classList.remove("active");
+  popupSignup.classList.add("active");
+});
+
+document.querySelector("#iniciar_sesion").addEventListener("click", function(){
+  popupLogin.classList.add("active");
+  popupSignup.classList.remove("active");
+});
+
+document.querySelector(".signup .cerrar_btn").addEventListener("click", function(){
+  popupSignup.classList.add("closing");
+  overlay.classList.add("closing");
+  setTimeout(function() {
+    popupSignup.classList.remove("active");
+    overlay.classList.remove("active"); //Elimina la clase active
+    popupSignup.classList.remove("closing");
+    overlay.classList.remove("closing"); //Elimina la clase de cierre después de la animación
+  }, 500); 
+});
+
+//ANIMACIÓN HAMBURGUESA
+let toggleBtn = document.querySelector('.toggle_button')
+let barras = document.querySelectorAll('.bar')
+
+function animHam(e) {
+  barras.forEach(bar => bar.classList.toggle('x'))
+}
+
+toggleBtn.addEventListener('click', animHam)
+
+
+//AGREGAR CLASE DE NAVBAR_LINK
 const toggleButton = document.getElementsByClassName('toggle_button')[0]
 const navbarLinks = document.getElementsByClassName('navbar_link')[0]
 
@@ -27,7 +63,7 @@ toggleButton.addEventListener('click', () => {
   navbarLinks.classList.toggle('active')
 });
 
-//SCRIPT PARA TYPEWRITER ANIMATION
+//TYPEWRITER ANIMATION
 function sleep(ms){ //Funcion para esperar unos milisegundos
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -37,9 +73,9 @@ const elementos = document.getElementById("escritura");
 
 let sleepTime = 100; //Tiempo para esperar entre letras
 
-let curFrases = 0; //index por la frase que queremos empezar, vamos a incrementarla con lógica
+let curFrases = 0; //Index por la frase que queremos empezar, vamos a incrementarla con lógica
 
-const loopEscritura = async () => { //función async para llamar a la función sleepTime
+const loopEscritura = async () => { //Función async para llamar a la función sleepTime
   while(true){ //loop para escribir las frases letra x letra
     let curLetra = frases[curFrases];
     for (let i = 0; i < curLetra.length; i++){
@@ -47,16 +83,16 @@ const loopEscritura = async () => { //función async para llamar a la función s
       await sleep(sleepTime);
     }
 
-    await sleep(sleepTime * 10); //tiempo de espera entre escritura y eliminación
+    await sleep(sleepTime * 10); //Tiempo de espera entre escritura y eliminación
 
-    for (let i = curLetra.length; i > 0; i--){ //borrar letra x letra
+    for (let i = curLetra.length; i > 0; i--){ //Borrar letra x letra
       elementos.innerText = curLetra.substring(0, i - 1);
       await sleep(sleepTime);
     }
 
-    await sleep(sleepTime * 5); //tiempo de espera entre eliminación y escritura
+    await sleep(sleepTime * 5); //Tiempo de espera entre eliminación y escritura
 
-    if (curFrases === frases.length - 1){ //lógica para escribir la siguiente frase/palabra
+    if (curFrases === frases.length - 1){ //Lógica para escribir la siguiente frase/palabra
       curFrases = 0;
     } else {
       curFrases++;

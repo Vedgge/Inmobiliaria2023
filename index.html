@@ -112,7 +112,8 @@
           <a href="#" class="registrate">Registrate</a>
         </div>
         <div class="overlay"></div>
-        <div class="popup">
+        <!-- Popup login form -->
+        <div class="popup login">
           <div class="cerrar_btn">&times;</div>
           <div class="form">
             <h2>Iniciar sesión</h2>
@@ -137,7 +138,36 @@
               <a href="#">Olvide mi contraseña</a>
             </div>
           </div>
+        </div> 
+        <!-- Popup signup form -->
+        <div class="popup signup">
+          <div class="cerrar_btn">&times;</div>
+          <div class="form">
+            <h2>Registrarse</h2>
+            <p>Guarde búsquedas, sus propiedades favoritas y más</p>
+            <p>¿Ya tienes una cuenta? <a href="#" id="iniciar_sesion">Inicia sesión</a></p>
+            <div class="elementos_form">
+              <label for="email">Email</label>
+              <input type="text" id="email" placeholder="Ingresa tu email">
+            </div>
+            <div class="elementos_form">
+              <label for="contraseña">Contraseña</label>
+              <input type="password" id="contraseña" placeholder="Crea tu contraseña">
+            </div>
+            <div class="elementos_form">
+              <label for="contraseña">Confirma contraseña</label>
+              <input type="password" id="contraseña" placeholder="Confirma tu contraseña">
+            </div>
+            <div class="elementos_form" id="term_cond">
+              <input type="checkbox">
+              <label for="checkbox">Estoy de acuerdo con los<a href="#"> Terminos y Condiciones</a></label>
+            </div>
+            <div class="elementos_form">
+              <button class="btn_submit">Regsitrate</button>
+            </div>
+          </div>
         </div>
+
       </div>
     </nav>
   </header>
@@ -211,11 +241,9 @@
       <!--Propiedades destacadas del mes-->
       <div class="propiedades_destacadas">
         <!--Descripción de las cartas de propiedades destacadas / agregar diseño responsivo y estructura-->
-        <div class="contenedor_div_grid">
-          <h2>Propiedades destacadas en CABA, Buenos Aires</h2>
-          <p id="first_desc">Estamos muy orgullosos del servicio que brindamos. Vea lo que nuestros huéspedes tienen que
-            decir sobre nosotros, nuestras ubicaciones y servicios.</p>
-        </div>
+        <h2>Propiedades destacadas en CABA, Buenos Aires</h2>
+        <p id="first_desc">Estamos muy orgullosos del servicio que brindamos. Vea lo que nuestros huéspedes tienen que
+          decir sobre nosotros, nuestras ubicaciones y servicios.</p>
         <!--Cartas de propiedades destacadas hecho con grid-->
         <div class="grid-container_destac">
           <div class="carta_prop">
@@ -625,7 +653,7 @@
               <div class="email_newsletter">
                 <input type="email" name="EMAIL" required placeholder="Escribe tu email aquí">
               </div>
-                <button class="btn_submit">Enviar</button>
+              <button class="btn_submit">Enviar</button>
             </div>
           </form>
           <div class="social_footer">
