@@ -1,11 +1,17 @@
 //INICIAR SESIÓN MODAL POPUP Y OVERLAY GRIS
-const mostrarPopup = document.querySelector("#mostrar_popup"),
+const mostrarPopupLi = document.querySelector("#mostrar_popup_li"),
       popupLogin = document.querySelector(".login"),
       overlay = document.querySelector(".overlay"),
+      mostrarPopupSu = document.querySelector("#mostrar_popup_sp"),
       popupSignup = document.querySelector(".signup");
 
-mostrarPopup.addEventListener("click", function(){
+mostrarPopupLi.addEventListener("click", function(){
   popupLogin.classList.add("active");
+  overlay.classList.add("active");
+});
+
+mostrarPopupSu.addEventListener("click", function(){
+  popupSignup.classList.add("active");
   overlay.classList.add("active");
 });
 

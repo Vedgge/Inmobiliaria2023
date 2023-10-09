@@ -160,12 +160,16 @@ article {
     padding: 10px;
 }
 
-#mostrar_popup {
+#mostrar_popup_li {
     color: #333333;
     font-size: 16px;
     border: none;
     cursor: pointer;
     background: transparent;
+}
+
+#mostrar_popup_sp {
+    cursor: pointer;
 }
 
 .btn_user .registrate {
@@ -313,9 +317,8 @@ article {
     font-style: italic;
 }
 
-#registrar {
+#registrar, #iniciar_sesion {
     color: #1a79ca;
-    text-decoration: none;
     font-weight: 600;
 }
 
@@ -960,7 +963,7 @@ footer {
         align-items: flex-start;
     }
 
-    #mostrar_popup{
+    #mostrar_popup_li{
         padding: 10px;
     }
 
