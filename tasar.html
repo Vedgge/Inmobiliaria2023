@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="./assets/styleTasar.css">
 
   <!--- custom js -->
-  <script src="script.js" defer></script>
+  <script src="./assets/script.js" defer></script>
 
   <!--- custom icons -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -109,9 +109,66 @@
           <li><a href="tasar.html">Tasar</a></li>
         </ul>
         <div class="btn_user">
-          <a href="#" class="iniciar_sesion">Iniciar sesión</a>
+          <button id="mostrar_popup"><a>Iniciar sesión</a></button>
           <a href="#" class="registrate">Registrate</a>
         </div>
+        <div class="overlay"></div>
+        <!-- Popup login form -->
+        <div class="popup login">
+          <div class="cerrar_btn">&times;</div>
+          <div class="form">
+            <h2>Iniciar sesión</h2>
+            <p>Guarde búsquedas, sus propiedades favoritas y más</p>
+            <p>¿Nuevo en el sitio? <a href="#" id="registrar">Registra una cuenta</a></p>
+            <div class="elementos_form">
+              <label for="email">Email</label>
+              <input type="text" id="email" placeholder="Ingresa tu email">
+            </div>
+            <div class="elementos_form">
+              <label for="contraseña">Contraseña</label>
+              <input type="password" id="contraseña" placeholder="Ingresa tu contraseña">
+            </div>
+            <div class="elementos_form">
+              <input type="checkbox" id="recordarme">
+              <label for="recordarme">Recordar mis datos</label>
+            </div>
+            <div class="elementos_form">
+              <button class="btn_submit">Iniciar sesión</button>
+            </div>
+            <div class="elementos_form">
+              <a href="#">Olvide mi contraseña</a>
+            </div>
+          </div>
+        </div> 
+        <!-- Popup signup form -->
+        <div class="popup signup">
+          <div class="cerrar_btn">&times;</div>
+          <div class="form">
+            <h2>Registrarse</h2>
+            <p>Guarde búsquedas, sus propiedades favoritas y más</p>
+            <p>¿Ya tienes una cuenta? <a href="#" id="iniciar_sesion">Inicia sesión</a></p>
+            <div class="elementos_form">
+              <label for="email">Email</label>
+              <input type="text" id="email" placeholder="Ingresa tu email">
+            </div>
+            <div class="elementos_form">
+              <label for="contraseña">Contraseña</label>
+              <input type="password" id="contraseña" placeholder="Crea tu contraseña">
+            </div>
+            <div class="elementos_form">
+              <label for="contraseña">Confirma contraseña</label>
+              <input type="password" id="contraseña" placeholder="Confirma tu contraseña">
+            </div>
+            <div class="elementos_form" id="term_cond">
+              <input type="checkbox">
+              <label for="checkbox">Estoy de acuerdo con los<a href="#"> Terminos y Condiciones</a></label>
+            </div>
+            <div class="elementos_form">
+              <button class="btn_submit">Regsitrate</button>
+            </div>
+          </div>
+        </div>
+
       </div>
     </nav>
   </header>

@@ -17,8 +17,8 @@
   <link rel="stylesheet" href="./assets/style.css">
   <link rel="stylesheet" href="./assets/nosotros.css">
 
-<!--- custom js -->
-<script src="./assets/script.js" defer></script>
+  <!--- custom js -->
+  <script src="./assets/script.js" defer></script>
 
   <!--- custom icons -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -26,8 +26,9 @@
   <!--- favicon -->
   <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
 </head>
+
 <body>
-   <!--header-->
+  <!--header-->
   <header class="header">
 
     <!--Sección superior del header con redes sociales y contacto-->
@@ -108,9 +109,66 @@
           <li><a href="tasar.html">Tasar</a></li>
         </ul>
         <div class="btn_user">
-          <a href="#" class="iniciar_sesion">Iniciar sesión</a>
+          <button id="mostrar_popup"><a>Iniciar sesión</a></button>
           <a href="#" class="registrate">Registrate</a>
         </div>
+        <div class="overlay"></div>
+        <!-- Popup login form -->
+        <div class="popup login">
+          <div class="cerrar_btn">&times;</div>
+          <div class="form">
+            <h2>Iniciar sesión</h2>
+            <p>Guarde búsquedas, sus propiedades favoritas y más</p>
+            <p>¿Nuevo en el sitio? <a href="#" id="registrar">Registra una cuenta</a></p>
+            <div class="elementos_form">
+              <label for="email">Email</label>
+              <input type="text" id="email" placeholder="Ingresa tu email">
+            </div>
+            <div class="elementos_form">
+              <label for="contraseña">Contraseña</label>
+              <input type="password" id="contraseña" placeholder="Ingresa tu contraseña">
+            </div>
+            <div class="elementos_form">
+              <input type="checkbox" id="recordarme">
+              <label for="recordarme">Recordar mis datos</label>
+            </div>
+            <div class="elementos_form">
+              <button class="btn_submit">Iniciar sesión</button>
+            </div>
+            <div class="elementos_form">
+              <a href="#">Olvide mi contraseña</a>
+            </div>
+          </div>
+        </div>
+        <!-- Popup signup form -->
+        <div class="popup signup">
+          <div class="cerrar_btn">&times;</div>
+          <div class="form">
+            <h2>Registrarse</h2>
+            <p>Guarde búsquedas, sus propiedades favoritas y más</p>
+            <p>¿Ya tienes una cuenta? <a href="#" id="iniciar_sesion">Inicia sesión</a></p>
+            <div class="elementos_form">
+              <label for="email">Email</label>
+              <input type="text" id="email" placeholder="Ingresa tu email">
+            </div>
+            <div class="elementos_form">
+              <label for="contraseña">Contraseña</label>
+              <input type="password" id="contraseña" placeholder="Crea tu contraseña">
+            </div>
+            <div class="elementos_form">
+              <label for="contraseña">Confirma contraseña</label>
+              <input type="password" id="contraseña" placeholder="Confirma tu contraseña">
+            </div>
+            <div class="elementos_form" id="term_cond">
+              <input type="checkbox">
+              <label for="checkbox">Estoy de acuerdo con los<a href="#"> Terminos y Condiciones</a></label>
+            </div>
+            <div class="elementos_form">
+              <button class="btn_submit">Regsitrate</button>
+            </div>
+          </div>
+        </div>
+
       </div>
     </nav>
   </header>
@@ -122,32 +180,42 @@
           <h1>¿Quiénes somos?</h1>
         </div>
         <div class="nosotros_texto">
-          <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda saepe aut neque! Illum nihil, repudiandae cumque est corrupti beatae eum quod tempore maxime officiis, molestiae rerum alias hic ut laboriosam!</h2>
+          <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda saepe aut neque! Illum nihil,
+            repudiandae cumque est corrupti beatae eum quod tempore maxime officiis, molestiae rerum alias hic ut
+            laboriosam!</h2>
         </div>
       </div>
     </section>
 
     <section class="nosotros">
-        <div class="cont_nosotros">
-          <h1>¿Qué hacemos?</h1>
-          <img src="/InmobiliariaCAC2023/img/inicio_hipoteca.jpg" alt="" width="380px" height="260px">
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, neque itaque! Ut adipisci doloribus inventore quia deleniti voluptates corporis magnam dignissimos nostrum perspiciatis. Vitae, omnis. Officia aut fuga officiis distinctio!</p>
-        </div>
-        <div class="cont_nosotros">
-          <h1>Soluciones inmobiliarias desde 1997</h1>
-          <img src="/InmobiliariaCAC2023/img/inicio_tasar.jpg" alt="" width="380px" height="260px">
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, neque itaque! Ut adipisci doloribus inventore quia deleniti voluptates corporis magnam dignissimos nostrum perspiciatis. Vitae, omnis. Officia aut fuga officiis distinctio!</p>
-        </div>
-        <div class="cont_nosotros">
-          <h1>Solo propiedades en las mejores condiciones</h1>
-          <img src="/InmobiliariaCAC2023/img/inicio_otros.jpg" alt="" width="380px" height="260px">
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, neque itaque! Ut adipisci doloribus inventore quia deleniti voluptates corporis magnam dignissimos nostrum perspiciatis. Vitae, omnis. Officia aut fuga officiis distinctio!</p>
-        </div>
-        <div class="cont_nosotros">
-          <h1>Clientes satisfechos nos respaldan</h1>
-          <img src="/InmobiliariaCAC2023/img/inicio_mudanza.jpg" alt="" width="380px" height="260px">
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, neque itaque! Ut adipisci doloribus inventore quia deleniti voluptates corporis magnam dignissimos nostrum perspiciatis. Vitae, omnis. Officia aut fuga officiis distinctio!</p>
-        </div>
+      <div class="cont_nosotros">
+        <h1>¿Qué hacemos?</h1>
+        <img src="/InmobiliariaCAC2023/img/inicio_hipoteca.jpg" alt="" width="380px" height="260px">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, neque itaque! Ut adipisci doloribus
+          inventore quia deleniti voluptates corporis magnam dignissimos nostrum perspiciatis. Vitae, omnis. Officia aut
+          fuga officiis distinctio!</p>
+      </div>
+      <div class="cont_nosotros">
+        <h1>Soluciones inmobiliarias desde 1997</h1>
+        <img src="/InmobiliariaCAC2023/img/inicio_tasar.jpg" alt="" width="380px" height="260px">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, neque itaque! Ut adipisci doloribus
+          inventore quia deleniti voluptates corporis magnam dignissimos nostrum perspiciatis. Vitae, omnis. Officia aut
+          fuga officiis distinctio!</p>
+      </div>
+      <div class="cont_nosotros">
+        <h1>Solo propiedades en las mejores condiciones</h1>
+        <img src="/InmobiliariaCAC2023/img/inicio_otros.jpg" alt="" width="380px" height="260px">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, neque itaque! Ut adipisci doloribus
+          inventore quia deleniti voluptates corporis magnam dignissimos nostrum perspiciatis. Vitae, omnis. Officia aut
+          fuga officiis distinctio!</p>
+      </div>
+      <div class="cont_nosotros">
+        <h1>Clientes satisfechos nos respaldan</h1>
+        <img src="/InmobiliariaCAC2023/img/inicio_mudanza.jpg" alt="" width="380px" height="260px">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, neque itaque! Ut adipisci doloribus
+          inventore quia deleniti voluptates corporis magnam dignissimos nostrum perspiciatis. Vitae, omnis. Officia aut
+          fuga officiis distinctio!</p>
+      </div>
     </section>
     <br><br><br>
   </main>
@@ -223,6 +291,7 @@
       </div>
     </div>
   </footer>
-    
+
 </body>
+
 </html>
