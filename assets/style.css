@@ -162,6 +162,7 @@ article {
     font-size: 16px;
     border: none;
     cursor: pointer;
+    background: transparent;
 }
 
 .btn_user .registrate {
@@ -339,9 +340,9 @@ article {
     }
 }
 
-@keyframes slide-up {
+@keyframes slide-up { /*Todavía no agregada */
     0% {
-        transform: translateY(100%);
+        transform: translateY(50%);
     }
 
     100% {
@@ -626,7 +627,7 @@ article h2 {
     background-color: #de2c2f;
 }
 
-.contendor_servicios_desc {
+.contenedor_servicios_desc {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(2, auto);
@@ -670,12 +671,12 @@ article h2 {
     color: #333333;
 }
 
-.contendor_servicios_desc h2 {
+.contenedor_servicios_desc h2 {
     font-size: 35px;
     padding-bottom: 30px;
 }
 
-.contendor_servicios_desc p {
+.contenedor_servicios_desc p {
     line-height: 25px;
 }
 
@@ -694,7 +695,7 @@ article h2 {
 }
 
 .titulo_div_grid h1 {
-    border-left: 4px solid #de2c2f;
+    border-left: 6px solid #de2c2f;
     padding: 0 0 0 50px;
 }
 
@@ -863,6 +864,10 @@ footer {
         grid-template-areas: "uno dos"
             "tres cuatro";
     }
+
+    .grid-container_destac {
+        grid-template-columns: auto auto;
+    }
 }
 
 @media (max-width: 800px) {
@@ -873,6 +878,9 @@ footer {
             "dos"
             "tres"
             "cuatro";
+    }
+    .grid-container_destac {
+        grid-template-columns: auto;
     }
 }
 
@@ -907,6 +915,7 @@ footer {
     .navbar_link .btn_user {
         align-items: center !important;
         border-bottom: 1px solid rgb(203, 214, 220);
+        border-top: 1px solid rgb(203, 214, 220);
         padding-bottom: 12px;
     }
 
@@ -944,11 +953,11 @@ footer {
         width: auto;
     }
 
-    .contendor_servicios_desc {
+    .contenedor_servicios_desc {
         font-size: 90%;
     }
 
-    .contendor_servicios_desc h2 {
+    .contenedor_servicios_desc h2 {
         font-size: 30px;
     }
 }
@@ -963,7 +972,7 @@ footer {
 
     }
 
-    .contendor_servicios_desc {
+    .contenedor_servicios_desc {
         grid-template-rows: auto;
         grid-template-columns: auto auto;
         grid-template-areas: "texto_s"
