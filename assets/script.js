@@ -5,17 +5,41 @@ const mostrarPopupLi = document.querySelector("#mostrar_popup_li"),
       mostrarPopupSu = document.querySelector("#mostrar_popup_sp"),
       popupSignup = document.querySelector(".signup");
 
-mostrarPopupLi.addEventListener("click", function(){
-  popupLogin.classList.add("active");
-  overlay.classList.add("active");
-});
-
-mostrarPopupSu.addEventListener("click", function(){
+function abrirPopupRegistro(){
   popupSignup.classList.add("active");
   overlay.classList.add("active");
-});
+}
 
-document.querySelector(".login .cerrar_btn").addEventListener("click", function(){
+function abrirPopupInicioSesion(){
+  popupLogin.classList.add("active");
+  overlay.classList.add("active");
+}
+
+mostrarPopupLi.addEventListener("click", abrirPopupInicioSesion);
+
+mostrarPopupSu.addEventListener("click", abrirPopupRegistro);
+
+function popupInicioSesionAPopupRegistro(){
+  popupLogin.classList.remove("active");
+  popupSignup.classList.add("active");
+}
+function popupRegistroAPopupInicioSesion(){
+  popupLogin.classList.add("active");
+  popupSignup.classList.remove("active");
+}
+
+function cerrarPopupRegistro(){
+  popupSignup.classList.add("closing");
+  overlay.classList.add("closing");
+  setTimeout(function() {
+    popupSignup.classList.remove("active");
+    overlay.classList.remove("active"); //Elimina la clase active
+    popupSignup.classList.remove("closing");
+    overlay.classList.remove("closing"); //Elimina la clase de cierre después de la animación
+  }, 500); 
+}
+
+function cerrarPopupInicioSesion(){
   popupLogin.classList.add("closing");
   overlay.classList.add("closing");
 
@@ -25,28 +49,15 @@ document.querySelector(".login .cerrar_btn").addEventListener("click", function(
     popupLogin.classList.remove("closing");
     overlay.classList.remove("closing"); //Elimina la clase de cierre después de la animación
   }, 500); 
-});
+}
 
-document.querySelector("#registrar").addEventListener("click", function(){
-  popupLogin.classList.remove("active");
-  popupSignup.classList.add("active");
-});
+document.querySelector(".login .cerrar_btn").addEventListener("click", cerrarPopupInicioSesion);
 
-document.querySelector("#iniciar_sesion").addEventListener("click", function(){
-  popupLogin.classList.add("active");
-  popupSignup.classList.remove("active");
-});
+document.querySelector("#registrar").addEventListener("click", popupInicioSesionAPopupRegistro);
 
-document.querySelector(".signup .cerrar_btn").addEventListener("click", function(){
-  popupSignup.classList.add("closing");
-  overlay.classList.add("closing");
-  setTimeout(function() {
-    popupSignup.classList.remove("active");
-    overlay.classList.remove("active"); //Elimina la clase active
-    popupSignup.classList.remove("closing");
-    overlay.classList.remove("closing"); //Elimina la clase de cierre después de la animación
-  }, 500); 
-});
+document.querySelector("#iniciar_sesion").addEventListener("click", popupRegistroAPopupInicioSesion);
+
+document.querySelector(".signup .cerrar_btn").addEventListener("click", cerrarPopupRegistro);
 
 //ANIMACIÓN HAMBURGUESA
 let toggleBtn = document.querySelector('.toggle_button')
@@ -60,15 +71,15 @@ toggleBtn.addEventListener('click', animHam)
 
 
 //AGREGAR CLASE DE NAVBAR_LINK
-const toggleButton = document.getElementsByClassName('toggle_button')[0]
-const navbarLinks = document.getElementsByClassName('navbar_link')[0]
+const toggleButton = document.querySelector(".toggle_button"),
+      navbarLinks = document.querySelector(".navbar_link");
 
-toggleButton.addEventListener('click', () => {
-  navbarLinks.classList.toggle('active')
+toggleButton.addEventListener('click', function(){
+  navbarLinks.classList.toggle('active');
 });
 
 //TYPEWRITER ANIMATION
-function sleep(ms){ //Funcion para esperar unos milisegundos
+function sleep(ms){ //Funcion promesa para esperar unos milisegundos
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
@@ -107,24 +118,23 @@ const loopEscritura = async () => { //Función async para llamar a la función w
 loopEscritura();
 
 //CARRUSEL
-const carrusel = document.getElementById('carrusel'),
-      tarjetas = document.querySelectorAll('.carta_prop'),
-      numTarjetasPorVista = 4;
-let currentIndex = 0;
+const tarjetas = document.querySelectorAll('.carta_prop'),
+      numTarjetasPorVista = 4; //Máximo n° de tarjetas a mostrar
+let currentIndex = 0; //Inicializo la variable currentIndex dentro de Let porque va a ser mutable, es como un contador o seguimiento
 
-function mostrarTarjetas(index) {
-  tarjetas.forEach((tarjeta, i) => {
-    tarjeta.style.display = i >= index && i < index + numTarjetasPorVista ? 'block' : 'none';
+function mostrarTarjetas(index) { //Toma parametro index que especifica el indice de la tarjeta a mostrar
+  tarjetas.forEach((tarjeta, i) => { //Recorre todas las tarjetas del carrusel, "tarjeta" representa cada carta individual e "i" el indice de la tarjeta en el array
+    tarjeta.style.display = i >= index && i < index + numTarjetasPorVista ? 'block' : 'none'; //Se usa para configurar la propiedad display del style de la tarjeta
   });
 }
 
 function avanzarTarjetas() {
-  currentIndex = (currentIndex + numTarjetasPorVista) % tarjetas.length;
+  currentIndex = (currentIndex + 1) % tarjetas.length; //Aumenta currentIndex en +1 para avanzar al siguiente, cuando currentIndex + 1 = 4, el módulo con tarjetas.length me da 0, volviendo al primer bucle
   mostrarTarjetas(currentIndex);
 }
 
 function retrocederTarjetas() {
-  currentIndex = (currentIndex - numTarjetasPorVista + tarjetas.length) % tarjetas.length;
+  currentIndex = (currentIndex - 1 + tarjetas.length) % tarjetas.length; //Lo mismo que avanzar, pero contrario
   mostrarTarjetas(currentIndex);
 }
 
@@ -136,11 +146,47 @@ botonSiguiente.addEventListener('click', avanzarTarjetas);
 
 mostrarTarjetas(currentIndex); //Mostrar las primeras tarjetas al cargar la página
 
-tarjetas.forEach((tarjeta, index) => { //Ocultar tarjetas extras
-  if (index >= numTarjetasPorVista) {
-    tarjeta.style.display = 'none';
-  }
-});
-
 //TESTIMONIOS
 
+// const testimonios = document.querySelectorAll(".testimonios"),
+//       testimonioPorVista = 4;
+// let currentIndexTesti = 0;
+
+// function mostrarTestimonio(index) {
+//   testimonios.forEach((testimonio, i) => {
+//     testimonio.style.display = i >= index && i < index + testimonioPorVista ? 'block' : 'none';
+//   });
+// }
+
+// function avanzarTestimonio() {
+//   currentIndexTesti = (currentIndexTesti + 1) % testimonios.length;
+//   mostrarTestimonio(currentIndexTesti);
+// }
+
+// function retrocederTestimonio() {
+//   currentIndexTesti = (currentIndexTesti - 1 + testimonios.length) % testimonios.length;
+//   mostrarTestimonio(currentIndexTesti);
+// }
+
+// mostrarTestimonio(currentIndexTesti);
+// setInterval(avanzarTestimonio, 1000);
+
+// const testimonials = document.querySelectorAll('.testimonial');
+// let currentIndex_test = 0;
+
+// function showTestimonial(index) {
+//     testimonials[currentIndex_test].classList.remove('show');
+//     currentIndex_test = index;
+//     if (currentIndex_test < 0) {
+//       currentIndex_test = testimonials.length - 1;
+//     } else if (currentIndex_test >= testimonials.length) {
+//       currentIndex_test = 0;
+//     }
+//     testimonials[currentIndex_test].classList.add('show');
+// }
+
+// showTestimonial(currentIndex_test);
+
+// setInterval(() => {
+//     showTestimonial(currentIndex_test + 1);
+// }, 2000); // Cambia el testimonio cada 5 segundos

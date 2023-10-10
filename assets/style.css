@@ -671,14 +671,47 @@ article h2 {
     text-align: center;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(31, 0, 31, 0.37), rgba(31, 8, 8, 0.37));
-    transition: background 4s ease /*No funciona????¿¿¿*/
+    background-image: linear-gradient(rgba(31, 0, 31, 0.192), rgba(31, 8, 8, 0.452));
+    z-index: 1;
 }
 
-.grid_lugares_popu .overlay_lug:hover {
-    background: linear-gradient(rgba(31, 0, 31, 0.5), rgba(161, 46, 46, 0.274));
+/* 
+linear-gradient(rgba(31, 0, 31, 0.37), rgba(31, 8, 8, 0.37)); GRADIENT ORIGINAL DEL OVERLAY_LUG NO HOVER
+
+.grid_lugares_popu .overlay_lug:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+
+    background-image: linear-gradient(rgba(31, 0, 31, 0.5), rgba(161, 46, 46, 0.274));
+    transition: opacity 0.3s ease-out;
+    z-index: 2;
+    opacity: 0;
+  }
+
+  .grid_lugares_popu .overlay_lug:hover:after {
+    opacity: 0.5;
+  } */
+/* .grid_lugares_popu .overlay_lug:hover { HOVER ORIGINAL SIN ANIMACIÓN DE TRANSICIÓN
+    background-image: linear-gradient(rgba(31, 0, 31, 0.5), rgba(161, 46, 46, 0.274));
+} */
+
+.grid_lugares_popu .overlay_lug:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(31, 0, 31, 0.2), rgba(161, 46, 46, 0.329));
+    z-index: 2;
+    transition: opacity 0.3s;
+    opacity: 0;
 }
 
+.grid_lugares_popu .overlay_lug:hover:after {
+    opacity: 0.5;
+  }
+  
 .overlay_lug h3, .overlay_lug p {
     letter-spacing: 2px;
     color: #FFF;
@@ -876,6 +909,11 @@ article h2 {
     width: 150px;
     height: 150px;
     border-radius: 100%;
+    transition: 0.3s;
+}
+
+.foto_experto_inicio img:hover {
+    transform: scale(1.1);
 }
 
 .np_nosotros {
@@ -898,7 +936,7 @@ article h2 {
     gap: 30px;
 }
 
-/*TESTIMONIOS*/
+/*TESTIMONIOS DE NUESTROS AMIGOS CUADRUPEDOS*/
 .testimonios_contenedor {
     max-width: 1420px;
     height: 321px;
@@ -948,17 +986,77 @@ article h2 {
     padding-bottom: 10px;
     color: #de2c2f;
     opacity: 0.2;
+    transition: 0.3s;
+}
+
+.testimonios .bx:hover {
+    transform: scale(1.1);
 }
 
 #quote {
     padding: 10px;
 }
+
 /*COMPAÑEROS?*/
 
+.logos {
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 30px 0;
+}
+
+.logos:before, .logos:after {
+    position: absolute;
+    width: 200px;
+    height: 84px;
+    content: "";
+    z-index: 2;
+}
+
+.logos:before {
+    left: 0;
+    background: linear-gradient(to left, transparent, #eaeaea);
+}
+
+.logos:after {
+    right: 0;
+    background: linear-gradient(to right, transparent, #eaeaea);
+}
+
+.logos:hover .slide_logos {
+    animation-play-state: paused;
+}
+
+.slide_logos {
+    display: inline-block;
+    animation: 35s slide infinite linear;
+}
+
+.slide_logos img {
+    height: 80px;
+    margin: 0 30px;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.slide_logos img:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+    
+}
 /*--------------------FOOTER-------------------*/
 footer {
     background: #d1d1d1;
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 .footer_contenedor {
