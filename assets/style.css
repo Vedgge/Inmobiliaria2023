@@ -63,6 +63,7 @@ article {
 .cto_header_top a {
     color: #333333;
     padding: 5px;
+    font-size: 18px;
     transition: 0.3s;
 }
 
@@ -285,15 +286,15 @@ article {
     position: absolute;
     top: 10px;
     right: 10px;
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     background: #de2c2f;
     color: #fff;
     text-align: center;
     border: 1px solid #de2c2f;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 25px;
     transition: 0.3s;
 }
 
@@ -320,6 +321,10 @@ article {
 #registrar, #iniciar_sesion {
     color: #1a79ca;
     font-weight: 600;
+}
+
+#checkbox {
+    cursor: pointer;
 }
 
 .popup .form .elementos_form {
@@ -398,10 +403,6 @@ article {
 }
 
 /*--------------------HOME o MAIN-------------------*/
-.home h2 {
-    font-size: 30px;
-}
-
 article h2 {
     font-size: 27px;
 }
@@ -418,6 +419,7 @@ article h2 {
     height: 426px;
     color: #FFF;
     padding: 50px;
+    margin-bottom: 50px;
 }
 
 .contenido h1 {
@@ -559,28 +561,176 @@ article h2 {
     padding: 16px;
 }
 
+/*GRID SERVICIOS OFRECIDOS*/
+#more_flecha {
+    font-size: 20px;
+}
+.container_servicios { 
+    margin: 0 auto;
+    max-width: 1420px; 
+    height: 320px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "hipoteca mudanza tasacion soporte-legal";
+  }
+  
+.hipoteca { grid-area: hipoteca; }
+  
+.mudanza { grid-area: mudanza; }
+  
+.tasacion { grid-area: tasacion; }
+  
+.soporte-legal { grid-area: soporte-legal; }
+
+.container_servicios > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .15);
+}
+
+.container_servicios > div .bx {
+    color: #242424;
+    font-size: 100px;
+}
+
+.desc_contenedores_serv h3 {
+    margin: 20px 0 15px 0;
+}
+
+.desc_contenedores_serv {
+    color: #222;
+}
+
+.desc_contenedores_serv p {
+    padding: 0 10px 0;
+}
+
+.contenedor_desc_serv {
+    transition: 0.3s;
+}
+
+.container_servicios .contenedor_desc_serv:hover {
+    cursor: pointer;
+    transform: translateY(-20px);
+}
+
+/*GRID LUGARES POPULARES*/
+.grid_lugares_popu {
+    margin: 0 auto;
+    max-width: 1420px;
+    max-height: 877px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Rosario Cordoba Cordoba"
+      "Buenos-aires Buenos-aires Mar-del-plata";
+    overflow: hidden;
+}
+
+.Rosario { grid-area: Rosario; position: relative;}
+  
+.Cordoba { grid-area: Cordoba; position: relative;}
+  
+.Buenos-aires { grid-area: Buenos-aires; position: relative;}
+  
+.Mar-del-plata { grid-area: Mar-del-plata; position: relative;}
+
+.grid_lugares_popu > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.grid_lugares_popu > div img {
+    width: 1050px; /*La imagen se ajusta al ancho del div*/
+    /*Asegura la relación de aspecto*/
+    height: auto; 
+    position: relative;
+}
+
+.grid_lugares_popu .overlay_lug {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(31, 0, 31, 0.37), rgba(31, 8, 8, 0.37));
+    transition: 0.4s;
+}
+
+.grid_lugares_popu .overlay_lug:hover {
+    background: linear-gradient(rgba(31, 0, 31, 0.5), rgba(161, 46, 46, 0.274));
+}
+
+.overlay_lug h3, .overlay_lug p {
+    letter-spacing: 2px;
+    color: #FFF;
+    font-size: 26px;
+}
+
 /*PROPIEDADES DESTACADAS (DESCRIPCIÓN Y CARTAS)*/
 .propiedades_destacadas {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
-.propiedades_destacadas h2 {
-    padding-top: 20px;
+#propiedades_destac h2 {
+    padding: 0 0 0 50px;
+    border-left: 6px solid #de2c2f;
+}
+
+.contenedor_title_prop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 #first_desc {
     padding: 10px 0 20px;
 }
 
+.propiedades_destacadas button {
+    width: 48px;
+    height: 48px;
+    background: #de2c2f;
+    color: #fff;
+    border: 1px solid #de2c2f;
+    border-radius: 50%;
+    font-size: 45px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.propiedades_destacadas button:hover {
+    background: transparent;
+    color: #333333;
+}
+
 .grid-container_destac {
     display: grid;
     justify-content: center;
-    padding: 10px;
-    grid-template-columns: repeat(3, auto);
-    background-color: transparent;
     gap: 20px;
+    padding: 10px;
+    grid-template-columns: repeat(4, auto);
 }
 
 .carta_prop {
@@ -618,6 +768,7 @@ article h2 {
 
 .titulo_carta_prop {
     padding: 20px;
+    text-align: center;
 }
 
 .titulo_carta_prop a h3 {
@@ -665,7 +816,6 @@ article h2 {
     font-weight: bold;
 }
 
-/* BREVE DESCRIPCIÓN DE SERVICIOS OFRECIDOS */
 .espaciador {
     display: block;
     margin: 90px auto;
@@ -674,58 +824,7 @@ article h2 {
     background-color: #de2c2f;
 }
 
-.contenedor_servicios_desc {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(2, auto);
-    background-color: transparent;
-    gap: 30px;
-    /*gap entre texto e img*/
-}
-
-.img_contenido img {
-    border: 1px solid red;
-    border-radius: 8px;
-    box-shadow: 0 40px 40px 0 rgba(0, 0, 0, .15);
-    max-width: 450px;
-    max-height: 400px;
-}
-
-.texto_serv_desc {
-    max-width: 600px;
-    border: 1px solid red;
-    padding: 10px 0;
-}
-
-.texto_serv_desc ul {
-    padding-top: 20px;
-}
-
-.texto_serv_desc ul li {
-    padding: 10px;
-    font-weight: bold;
-}
-
-#check_list {
-    padding-right: 10px;
-    color: #de2c2f;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.texto_serv_desc ul li a {
-    color: #333333;
-}
-
-.contenedor_servicios_desc h2 {
-    font-size: 35px;
-    padding-bottom: 30px;
-}
-
-.contenedor_servicios_desc p {
-    line-height: 25px;
-}
-
+/* NUESTRO EQUIPO DE ANIMALES EXPERTOS */
 .contenedor_div_grid {
     max-width: 1420px;
     margin-left: auto;
@@ -734,7 +833,6 @@ article h2 {
 }
 
 .titulo_div_grid {
-    max-width: 1420px;
     display: flex;
     justify-content: space-between;
     padding: 0 10px 10px;
@@ -800,33 +898,14 @@ article h2 {
     gap: 30px;
 }
 
+/*TESTIMONIOS*/
 
-.contenedor_blog_art {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    padding: 10px;
-    gap: 30px;
-}
-
-.blog_lista {
-    height: 160px;
-    width: 240px;
-    background-color: red;
-}
-
-.text_blog {
-    height: 160px;
-    width: 700px;
-    background-color: blue;
-}
-
-#articulo_final {
-    padding-bottom: 90px;
-}
+/*COMPAÑEROS?*/
 
 /*--------------------FOOTER-------------------*/
 footer {
     background: #d1d1d1;
+    margin-top: 30px;
 }
 
 .footer_contenedor {
@@ -992,7 +1071,6 @@ footer {
         padding: 5px 1rem;
     }
 
-    
     .logo {
         padding-left: 40px;
     }
@@ -1001,35 +1079,11 @@ footer {
         padding-right: 40px;
     }
 
-    .img_contenido img {
-        height: 340px;
-        width: auto;
-    }
-
-    .contenedor_servicios_desc {
-        font-size: 90%;
-    }
-
-    .contenedor_servicios_desc h2 {
-        font-size: 30px;
-    }
 }
 
 @media (max-width: 850px) {
     .texto_serv_desc {
         max-width: 450px;
-    }
-
-    .img_contenido {
-        grid-area: img_c;
-
-    }
-
-    .contenedor_servicios_desc {
-        grid-template-rows: auto;
-        grid-template-columns: auto auto;
-        grid-template-areas: "texto_s"
-            "img_c";
     }
 
 }

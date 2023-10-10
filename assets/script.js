@@ -105,3 +105,42 @@ const loopEscritura = async () => { //Función async para llamar a la función w
 };
 
 loopEscritura();
+
+//CARRUSEL
+const carrusel = document.getElementById('carrusel'),
+      tarjetas = document.querySelectorAll('.carta_prop'),
+      numTarjetasPorVista = 4;
+let currentIndex = 0;
+
+function mostrarTarjetas(index) {
+  tarjetas.forEach((tarjeta, i) => {
+    tarjeta.style.display = i >= index && i < index + numTarjetasPorVista ? 'block' : 'none';
+  });
+}
+
+function avanzarTarjetas() {
+  currentIndex = (currentIndex + numTarjetasPorVista) % tarjetas.length;
+  mostrarTarjetas(currentIndex);
+}
+
+function retrocederTarjetas() {
+  currentIndex = (currentIndex - numTarjetasPorVista + tarjetas.length) % tarjetas.length;
+  mostrarTarjetas(currentIndex);
+}
+
+const botonAnterior = document.getElementById('anterior'),
+      botonSiguiente = document.getElementById('siguiente');
+
+botonAnterior.addEventListener('click', retrocederTarjetas);
+botonSiguiente.addEventListener('click', avanzarTarjetas);
+
+mostrarTarjetas(currentIndex); //Mostrar las primeras tarjetas al cargar la página
+
+tarjetas.forEach((tarjeta, index) => { //Ocultar tarjetas extras
+  if (index >= numTarjetasPorVista) {
+    tarjeta.style.display = 'none';
+  }
+});
+
+//TESTIMONIOS
+

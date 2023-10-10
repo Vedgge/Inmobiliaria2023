@@ -128,7 +128,7 @@
               <input type="password" id="contraseña" placeholder="Ingresa tu contraseña">
             </div>
             <div class="elementos_form">
-              <input type="checkbox" id="recordarme">
+              <input type="checkbox" id="checkbox">
               <label for="recordarme">Recordar mis datos</label>
             </div>
             <div class="elementos_form">
@@ -138,7 +138,7 @@
               <a href="#">Olvide mi contraseña</a>
             </div>
           </div>
-        </div> 
+        </div>
         <!-- Popup signup form -->
         <div class="popup signup">
           <div class="cerrar_btn">&times;</div>
@@ -159,7 +159,7 @@
               <input type="password" id="contraseña" placeholder="Confirma tu contraseña">
             </div>
             <div class="elementos_form" id="term_cond">
-              <input type="checkbox">
+              <input type="checkbox" id="checkbox">
               <label for="checkbox">Estoy de acuerdo con los<a href="#"> Terminos y Condiciones</a></label>
             </div>
             <div class="elementos_form">
@@ -174,78 +174,189 @@
 
   <!-- Contenido main de la página -->
   <main>
-    <section class="home">
-      <div class="contenido">
-        <h1>Descubre tu futuro <span id="escritura"></span><span id="cursor">|</span></h1>
-        <p>Descubre hogares desde la majestuosa Tierra del Fuego hasta la vibrante Buenos Aires</p>
-        <!--Botones del buscador de propiedades-->
-        <div class="form_contenedor">
-          <div class="busqueda">
-            <button class="type-btn active" data-tab-btn>Alquilar</button>
-            <button class="type-btn" data-tab-btn>Comprar</button>
-            <button class="type-btn" data-tab-btn>Vender</button>
-          </div>
-          <!--Variables básicas para el buscador de propiedades - Son expandidas al buscar propiedades-->
-          <form action="">
-            <div class="input-box">
-              <span>Ubicación</span>
-              <input type="search" name="ubicacion" placeholder="Busca por ubicación">
-            </div>
-            <div class="input-box">
-              <label for="" class="tipo_alquiler">Tipo de alquiler</label>
-              <select name="tipo_alquiler" class="lista">
-                <option value="">Departamento</option>
-                <option value="">Casa</option>
-                <option value="">Oficina</option>
-                <option value="">Hotel</option>
-                <option value="">Edificio Comercial</option>
-              </select>
-            </div>
-            <div class="input-box">
-              <label for="" class="min_dorm">Dormitorios</label>
-              <select name="min_dorm" class="lista">
-                <option value="sin dormitorios min">Sin dormitorios min</option>
-                <option value="">1+</option>
-                <option value="">2+</option>
-                <option value="">3+</option>
-                <option value="">4+</option>
-                <option value="">5+</option>
-              </select>
-            </div>
-            <div class="input-box">
-              <label for="" class="precio">Precio máximo en $</label>
-              <select name="precio" class="lista">
-                <option value="cualquier precio">Cualquier precio</option>
-                <option value="">25.000$</option>
-                <option value="">50.000$</option>
-                <option value="">75.000$</option>
-                <option value="">100.000$</option>
-                <option value="">125.000$</option>
-                <option value="">150.000$</option>
-                <option value="">175.000$</option>
-                <option value="">200.000$</option>
-                <option value="">225.000$</option>
-                <option value="">250.000$</option>
-                <option value="">275.000$</option>
-                <option value="">300.000$</option>
-                <option value="">325.000$</option>
-                <option value="">350.000$</option>
-                <option value="">375.000$</option>
-                <option value="">400.000$</option>
-              </select>
-            </div>
-            <input type="submit" name="enviar" class="btn_submit">
-          </form>
+    <div class="contenido">
+      <h1>Descubre tu futuro <span id="escritura"></span><span id="cursor">|</span></h1>
+      <p>Descubre hogares desde la majestuosa Tierra del Fuego hasta la vibrante Buenos Aires</p>
+      <!--Botones del buscador de propiedades-->
+      <div class="form_contenedor">
+        <div class="busqueda">
+          <button class="type-btn active" data-tab-btn>Alquilar</button>
+          <button class="type-btn" data-tab-btn>Comprar</button>
+          <button class="type-btn" data-tab-btn>Vender</button>
         </div>
+        <!--Variables básicas para el buscador de propiedades - Son expandidas al buscar propiedades-->
+        <form action="">
+          <div class="input-box">
+            <span>Ubicación</span>
+            <input type="search" name="ubicacion" placeholder="Busca por ubicación">
+          </div>
+          <div class="input-box">
+            <label for="" class="tipo_alquiler">Tipo de alquiler</label>
+            <select name="tipo_alquiler" class="lista">
+              <option value="">Departamento</option>
+              <option value="">Casa</option>
+              <option value="">Oficina</option>
+              <option value="">Hotel</option>
+              <option value="">Edificio Comercial</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <label for="" class="min_dorm">Dormitorios</label>
+            <select name="min_dorm" class="lista">
+              <option value="sin dormitorios min">Sin dormitorios min</option>
+              <option value="">1+</option>
+              <option value="">2+</option>
+              <option value="">3+</option>
+              <option value="">4+</option>
+              <option value="">5+</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <label for="" class="precio">Precio máximo en $</label>
+            <select name="precio" class="lista">
+              <option value="cualquier precio">Cualquier precio</option>
+              <option value="">25.000$</option>
+              <option value="">50.000$</option>
+              <option value="">75.000$</option>
+              <option value="">100.000$</option>
+              <option value="">125.000$</option>
+              <option value="">150.000$</option>
+              <option value="">175.000$</option>
+              <option value="">200.000$</option>
+              <option value="">225.000$</option>
+              <option value="">250.000$</option>
+              <option value="">275.000$</option>
+              <option value="">300.000$</option>
+              <option value="">325.000$</option>
+              <option value="">350.000$</option>
+              <option value="">375.000$</option>
+              <option value="">400.000$</option>
+            </select>
+          </div>
+          <input type="submit" name="enviar" class="btn_submit">
+        </form>
+      </div>
+    </div>
+
+    <article>
+      <div class="contenedor_div_grid" id="propiedades_destac">
+        <div class="contenedor_title_prop">
+          <h2>Nuestros servicios</h2>
+          <div class="cto_header_top">
+            <a href="#">Todos los servicios<i class='bx bx-chevron-right' id="more_flecha"></i></a>
+          </div>
+        </div>
+        <p id="first_desc">Estamos muy orgullosos del servicio que brindamos. Vea lo que nuestros huéspedes tienen que
+          decir sobre nosotros, nuestras ubicaciones y servicios.</p>
+      </div>
+      <div class="container_servicios">
+        <div class="hipoteca">
+          <div class="contenedor_desc_serv">
+            <i class='bx bx-money-withdraw'></i>
+            <a href="#" class="desc_contenedores_serv">
+              <h3>Te conseguimos tu hipoteca</h3>
+              <p>Te guiamos en cada paso del proceso de préstamos hipotecarios, desde la evaluación de opciones de
+                financiamiento hasta la obtención de tasas competitivas completamente GRATIS.</p>
+            </a>
+          </div>
+        </div>
+        <div class="mudanza">
+          <div class="contenedor_desc_serv">
+            <i class='bx bxs-truck'></i>
+            <a href="#" class="desc_contenedores_serv">
+              <h3>Te acompañamos en la mudanza</h3>
+              <p>A través de nuestra asociación con XXXXXXX, te ofrecemos un proceso de traslado sin complicaciones.
+                Encuentra tu nuevo hogar con nosotros y deja que nos ocupemos de la mudanza.</p>
+            </a>
+          </div>
+        </div>
+        <div class="tasacion">
+          <div class="contenedor_desc_serv">
+            <i class='bx bx-purchase-tag-alt'></i>
+            <a href="tasar.html" class="desc_contenedores_serv">
+              <h3>¿Cuánto vale tu hogar?</h3>
+              <p>Conoce el valor real de tu propiedad con nuestro equipo de expertos. Nuestro conocimiento y experiencia
+                en el mercado inmobiliario te brindan una evaluación precisa y confiable.</p>
+            </a>
+          </div>
+        </div>
+        <div class="soporte-legal">
+          <div class="contenedor_desc_serv">
+            <i class='bx bx-support'></i>
+            <a href="contacto.html" class="desc_contenedores_serv">
+              <h3>Asesoramiento legal 24/7</h3>
+              <p>Nuestro equipo de expertos especializados en bienes raíces está disponible 24/7 para brindar
+                orientación legal experta en transacciones inmobiliarias, contratos y regulaciones.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="espaciador"></div>
+
+    <article>
+      <div class="contenedor_div_grid" id="propiedades_destac">
+        <div class="contenedor_title_prop">
+          <h2>Lugares más populares</h2>
+          <div class="cto_header_top">
+            <a href="#">Todos los lugares<i class='bx bx-chevron-right' id="more_flecha"></i></a>
+          </div>
+        </div>
+        <p id="first_desc">Estamos muy orgullosos del servicio que brindamos. Vea lo que nuestros huéspedes tienen que
+          decir sobre nosotros, nuestras ubicaciones y servicios.</p>
+      </div>
+      <div class="grid_lugares_popu">
+        <div class="Rosario">
+          <img src="./img/rosario.jpeg" alt="rosario">
+          <a href="#" class="overlay_lug">
+            <h3>Rosario</h3>
+            <p>159 Propiedades</p>
+          </a>
+        </div>
+        <div class="Cordoba">
+          <img src="./img/cordoba.jpeg" alt="cordoba">
+          <a href="#" class="overlay_lug">
+            <h3>Córdoba Capital</h3>
+            <p>356 Propiedades</p>
+          </a>
+        </div>
+        <div class="Buenos-aires">
+          <img src="./img/buenos aires.webp" alt="buenos aires">
+          <a href="#" class="overlay_lug">
+            <h3>Buenos Aires</h3>
+            <p>437 Propiedades</p>
+          </a>
+        </div>
+        <div class="Mar-del-plata">
+          <img src="./img/mar del plata.webp" alt="mar del plata">
+          <a href="#" class="overlay_lug">
+            <h3>Mar del Plata</h3>
+            <p>76 Propiedades</p>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <div class="espaciador"></div>
+
+    <article>
+      <div class="contenedor_div_grid" id="propiedades_destac">
+        <div class="contenedor_title_prop">
+          <h2>Propiedades destacadas</h2>
+          <div class="cto_header_top">
+            <a href="#">Todas las propiedades<i class='bx bx-chevron-right' id="more_flecha"></i></a>
+          </div>
+        </div>
+        <p id="first_desc">Estamos muy orgullosos del servicio que brindamos. Vea lo que nuestros huéspedes tienen que
+          decir sobre nosotros, nuestras ubicaciones y servicios.</p>
       </div>
       <!--Propiedades destacadas del mes-->
       <div class="propiedades_destacadas">
-        <!--Descripción de las cartas de propiedades destacadas / agregar diseño responsivo y estructura-->
-        <h2>Propiedades destacadas en CABA, Buenos Aires</h2>
-        <p id="first_desc">Estamos muy orgullosos del servicio que brindamos. Vea lo que nuestros huéspedes tienen que
-          decir sobre nosotros, nuestras ubicaciones y servicios.</p>
+        <button id="anterior"><i class='bx bx-chevron-left'></i></button>
         <!--Cartas de propiedades destacadas hecho con grid-->
-        <div class="grid-container_destac">
+        <div class="grid-container_destac" id="carrusel">
+          <!--Descripción de las cartas de propiedades destacadas-->
           <div class="carta_prop">
             <figure>
               <a href="#"><img src="./img/depto_4dorm/ejemplo_propiedad.jpg" alt=""></a>
@@ -438,75 +549,87 @@
               </div>
             </div>
           </div>
+          <div class="carta_prop">
+            <figure>
+              <a href="#"><img src="./img/depto_4dorm/ejemplo_casa(3) 1.jpg" alt=""></a>
+              <div class="fav_dest">
+                <!--Corazón de favorito en esquina superior izquierda-->
+              </div>
+            </figure>
+            <div class="desc_prop">
+              <div class="titulo_carta_prop">
+                <a href="#">
+                  <h3>Casa Al Rio en Venta y Alquiler - Barrio Santa Maria de Tigre</h3>
+                </a>
+                <p id="ubicacion_carta"><i class='bx bx-map'></i>Santa María de Tigre, Rincón de Milberg</p>
+              </div>
+              <div class="int_desc_prop">
+                <p id="tipo_prop_carta"><span><i class='bx bx-home-heart'></i>Casa</span></p>
+                <hr>
+                <div class="prop_interior">
+                  <p>
+                    <span><i class='bx bx-door-open'></i>5 Amb</span>
+                    <span><i class='bx bx-bath'></i>6 Baño</span>
+                    <span><i class='bx bx-area'></i>480 m²</span>
+                  </p>
+                </div>
+                <hr>
+                <div class="precio_btn btn_user">
+                  <p id="item_precio"><span>USD 4.100</span></p>
+                  <a href="#" class="registrate">Detalles</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carta_prop">
+            <figure>
+              <a href="#"><img src="./img/depto_4dorm/ejemplo_casa(3) 1.jpg" alt=""></a>
+              <div class="fav_dest">
+                <!--Corazón de favorito en esquina superior izquierda-->
+              </div>
+            </figure>
+            <div class="desc_prop">
+              <div class="titulo_carta_prop">
+                <a href="#">
+                  <h3>Casa Al Rio en Venta y Alquiler - Barrio Santa Maria de Tigre</h3>
+                </a>
+                <p id="ubicacion_carta"><i class='bx bx-map'></i>Santa María de Tigre, Rincón de Milberg</p>
+              </div>
+              <div class="int_desc_prop">
+                <p id="tipo_prop_carta"><span><i class='bx bx-home-heart'></i>Casa</span></p>
+                <hr>
+                <div class="prop_interior">
+                  <p>
+                    <span><i class='bx bx-door-open'></i>5 Amb</span>
+                    <span><i class='bx bx-bath'></i>6 Baño</span>
+                    <span><i class='bx bx-area'></i>480 m²</span>
+                  </p>
+                </div>
+                <hr>
+                <div class="precio_btn btn_user">
+                  <p id="item_precio"><span>USD 4.100</span></p>
+                  <a href="#" class="registrate">Detalles</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
-    <!--Articulos que describan brevemente los servicios que se ofrecen-->
-    <div class="espaciador"></div>
-    <article>
-      <div class="contenedor_servicios_desc">
-        <div class="texto_serv_desc">
-          <h2>¡Te conseguimos tu hipoteca!</h2>
-          <p>Nuestro equipo de expertos te guia en cada paso del proceso de préstamos hipotecarios, desde la evaluación
-            de opciones de financiamiento hasta la obtención de tasas competitivas. Deja que nos encarguemos de las
-            finanzas para que puedas enfocarte en tu nuevo hogar. ¡Y lo mejor de todo es que nuestro servicio es
-            completamente <strong>GRATIS</strong> para ti!</p>
-        </div>
-        <div class="img_contenido"><a href="#"><img src="img/inicio_hipoteca.jpg" alt=""></a></div>
+        <button id="siguiente"><i class='bx bx-chevron-right'></i></button>
       </div>
     </article>
+
     <div class="espaciador"></div>
-    <article>
-      <div class="contenedor_servicios_desc">
-        <div class="img_contenido"><a href=""><img src="img/inicio_mudanza.jpg" alt=""></a></div>
-        <div class="texto_serv_desc">
-          <h2>¡Te acompañamos en tu proceso de mudanza!</h2>
-          <p>A través de nuestra asociación con XXXXXXX, te ofrecemos un proceso de traslado sin complicaciones.
-            Encuentra tu nuevo hogar con nosotros y deja que nos ocupemos de la mudanza.</p>
-        </div>
-      </div>
-    </article>
-    <div class="espaciador"></div>
-    <article class="inicio_tasar">
-      <div class="contenedor_servicios_desc">
-        <div class="texto_serv_desc">
-          <h2>¿Cuánto vale tu hogar?</h2>
-          <p>Conoce el valor real de tu propiedad con nuestro equipo de expertos. Nuestro conocimiento y experiencia en
-            el mercado inmobiliario te brindan una evaluación precisa y confiable.</p>
-        </div>
-        <div class="img_contenido"><a href="tasar.html"><img src="img/inicio_tasar.jpg" alt="foto tasaciones"></a>
-        </div>
-      </div>
-    </article>
-    <div class="espaciador"></div>
-    <article>
-      <div class="contenedor_servicios_desc">
-        <div class="img_contenido"><a href="#"><img src="./img/inicio_otros.jpg" alt="foto casa otros servicios"></a>
-        </div>
-        <div class="texto_serv_desc">
-          <h2>Otros servicios destacados</h2>
-          <p>Descubre todos los servicios que ofrecemos para hacer que tu experiencia inmobiliaria sea excelente.</p>
-          <ul>
-            <li><a href="#"><i class='bx bx-check' id="check_list"></i>Gestión de propiedades</a></li>
-            <li><a href="#"><i class='bx bx-check' id="check_list"></i>Asesoría personalizada</a></li>
-            <li><a href="#"><i class='bx bx-check' id="check_list"></i>Soporte legal</a></li>
-          </ul>
-        </div>
-      </div>
-    </article>
-    <div class="espaciador"></div>
+
     <article>
       <div class="contenedor_div_grid">
-        <div class="titulo_div_grid">
-          <h1>Nuestro equipo de expertos</h1>
+        <div class="titulo_div_grid" id="propiedades_destac">
+          <h2>Nuestro equipo de expertos</h2>
           <div class="cto_header_top">
             <a href="#"><i class='bx bx-envelope'></i>Contáctanos</a>
             <a href="#"><i class='bx bx-phone'></i>(999) 999-9999</a>
           </div>
         </div>
-
         <div class="contendor_tarjetas_nosotros">
-
           <div class="tarjetas_ind_nosotros uno">
             <div class="foto_experto_inicio"><a href="#"><img src="./img/integrantes/int1.jpg" alt="foto experto"></a>
             </div>
@@ -581,22 +704,55 @@
         </div>
       </div>
     </article>
+
     <div class="espaciador"></div>
-    <article id="articulo_final">
-      <div class="contenedor_div_grid">
-        <div class="titulo_div_grid">
-          <h2>El blog más importante del inmobiliario argentino</h2>
+
+    <article>
+      <div class="contenedor_div_grid" id="propiedades_destac">
+        <div class="contenedor_title_prop">
+          <h2>Testimonios de nuestros huéspedes</h2>
+          <div class="cto_header_top">
+            <a href="#">Todas los testimonios<i class='bx bx-chevron-right' id="more_flecha"></i></a>
+          </div>
         </div>
-        <div class="contenedor_blog_art">
-          <div class="blog_lista"></div>
-          <div class="text_blog"></div>
-          <div class="blog_lista"></div>
-          <div class="text_blog"></div>
-          <div class="blog_lista"></div>
-          <div class="text_blog"></div>
+        <p id="first_desc">Estamos muy orgullosos del servicio que brindamos. Vea lo que nuestros huéspedes tienen que
+          decir sobre nosotros, nuestras ubicaciones y servicios.</p>
+
+        <div class="testimonios_contenedor">
+          <div class="testimonios">
+            <p>"Excelente servicio. ¡Encontré la casa de mis sueños con su ayuda!"</p>
+            <p class="autor">- Ana Pérez</p>
+          </div>
+          <div class="testimonios">
+            <p>"El equipo de esta inmobiliaria es increíble. Me ayudaron a vender mi propiedad rápidamente."</p>
+            <p class="autor">- Juan Rodríguez</p>
+          </div>
+          <div class="testimonios">
+            <p>"Muy profesionales. Me ayudaron a encontrar un apartamento que se ajusta a mis necesidades."</p>
+            <p class="autor">- María López</p>
+          </div>
+          <div class="testimonios">
+            <p>"Excelente atención al cliente. Recomiendo sus servicios a todos."</p>
+            <p class="autor">- Luis Gómez</p>
+          </div>
         </div>
       </div>
     </article>
+
+    <div class="espaciador"></div>
+
+    <article>
+      <div class="contenedor_div_grid" id="propiedades_destac">
+        <div class="contenedor_title_prop">
+          <h2>Nuestros compañeros</h2>
+        </div>
+        <p id="first_desc">Las compañías que nos representan</p>
+        <div class="carrusel_logos">
+
+        </div>
+      </div>
+    </article>
+
   </main>
 
   <footer>
