@@ -27,149 +27,149 @@
 </head>
 
 <body>
- <!--header-->
- <header class="header">
+  <!--header-->
+  <header class="header">
 
-  <!--Sección superior del header con redes sociales y contacto-->
-  <div class="header-top">
-    <div class="data_header">
-      <div class="contendor_data_header">
-        <div class="cto_header_top">
-          <a href="#"><i class='bx bx-envelope'></i>info@andesinmobiliaria.com</a>
-        </div>
-        <div class="cto_header_top">
-          <a href="#"><i class='bx bx-phone'></i>(999) 999-9999</a>
-        </div>
-        <div class="social">
-          <a href="#"><i class='bx bxl-whatsapp'></i></a>
-          <a href="#"><i class='bx bxl-facebook-square'></i></a>
-          <a href="#"><i class='bx bxl-instagram'></i></a>
-          <a href="#"><i class='bx bxl-youtube'></i></a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!--Sección inferior del header con botones de navegación / agregar diseño responsivo y estructura-->
-  <nav class="header-bottom">
-    <div class="brand">
-      <a href="index.html"><img src="./img/andes_fontlogo.png" alt="logo inmobiliaria andes" class="logo"></a>
-    </div>
-
-    <!--Navbar-->
-    <a href="#" class="toggle_button">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </a>
-
-    <div class="navbar_link">
-      <ul class="navbar_ul">
-        <li><a href="index.html" class="active">Inicio</a></li>
-        <li>
-          <a href="alquilar.html">Alquilar</a>
-          <ul class="drowpdown_lista">
-            <div class="dropdown_cont">
-              <div class="dropdown_titulo">Tipo de propiedades</div>
-              <ul class="dropdown_prop">
-                <li><a href="#">Edificios Comerciales</a></li>
-                <li><a href="#">Hoteles</a></li>
-                <li><a href="#">Apartamentos</a></li>
-                <li><a href="#">Casas</a></li>
-                <li><a href="#">Oficinas</a></li>
-              </ul>
-            </div>
-            <div class="dropdown_cont">
-              <div class="dropdown_titulo">Provincia</div>
-              <ul class="dropdown_prop">
-                <li><a href="#">Buenos Aires</a></li>
-                <li><a href="#">Córdoba</a></li>
-                <li><a href="#">Tierra del Fuego</a></li>
-                <li><a href="#">Neuquén</a></li>
-                <li><a href="#">Santa Fe</a></li>
-              </ul>
-            </div>
-            <div class="dropdown_cont">
-              <div class="dropdown_titulo">Ciudades</div>
-              <ul class="dropdown_prop">
-                <li><a href="#">Capital Federal</a></li>
-                <li><a href="#">Córdoba Capital</a></li>
-                <li><a href="#">Rosario</a></li>
-                <li><a href="#">Mar del Plata</a></li>
-                <li><a href="#">Neuquén Capital</a></li>
-              </ul>
-            </div>
-          </ul>
-        </li>
-        <li><a href="comprar.html">Comprar</a></li>
-        <li><a href="vender.html">Vender</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="tasar.html">Tasar</a></li>
-      </ul>
-      <div class="btn_user">
-        <button id="mostrar_popup"><a>Iniciar sesión</a></button>
-        <a href="#" class="registrate">Registrate</a>
-      </div>
-      <div class="overlay"></div>
-      <!-- Popup login form -->
-      <div class="popup login">
-        <div class="cerrar_btn">&times;</div>
-        <div class="form">
-          <h2>Iniciar sesión</h2>
-          <p>Guarde búsquedas, sus propiedades favoritas y más</p>
-          <p>¿Nuevo en el sitio? <a href="#" id="registrar">Registra una cuenta</a></p>
-          <div class="elementos_form">
-            <label for="email">Email</label>
-            <input type="text" id="email" placeholder="Ingresa tu email">
+    <!--Sección superior del header con redes sociales y contacto-->
+    <div class="header-top">
+      <div class="data_header">
+        <div class="contendor_data_header">
+          <div class="cto_header_top">
+            <a href="#"><i class='bx bx-envelope'></i>info@andesinmobiliaria.com</a>
           </div>
-          <div class="elementos_form">
-            <label for="contraseña">Contraseña</label>
-            <input type="password" id="contraseña" placeholder="Ingresa tu contraseña">
+          <div class="cto_header_top">
+            <a href="#"><i class='bx bx-phone'></i>(999) 999-9999</a>
           </div>
-          <div class="elementos_form">
-            <input type="checkbox" id="recordarme">
-            <label for="recordarme">Recordar mis datos</label>
-          </div>
-          <div class="elementos_form">
-            <button class="btn_submit">Iniciar sesión</button>
-          </div>
-          <div class="elementos_form">
-            <a href="#">Olvide mi contraseña</a>
-          </div>
-        </div>
-      </div> 
-      <!-- Popup signup form -->
-      <div class="popup signup">
-        <div class="cerrar_btn">&times;</div>
-        <div class="form">
-          <h2>Registrarse</h2>
-          <p>Guarde búsquedas, sus propiedades favoritas y más</p>
-          <p>¿Ya tienes una cuenta? <a href="#" id="iniciar_sesion">Inicia sesión</a></p>
-          <div class="elementos_form">
-            <label for="email">Email</label>
-            <input type="text" id="email" placeholder="Ingresa tu email">
-          </div>
-          <div class="elementos_form">
-            <label for="contraseña">Contraseña</label>
-            <input type="password" id="contraseña" placeholder="Crea tu contraseña">
-          </div>
-          <div class="elementos_form">
-            <label for="contraseña">Confirma contraseña</label>
-            <input type="password" id="contraseña" placeholder="Confirma tu contraseña">
-          </div>
-          <div class="elementos_form" id="term_cond">
-            <input type="checkbox">
-            <label for="checkbox">Estoy de acuerdo con los<a href="#"> Terminos y Condiciones</a></label>
-          </div>
-          <div class="elementos_form">
-            <button class="btn_submit">Regsitrate</button>
+          <div class="social">
+            <a href="#"><i class='bx bxl-whatsapp'></i></a>
+            <a href="#"><i class='bx bxl-facebook-square'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-youtube'></i></a>
           </div>
         </div>
       </div>
-
     </div>
-  </nav>
-</header>
+
+    <!--Sección inferior del header con botones de navegación / agregar diseño responsivo y estructura-->
+    <nav class="header-bottom">
+      <div class="brand">
+        <a href="index.html"><img src="./img/andes_fontlogo.png" alt="logo inmobiliaria andes" class="logo"></a>
+      </div>
+
+      <!--Navbar-->
+      <a href="#" class="toggle_button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+
+      <div class="navbar_link">
+        <ul class="navbar_ul">
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li>
+            <a href="alquilar.html">Alquilar</a>
+            <ul class="drowpdown_lista">
+              <div class="dropdown_cont">
+                <div class="dropdown_titulo">Tipo de propiedades</div>
+                <ul class="dropdown_prop">
+                  <li><a href="#">Edificios Comerciales</a></li>
+                  <li><a href="#">Hoteles</a></li>
+                  <li><a href="#">Apartamentos</a></li>
+                  <li><a href="#">Casas</a></li>
+                  <li><a href="#">Oficinas</a></li>
+                </ul>
+              </div>
+              <div class="dropdown_cont">
+                <div class="dropdown_titulo">Provincia</div>
+                <ul class="dropdown_prop">
+                  <li><a href="#">Buenos Aires</a></li>
+                  <li><a href="#">Córdoba</a></li>
+                  <li><a href="#">Tierra del Fuego</a></li>
+                  <li><a href="#">Neuquén</a></li>
+                  <li><a href="#">Santa Fe</a></li>
+                </ul>
+              </div>
+              <div class="dropdown_cont">
+                <div class="dropdown_titulo">Ciudades</div>
+                <ul class="dropdown_prop">
+                  <li><a href="#">Capital Federal</a></li>
+                  <li><a href="#">Córdoba Capital</a></li>
+                  <li><a href="#">Rosario</a></li>
+                  <li><a href="#">Mar del Plata</a></li>
+                  <li><a href="#">Neuquén Capital</a></li>
+                </ul>
+              </div>
+            </ul>
+          </li>
+          <li><a href="comprar.html">Comprar</a></li>
+          <li><a href="vender.html">Vender</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="tasar.html">Tasar</a></li>
+        </ul>
+        <div class="btn_user">
+          <button id="mostrar_popup_li"><a>Iniciar sesión</a></button>
+          <a class="registrate" id="mostrar_popup_sp">Registrate</a>
+        </div>
+        <div class="overlay"></div>
+        <!-- Popup login form -->
+        <div class="popup login">
+          <div class="cerrar_btn">&times;</div>
+          <div class="form">
+            <h2>Iniciar sesión</h2>
+            <p>Guarde búsquedas, sus propiedades favoritas y más</p>
+            <p>¿Nuevo en el sitio? <a href="#" id="registrar">Registra una cuenta</a></p>
+            <div class="elementos_form">
+              <label for="email">Email</label>
+              <input type="text" id="email" placeholder="Ingresa tu email">
+            </div>
+            <div class="elementos_form">
+              <label for="contraseña">Contraseña</label>
+              <input type="password" id="contraseña" placeholder="Ingresa tu contraseña">
+            </div>
+            <div class="elementos_form">
+              <input type="checkbox" id="checkbox">
+              <label for="recordarme">Recordar mis datos</label>
+            </div>
+            <div class="elementos_form">
+              <button class="btn_submit">Iniciar sesión</button>
+            </div>
+            <div class="elementos_form">
+              <a href="#">Olvide mi contraseña</a>
+            </div>
+          </div>
+        </div>
+        <!-- Popup signup form -->
+        <div class="popup signup">
+          <div class="cerrar_btn">&times;</div>
+          <div class="form">
+            <h2>Registrarse</h2>
+            <p>Guarde búsquedas, sus propiedades favoritas y más</p>
+            <p>¿Ya tienes una cuenta? <a href="#" id="iniciar_sesion">Inicia sesión</a></p>
+            <div class="elementos_form">
+              <label for="email">Email</label>
+              <input type="text" id="email" placeholder="Ingresa tu email">
+            </div>
+            <div class="elementos_form">
+              <label for="contraseña">Contraseña</label>
+              <input type="password" id="contraseña" placeholder="Crea tu contraseña">
+            </div>
+            <div class="elementos_form">
+              <label for="contraseña">Confirma contraseña</label>
+              <input type="password" id="contraseña" placeholder="Confirma tu contraseña">
+            </div>
+            <div class="elementos_form" id="term_cond">
+              <input type="checkbox" id="checkbox">
+              <label for="checkbox">Estoy de acuerdo con los<a href="#"> Terminos y Condiciones</a></label>
+            </div>
+            <div class="elementos_form">
+              <button class="btn_submit">Regsitrate</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+  </header>
 </body>
 </html>
