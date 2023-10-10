@@ -211,15 +211,15 @@ article {
     width: 45px;
   }
   
-  .x:nth-of-type(2) {
+.x:nth-of-type(2) {
     opacity: 0;
-  }
+}
   
-  .x:nth-of-type(3) {
+.x:nth-of-type(3) {
     transform: rotate(-45deg);
     transform-origin: bottom left;
     width: 45px;
-  } 
+} 
 /*--------------------POPUP INICIO DE SESIÓN-----------------*/
 .overlay {
     display: none;
@@ -858,6 +858,31 @@ linear-gradient(rgba(31, 0, 31, 0.37), rgba(31, 8, 8, 0.37)); GRADIENT ORIGINAL 
 }
 
 /* NUESTRO EQUIPO DE ANIMALES EXPERTOS */
+.escondido {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.mostrar {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.contendor_tarjetas_nosotros .dos{
+    transition-delay: 0.2s;
+}
+
+.contendor_tarjetas_nosotros .tres{
+    transition-delay: 0.4s;
+}
+
+.contendor_tarjetas_nosotros .cuatro{
+    transition-delay: 0.6s;
+}
+
 .contenedor_div_grid {
     max-width: 1420px;
     margin-left: auto;
@@ -997,6 +1022,21 @@ linear-gradient(rgba(31, 0, 31, 0.37), rgba(31, 8, 8, 0.37)); GRADIENT ORIGINAL 
     padding: 10px;
 }
 
+.testimonio-2 {
+    transition-delay: 0.2s;
+}
+
+.testimonio-3 {
+    transition-delay: 0.4s;
+}
+
+.testimonio-4 {
+    transition-delay: 0.6s;
+}
+
+.testimonio-5 {
+    transition-delay: 0.8s;
+}
 /*COMPAÑEROS?*/
 
 .logos {

@@ -117,6 +117,18 @@ const loopEscritura = async () => { //Función async para llamar a la función w
 
 loopEscritura();
 
+//ANIMACIÓN SCROLL
+const observador = new IntersectionObserver((entries) => { //Creo una clase llamada IntersectionObserver que toma una función callback en su constructor, observa varias entrys
+  entries.forEach((entry) => { //Loop sobre los multiples entrys (elementos escondidos)
+    if (entry.isIntersecting) { //Condicional para saber si esta intersectando el viewport, si es así le agregamos la clase mostrar
+      entry.target.classList.add('mostrar');
+    }
+  });
+});
+
+const hiddenElements = document.querySelectorAll('.escondido'); //Selecciono todos los elemtnos que tengan la clase escondido
+hiddenElements.forEach((el) => observador.observe(el)); //Acá le decimos que observar al observador, loopea sobre todos los elementos escondidos
+
 //CARRUSEL
 const tarjetas = document.querySelectorAll('.carta_prop'),
       numTarjetasPorVista = 4; //Máximo n° de tarjetas a mostrar
