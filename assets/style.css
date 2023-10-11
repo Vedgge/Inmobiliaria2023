@@ -673,6 +673,11 @@ article h2 {
     height: 100%;
     background-image: linear-gradient(rgba(31, 0, 31, 0.192), rgba(31, 8, 8, 0.452));
     z-index: 1;
+    transition: 0.3s;
+}
+
+.grid_lugares_popu .overlay_lug:hover {
+    transform: scale(1.07);
 }
 
 /* 
@@ -702,7 +707,7 @@ linear-gradient(rgba(31, 0, 31, 0.37), rgba(31, 8, 8, 0.37)); GRADIENT ORIGINAL 
     content: '';
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(rgba(31, 0, 31, 0.2), rgba(161, 46, 46, 0.329));
+    background-image: linear-gradient(rgba(31, 0, 31, 0.37), rgba(161, 46, 46, 0.37));
     z-index: 2;
     transition: opacity 0.3s;
     opacity: 0;
@@ -711,7 +716,7 @@ linear-gradient(rgba(31, 0, 31, 0.37), rgba(31, 8, 8, 0.37)); GRADIENT ORIGINAL 
 .grid_lugares_popu .overlay_lug:hover:after {
     opacity: 0.5;
   }
-  
+
 .overlay_lug h3, .overlay_lug p {
     letter-spacing: 2px;
     color: #FFF;
@@ -784,7 +789,7 @@ linear-gradient(rgba(31, 0, 31, 0.37), rgba(31, 8, 8, 0.37)); GRADIENT ORIGINAL 
 .carta_prop figure img {
     width: 100%;
     min-height: 232.47px;
-    transition: .2s linear;
+    transition: 0.2s linear;
 }
 
 .carta_prop figure img:hover {
