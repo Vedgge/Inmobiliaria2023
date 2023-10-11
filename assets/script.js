@@ -83,8 +83,8 @@ function sleep(ms){ //Funcion promesa para esperar unos milisegundos
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-const frases = ['hogar','departamento', 'local'];
-const elementos = document.getElementById("escritura");
+const frases = ['hogar','departamento', 'local'],
+      elementos = document.getElementById("escritura");
 
 let waitTime = 100; //Tiempo para esperar entre letras
 
@@ -107,7 +107,7 @@ const loopEscritura = async () => { //Función async para llamar a la función w
 
     await sleep(waitTime * 5); //Tiempo de espera entre eliminación y escritura
 
-    if (curFrases === frases.length - 1){ //Lógica para escribir la siguiente frase/palabra
+    if (curFrases === frases.length - 1){ //Lógica para borrar palabra actual y escribir la siguiente frase/palabra
       curFrases = 0;
     } else {
       curFrases++;
@@ -117,7 +117,7 @@ const loopEscritura = async () => { //Función async para llamar a la función w
 
 loopEscritura();
 
-//ANIMACIÓN SCROLL
+//ANIMACIÓN SCROLL SLIDE RIGHT -> CENTER
 const observador = new IntersectionObserver((entries) => { //Creo una clase llamada IntersectionObserver que toma una función callback en su constructor, observa varias entrys
   entries.forEach((entry) => { //Loop sobre los multiples entrys (elementos escondidos)
     if (entry.isIntersecting) { //Condicional para saber si esta intersectando el viewport, si es así le agregamos la clase mostrar
@@ -126,9 +126,20 @@ const observador = new IntersectionObserver((entries) => { //Creo una clase llam
   });
 });
 
-const hiddenElements = document.querySelectorAll('.escondido'); //Selecciono todos los elemtnos que tengan la clase escondido
-hiddenElements.forEach((el) => observador.observe(el)); //Acá le decimos que observar al observador, loopea sobre todos los elementos escondidos
+const elEscondidos = document.querySelectorAll('.escondido'); //Selecciono todos los elemtnos que tengan la clase escondido
+elEscondidos.forEach((el) => observador.observe(el)); //Acá le decimos que observar al observador, loopea sobre todos los elementos escondidos
 
+//ANIMACIÓN SCROLL SLIDE-DOWN -> UP
+const observador2 = new IntersectionObserver((entries) => { 
+  entries.forEach((entry) => { 
+    if (entry.isIntersecting) { 
+      entry.target.classList.add('mostrar-1');
+    }
+  });
+});
+
+const elEscondidos2 = document.querySelectorAll('.escondido-1'); 
+elEscondidos2.forEach((el) => observador2.observe(el)); 
 //CARRUSEL
 const tarjetas = document.querySelectorAll('.carta_prop'),
       numTarjetasPorVista = 4; //Máximo n° de tarjetas a mostrar

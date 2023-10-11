@@ -32,6 +32,31 @@ article {
     }
 }
 
+.escondido { /*Slide right -> center*/
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.mostrar { /*Slide right -> center*/
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.escondido-1 { /*Slide down -> center*/
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100%);
+    transition: all 1s;
+}
+
+.mostrar-1 { /*Slide down -> center*/
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
 /*--------------------PRELOAD-------------------*/
 
 /*--------------------LOGO-------------------*/
@@ -619,7 +644,7 @@ article h2 {
 
 .container_servicios .contenedor_desc_serv:hover {
     cursor: pointer;
-    transform: translateY(-20px);
+    transform: translateY(-15px);
 }
 
 /*GRID LUGARES POPULARES*/
@@ -640,11 +665,11 @@ article h2 {
 
 .Rosario { grid-area: Rosario; position: relative;}
   
-.Cordoba { grid-area: Cordoba; position: relative;}
+.Cordoba { grid-area: Cordoba; position: relative; transition-delay: 0.1s;}
   
-.Buenos-aires { grid-area: Buenos-aires; position: relative;}
+.Buenos-aires { grid-area: Buenos-aires; position: relative; transition-delay: 0.2s;}
   
-.Mar-del-plata { grid-area: Mar-del-plata; position: relative;}
+.Mar-del-plata { grid-area: Mar-del-plata; position: relative; transition-delay: 0.3s;}
 
 .grid_lugares_popu > div {
     display: flex;
@@ -863,19 +888,6 @@ linear-gradient(rgba(31, 0, 31, 0.37), rgba(31, 8, 8, 0.37)); GRADIENT ORIGINAL 
 }
 
 /* NUESTRO EQUIPO DE ANIMALES EXPERTOS */
-.escondido {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-100%);
-    transition: all 1s;
-}
-
-.mostrar {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-}
-
 .contendor_tarjetas_nosotros .dos{
     transition-delay: 0.2s;
 }
@@ -981,13 +993,13 @@ linear-gradient(rgba(31, 0, 31, 0.37), rgba(31, 8, 8, 0.37)); GRADIENT ORIGINAL 
   
   .testimonio-1 { grid-area: testimonio-1; }
   
-  .testimonio-2 { grid-area: testimonio-2; }
+  .testimonio-2 { grid-area: testimonio-2; transition-delay: 0.2s;}
   
-  .testimonio-3 { grid-area: testimonio-3; }
+  .testimonio-3 { grid-area: testimonio-3; transition-delay: 0.4s;}
   
-  .testimonio-4 { grid-area: testimonio-4; }
+  .testimonio-4 { grid-area: testimonio-4; transition-delay: 0.6s;}
   
-  .testimonio-5 { grid-area: testimonio-5; }
+  .testimonio-5 { grid-area: testimonio-5; transition-delay: 0.8s;}
 
 .testimonios {
     display: flex;
@@ -1027,23 +1039,7 @@ linear-gradient(rgba(31, 0, 31, 0.37), rgba(31, 8, 8, 0.37)); GRADIENT ORIGINAL 
     padding: 10px;
 }
 
-.testimonio-2 {
-    transition-delay: 0.2s;
-}
-
-.testimonio-3 {
-    transition-delay: 0.4s;
-}
-
-.testimonio-4 {
-    transition-delay: 0.6s;
-}
-
-.testimonio-5 {
-    transition-delay: 0.8s;
-}
-/*COMPAÑEROS?*/
-
+/*COMPAÑEROS*/
 .logos {
     overflow: hidden;
     white-space: nowrap;
