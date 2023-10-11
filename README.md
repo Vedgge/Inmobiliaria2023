@@ -3,6 +3,14 @@
 Este repositorio contiene el código fuente de la página web de Inmobiliaria Andes, donde podrás encontrar propiedades para alquilar, comprar y vender.
 Forma parte de un Tabajo práctico para el curso **Full Stack 2023** del programa [codo a codo](https://aulasvirtuales.edu.ar)
 
+## Objetivo
+Desarrollar un sitio web de inmobiliaria que sea atractivo, funcional y fácil de usar.
+&emsp; 
+
+    Desarrollar un sitio web que sea responsive y se vea bien en diferentes dispositivos.
+    Desarrollar un sitio web que incluya un formulario de contacto que sea fácil de usar y que recopile información relevante de los clientes potenciales.
+    Desarrollar un sitio web que incluya una galería de imágenes de las propiedades disponibles.
+
 ## Características
 
 - Utiliza HTML, CSS y JavaScript para la estructura, diseño y funcionalidad de la página.
