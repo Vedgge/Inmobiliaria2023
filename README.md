@@ -55,7 +55,7 @@ El repositorio contiene los siguientes archivos y carpetas:
 
 [x] Utilizar Flexbox y/o CSS Grid para la maquetación.
 
-[   ] Realizar una solicitud a una API Rest desde JavaScript.
+[ ] Realizar una solicitud a una API Rest desde JavaScript.
 
 [o] Si se utiliza Bootstrap, solo en la página del formulario.
 
