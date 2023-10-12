@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Datos</title>
+</head>
+<body>
+    <h1>Datos del Formulario enviados correctamente</h1>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const params = new URLSearchParams(location.search);
+            const ciudad = params.get("ciudad");
+            const barrio = params.get("barrio");
+            const calle = params.get("calle");
+            const piso = params.get("piso");
+            const habitaciones = params.get("habitaciones");
+            const banos = params.get("banos");
+            const area = params.get("area");
+            const correo = params.get("correo");
+
+            const datosContainer = document.createElement("div");
+            datosContainer.innerHTML = `
+                <p>Ciudad: ${ciudad}</p>
+                <p>Barrio: ${barrio}</p>
+                <p>Teléfono: ${calle}</p>
+                <p>Piso: ${piso}</p>
+                <p>Habitaciones: ${habitaciones}</p>
+                <p>Baños: ${banos}</p>
+                <p>Area: ${area}</p>
+                <p>Correo: ${correo}</p>
+            `;
+
+            document.body.appendChild(datosContainer);
+        });
+    </script>
+
+    <a href="index.html">Volver al inicio</a>
+</body>
+</html>
