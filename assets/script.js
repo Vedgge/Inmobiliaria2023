@@ -145,7 +145,7 @@ elEscondidos2.forEach((el) => observador2.observe(el));
 //CARRUSEL
  const tarjetas = document.querySelectorAll('.tarjeta_prop'),
       numTarjetasPorVista = 4; //Máximo n° de tarjetas a mostrar
- let currentIndex = 0; //Inicializo la variable currentIndex dentro de Let porque va a ser mutable, es como un contador o seguimiento
+ let tarjetasIndex = 0; //Inicializo la variable tarjetasIndex dentro de Let porque va a ser mutable, es como un contador o seguimiento
 
  function mostrarTarjetas(index) { //Toma parametro index que especifica el indice de la tarjeta a mostrar
    tarjetas.forEach((tarjeta, i) => { //Recorre todas las tarjetas del carrusel, "tarjeta" representa cada carta individual e "i" el indice de la tarjeta en el array
@@ -155,13 +155,13 @@ elEscondidos2.forEach((el) => observador2.observe(el));
  }
 
 function avanzarTarjetas() {
-   currentIndex = (currentIndex + 1) % tarjetas.length; //Aumenta currentIndex en +1 para avanzar al siguiente, cuando currentIndex + 1 = 4, el módulo con tarjetas.length me da 0, volviendo al primer bucle
-  mostrarTarjetas(currentIndex);
+  tarjetasIndex = (tarjetasIndex + 1) % tarjetas.length; //Aumenta tarjetasIndex en +1 para avanzar al siguiente, cuando currentIndex + 1 = 4, el módulo con tarjetas.length me da 0, volviendo al primer bucle
+  mostrarTarjetas(tarjetasIndex);
  }
 
  function retrocederTarjetas() {
-   currentIndex = (currentIndex - 1 + tarjetas.length) % tarjetas.length; //Lo mismo que avanzar, pero contrario
-   mostrarTarjetas(currentIndex);
+  tarjetasIndex = (tarjetasIndex - 1 + tarjetas.length) % tarjetas.length; //Lo mismo que avanzar, pero contrario
+   mostrarTarjetas(tarjetasIndex);
 }
 
 const botonAnterior = document.getElementById('anterior'),
@@ -170,5 +170,5 @@ const botonAnterior = document.getElementById('anterior'),
 botonAnterior.addEventListener('click', retrocederTarjetas);
 botonSiguiente.addEventListener('click', avanzarTarjetas);
 
-mostrarTarjetas(currentIndex); //Mostrar las primeras tarjetas al cargar la página
+mostrarTarjetas(tarjetasIndex); //Mostrar las primeras tarjetas al cargar la página
 

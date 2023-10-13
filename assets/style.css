@@ -792,8 +792,8 @@ linear-gradient(rgba(31, 0, 31, 0.37), rgba(31, 8, 8, 0.37)); GRADIENT ORIGINAL 
 .container-tarjetas-prop {
     max-width: 1420px;
     display: flex;
-    align-items: center; /* Center items vertically */
-    gap: 20px; /* Adjust the gap between cards as needed */
+    align-items: center; 
+    gap: 20px; 
 }
 
 .tarjeta_prop {
