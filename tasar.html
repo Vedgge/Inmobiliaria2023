@@ -25,6 +25,9 @@
 
   <!--- favicon -->
   <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
+
+  <!--- validacion -->
+  <script src="./assets/tasar.js" defer></script>
 </head>
 
 <body>
@@ -179,27 +182,28 @@
       <div class="contenido">
         <h1>Cotizamos tu vivienda al mejor precio</h1>
         <p>Ahora te podrás proyectar hacia el lugar de tus sueños</p>
-        <form action="agregar-vivienda" method="post" class="formulario">
+        <!-- <form action="agregar-vivienda" method="post" class="formulario"> -->
+        <form action="mostrar-datos-tasar.html" id="viviendaForm" class="formulario">
             <ul class="columna">
                 <li class="campo ciudad">
                     <label for="ciudad">Ciudad</label>
                     <br>
-                    <input type="text" id="ciudad" name="ciudad" required>
+                    <input type="text" id="ciudad" name="ciudad">
                 </li>
                 <li class="campo barrio">
                     <label for="barrio">Barrio</label>
                     <br>
-                    <input type="text" id="barrio" name="barrio" required>
+                    <input type="text" id="barrio" name="barrio">
                 </li>
                 <li class="campo calle">
                     <label for="calle">Calle</label>
                     <br>
-                    <input type="text" id="calle" name="calle" required>
+                    <input type="text" id="calle" name="calle">
                 </li>
                 <li class="campo numero">
                     <label for="numero">Número</label>
                     <br>
-                    <input type="text" id="numero" name="numero" required>
+                    <input type="text" id="numero" name="numero">
                 </li>
                 <li class="campo piso">
                     <label for="piso">Piso</label>
@@ -209,22 +213,22 @@
                 <li class="campo habitaciones">
                     <label for="habitaciones">Habitaciones</label>
                     <br>
-                    <input type="text" id="habitaciones" name="habitaciones" required>
+                    <input type="text" id="habitaciones" name="habitaciones">
                 </li>
                 <li class="campo banos">
                     <label for="banos">Baños</label>
                     <br>
-                    <input type="text" id="banos" name="banos" required>
+                    <input type="text" id="banos" name="banos">
                 </li>
                 <li class="campo area">
                     <label for="area">Área (m2)</label>
                     <br>
-                    <input type="text" id="area" name="area" required>
+                    <input type="text" id="area" name="area">
                 </li>
                 <li class="campo correo">
                     <label for="correo">Correo electrónico</label>
                     <br>
-                    <input type="email" id="correo" name="correo" required>
+                    <input type="email" id="correo" name="correo">
                 </li>
                 <li class="campo boton enviar">
                     <button type="submit">Agregar Propiedad</button>
