@@ -45,7 +45,7 @@ El repositorio contiene los siguientes archivos y carpetas:
 
 [x] Diseñar la estructura del sitio usando etiquetas semánticas.
 
-[ ] Crear un formulario de contacto con validación en JavaScript.
+[x] Crear un formulario de contacto con validación en JavaScript.
 
 [x] Incluir al menos un iframe, íconos (FontAwesome, Flaticon), y fuentes (locales o Google Fonts).
 
