@@ -5,6 +5,18 @@ const mostrarPopupLi = document.querySelector("#mostrar_popup_li"),
       mostrarPopupSu = document.querySelector("#mostrar_popup_sp"),
       popupSignup = document.querySelector(".signup");
 
+mostrarPopupLi.addEventListener("click", abrirPopupInicioSesion);
+
+mostrarPopupSu.addEventListener("click", abrirPopupRegistro);
+
+document.querySelector(".login .cerrar_btn").addEventListener("click", cerrarPopupInicioSesion);
+
+document.querySelector("#registrar").addEventListener("click", popupInicioSesionAPopupRegistro);
+
+document.querySelector("#iniciar_sesion").addEventListener("click", popupRegistroAPopupInicioSesion);
+
+document.querySelector(".signup .cerrar_btn").addEventListener("click", cerrarPopupRegistro);
+
 function abrirPopupRegistro(){
   popupSignup.classList.add("active");
   overlay.classList.add("active");
@@ -15,14 +27,11 @@ function abrirPopupInicioSesion(){
   overlay.classList.add("active");
 }
 
-mostrarPopupLi.addEventListener("click", abrirPopupInicioSesion);
-
-mostrarPopupSu.addEventListener("click", abrirPopupRegistro);
-
 function popupInicioSesionAPopupRegistro(){
   popupLogin.classList.remove("active");
   popupSignup.classList.add("active");
 }
+
 function popupRegistroAPopupInicioSesion(){
   popupLogin.classList.add("active");
   popupSignup.classList.remove("active");
@@ -50,14 +59,6 @@ function cerrarPopupInicioSesion(){
     overlay.classList.remove("closing"); //Elimina la clase de cierre después de la animación
   }, 500); 
 }
-
-document.querySelector(".login .cerrar_btn").addEventListener("click", cerrarPopupInicioSesion);
-
-document.querySelector("#registrar").addEventListener("click", popupInicioSesionAPopupRegistro);
-
-document.querySelector("#iniciar_sesion").addEventListener("click", popupRegistroAPopupInicioSesion);
-
-document.querySelector(".signup .cerrar_btn").addEventListener("click", cerrarPopupRegistro);
 
 //ANIMACIÓN HAMBURGUESA
 let toggleBtn = document.querySelector('.toggle_button')
@@ -140,31 +141,34 @@ const observador2 = new IntersectionObserver((entries) => {
 
 const elEscondidos2 = document.querySelectorAll('.escondido-1'); 
 elEscondidos2.forEach((el) => observador2.observe(el)); 
-//CARRUSEL
-const tarjetas = document.querySelectorAll('.carta_prop'),
-      numTarjetasPorVista = 4; //Máximo n° de tarjetas a mostrar
-let currentIndex = 0; //Inicializo la variable currentIndex dentro de Let porque va a ser mutable, es como un contador o seguimiento
 
-function mostrarTarjetas(index) { //Toma parametro index que especifica el indice de la tarjeta a mostrar
-  tarjetas.forEach((tarjeta, i) => { //Recorre todas las tarjetas del carrusel, "tarjeta" representa cada carta individual e "i" el indice de la tarjeta en el array
-    tarjeta.style.display = i >= index && i < index + numTarjetasPorVista ? 'block' : 'none'; //Se usa para configurar la propiedad display del style de la tarjeta
+//CARRUSEL
+ const tarjetas = document.querySelectorAll('.tarjeta_prop'),
+      numTarjetasPorVista = 4; //Máximo n° de tarjetas a mostrar
+ let currentIndex = 0; //Inicializo la variable currentIndex dentro de Let porque va a ser mutable, es como un contador o seguimiento
+
+ function mostrarTarjetas(index) { //Toma parametro index que especifica el indice de la tarjeta a mostrar
+   tarjetas.forEach((tarjeta, i) => { //Recorre todas las tarjetas del carrusel, "tarjeta" representa cada carta individual e "i" el indice de la tarjeta en el array
+     tarjeta.style.display = i >= index && i < index + numTarjetasPorVista ? 'block' : 'none';
+      //Se usa para configurar la propiedad display del style de la tarjeta
   });
-}
+ }
 
 function avanzarTarjetas() {
-  currentIndex = (currentIndex + 1) % tarjetas.length; //Aumenta currentIndex en +1 para avanzar al siguiente, cuando currentIndex + 1 = 4, el módulo con tarjetas.length me da 0, volviendo al primer bucle
+   currentIndex = (currentIndex + 1) % tarjetas.length; //Aumenta currentIndex en +1 para avanzar al siguiente, cuando currentIndex + 1 = 4, el módulo con tarjetas.length me da 0, volviendo al primer bucle
   mostrarTarjetas(currentIndex);
-}
+ }
 
-function retrocederTarjetas() {
-  currentIndex = (currentIndex - 1 + tarjetas.length) % tarjetas.length; //Lo mismo que avanzar, pero contrario
-  mostrarTarjetas(currentIndex);
+ function retrocederTarjetas() {
+   currentIndex = (currentIndex - 1 + tarjetas.length) % tarjetas.length; //Lo mismo que avanzar, pero contrario
+   mostrarTarjetas(currentIndex);
 }
 
 const botonAnterior = document.getElementById('anterior'),
-      botonSiguiente = document.getElementById('siguiente');
+       botonSiguiente = document.getElementById('siguiente');
 
 botonAnterior.addEventListener('click', retrocederTarjetas);
 botonSiguiente.addEventListener('click', avanzarTarjetas);
 
 mostrarTarjetas(currentIndex); //Mostrar las primeras tarjetas al cargar la página
+

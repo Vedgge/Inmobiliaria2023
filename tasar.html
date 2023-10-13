@@ -20,6 +20,9 @@
   <!--- custom js -->
   <script src="./assets/script.js" defer></script>
 
+   <!--- validacion -->
+   <script src="./assets/tasar.js" defer></script>
+
   <!--- custom icons -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -28,8 +31,8 @@
 </head>
 
 <body>
-   <!--header-->
-   <header class="header">
+  <!--header-->
+  <header class="header">
 
     <!--Sección superior del header con redes sociales y contacto-->
     <div class="header-top">
@@ -176,64 +179,162 @@
   <!-- Contenido main de la página -->
   <main>
     <section class="home">
-      <div class="contenido">
-        <h1>Cotizamos tu vivienda al mejor precio</h1>
-        <p>Ahora te podrás proyectar hacia el lugar de tus sueños</p>
-        <form action="agregar-vivienda" method="post" class="formulario">
-            <ul class="columna">
-                <li class="campo ciudad">
-                    <label for="ciudad">Ciudad</label>
-                    <br>
-                    <input type="text" id="ciudad" name="ciudad" required>
-                </li>
-                <li class="campo barrio">
-                    <label for="barrio">Barrio</label>
-                    <br>
-                    <input type="text" id="barrio" name="barrio" required>
-                </li>
-                <li class="campo calle">
-                    <label for="calle">Calle</label>
-                    <br>
-                    <input type="text" id="calle" name="calle" required>
-                </li>
-                <li class="campo numero">
-                    <label for="numero">Número</label>
-                    <br>
-                    <input type="text" id="numero" name="numero" required>
-                </li>
-                <li class="campo piso">
-                    <label for="piso">Piso</label>
-                    <br>
-                    <input type="text" id="piso" name="piso">
-                </li>
-                <li class="campo habitaciones">
-                    <label for="habitaciones">Habitaciones</label>
-                    <br>
-                    <input type="text" id="habitaciones" name="habitaciones" required>
-                </li>
-                <li class="campo banos">
-                    <label for="banos">Baños</label>
-                    <br>
-                    <input type="text" id="banos" name="banos" required>
-                </li>
-                <li class="campo area">
-                    <label for="area">Área (m2)</label>
-                    <br>
-                    <input type="text" id="area" name="area" required>
-                </li>
-                <li class="campo correo">
-                    <label for="correo">Correo electrónico</label>
-                    <br>
-                    <input type="email" id="correo" name="correo" required>
-                </li>
-                <li class="campo boton enviar">
-                    <button type="submit">Agregar Propiedad</button>
-                </li>
-                <li class="campo boton borrar">
-                    <button type="reset">Borrar Contenido</button>
-                </li>
-            </ul>
-        </form>
+
+      <div class="contenido_tasar">
+
+        <div class="contenedor_tasar_form">
+          <form action="mostrar-datos-tasar.html" id="viviendaForm" class="formulario">
+            <div class="container-tarjetas-prop">
+              <div class="titulo_tasar">
+                <h2>Tasamos tu propiedad</h1>
+                  <p>Ahora te podrás proyectar hacia el lugar de tus sueños</p>
+              </div>
+
+              <div class="direccion campo_rellenar ">
+                <label for="direccion" style="font-weight: bold;">Dirección</label>
+                <input type="text" id="direccion" name="direccion" required placeholder="Escribe tu dirección aquí">
+
+              </div>
+
+              <div class="operacion">
+                <label for="operacion" style="font-weight: bold;">Tipo de operación</label>
+                <div id="checkbox_contenedor">
+                  <div class="switch">
+                    <input id="vender" name="operacion" type="radio" value="vender" checked>
+                    <label for="vender" id="vender">Vender</label>
+                    <input id="alquilar" name="operacion" type="radio" value="alquilar">
+                    <label for="alquilar" id="alquilar">Alquilar</label>
+                    <span class="switch-button"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="propiedad">
+                <label for="propiedad" style="font-weight: bold;">Tipo de propiedad</label>
+                <div class="checkbox_contenedor btn_form">
+                  <label>
+                    <input type="radio" name="tipo_propiedad" class="radio_input" value="casa">
+                    <div class="contenedor_iconos_tasar">
+                      <i class="bx bx-home-smile"></i>
+                      <span>Casa</span>
+                    </div>
+                  </label>
+                  <label>
+                    <input type="radio" name="tipo_propiedad" class="radio_input" value="departamento">
+                    <div class="contenedor_iconos_tasar">
+                      <i class='bx bx-building-house'></i>
+                      <span>Departamento</span>
+                    </div>
+                  </label>
+                  <label>
+                    <input type="radio" name="tipo_propiedad" class="radio_input" value="PH">
+                    <div class="contenedor_iconos_tasar">
+                      <span class="radio_icono"><i class='bx bx-building'></i></span>
+                      <span>PH</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <div class="ambientes_contenedor">
+                <div class="ambientes">
+                  <label for="ambientes" style="font-weight: bold;">Ambientes </label>
+                  <div class="number_input">
+                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                    <input type="number" min="1" max="30" placeholder="0" name="ambientes" value="1">
+                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                      class="plus"></button>
+                  </div>
+                </div>
+                <div class="banos">
+                  <label for="banos" style="font-weight: bold;">Baños</label>
+
+                  <div class="number_input">
+                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                    <input type="number" min="1" max="30" placeholder="0" name="banos" value="1">
+                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                      class="plus"></button>
+                  </div>
+                </div>
+
+                <div class="cocheras">
+                  <label for="cocheras" style="font-weight: bold;">¿Tiene cochera?</label>
+                  <div class="switch_cochera">
+                    <input type="radio" id="si_radio" name="cochera" class="radio_input" value="si" checked>
+                    <label for="si_radio" id="si_radio">Si</label>
+                    <input type="radio" id="no_radio" name="cochera" class="radio_input" value="no">
+                    <label for="no_radio" id="no_radio">No</label>
+                    <span class="switch-button"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="area campo_rellenar">
+                <label for="area" style="font-weight: bold;">Área (m²)</label>
+                <input type="number" name="area" id="area" required
+                  placeholder="Ingrese el área cubierta de su propiedad en m²">
+              </div>
+
+              <div class="otros">
+                <label for="otros" style="font-weight: bold; padding-bottom: 10px;">Otros</label>
+                <div class="checkbox_container_other">
+                  <div class="otros_input_contenedor">
+                    <input type="checkbox" name="otros" id="piscina" value="Piscina">
+                    <label for="piscina">Piscina</label>
+                  </div>
+                  <div class="otros_input_contenedor">
+                    <input type="checkbox" name="otros" id="parrilla" value="parrilla">
+                    <label for="parrilla">Parrilla</label>
+                  </div>
+                  <div class="otros_input_contenedor">
+                    <input type="checkbox" name="otros" id="sum" value="SUM">
+                    <label for="sum">SUM</label>
+                  </div>
+                  <div class="otros_input_contenedor">
+                    <input type="checkbox" name="otros" id="gimnasio" value="gimnasio">
+                    <label for="gimnasio">Gimnasio</label>
+                  </div>
+                </div>
+              </div>
+              <div class="email campo_rellenar">
+                <label for="correo" style="font-weight: bold;">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" required placeholder="Escribe tu correo electrónico aquí">
+              </div>
+              <div class="botones_tasar campo_rellenar">
+                <button type="submit" class="botones_estilo">Tasar mi propiedad</button>
+                <button type="reset" class="botones_estilo">Borrar contenido</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="articulos_tasar">
+      <h2 style="font-size: 26px;">Descubrí todo lo que podés hacer</h2>
+      <br>
+      <div class="contenedor_articulos_tasar">
+        <div class="compara_tu_propiedad">
+          <img src="/img/inicio_tasar.jpg" alt="tasacion">
+          <div class="desc_articulos_Tasar">
+            <br>
+            <h3>Comparar tu propiedad</h3>
+            <br>
+            <p>Conocé otras propiedades similares a la tuya que están ubicadas en la misma zona.</p>
+          </div>
+        </div>
+
+        <div class="compartir_calculo">
+          <img src="/img/social_media.jpg" alt="social_media">
+          <div class="desc_articulos_Tasar">
+            <br>
+            <h3>Compartir el cálculo</h3>
+            <br>
+            <p>Conocé otras propiedades similares a la tuya que están ubicadas en la misma zona.</p>
+          </div>
+        </div>
+
       </div>
     </section>
   </main>

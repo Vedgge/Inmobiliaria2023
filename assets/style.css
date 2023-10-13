@@ -781,6 +781,7 @@ linear-gradient(rgba(31, 0, 31, 0.37), rgba(31, 8, 8, 0.37)); GRADIENT ORIGINAL 
     font-size: 45px;
     cursor: pointer;
     transition: 0.3s;
+    margin: 0 20px;
 }
 
 .propiedades_destacadas button:hover {
@@ -788,53 +789,52 @@ linear-gradient(rgba(31, 0, 31, 0.37), rgba(31, 8, 8, 0.37)); GRADIENT ORIGINAL 
     color: #333333;
 }
 
-.grid-container_destac {
-    display: grid;
-    justify-content: center;
-    gap: 20px;
-    padding: 10px;
-    grid-template-columns: repeat(4, auto);
+.container-tarjetas-prop {
+    max-width: 1420px;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    gap: 20px; /* Adjust the gap between cards as needed */
 }
 
-.carta_prop {
+.tarjeta_prop {
     background-color: transparent;
     border-radius: 12px;
     max-width: 307px;
     /*n° magico que saque de no sé donde*/
     min-height: 510px;
-    border: 1px solid rgb(209, 209, 209);
     overflow: hidden;
+    border: 1px solid rgb(209, 209, 209);
     box-shadow: 2px 15px 15px 0 rgba(0, 0, 0, .1);
 }
 
-.carta_prop figure {
+.tarjeta_prop figure {
     overflow: hidden;
 }
 
-.carta_prop figure img {
+.tarjeta_prop figure img {
     width: 100%;
     min-height: 232.47px;
     transition: 0.2s linear;
 }
 
-.carta_prop figure img:hover {
+.tarjeta_prop figure img:hover {
     transform: scale(1.1);
 }
 
 .desc_prop {
-    /*YA FUNCIONA ESTO LETS GOOOOO, por alguna razón la descripción de la carta no ocupada el resto inferior de carta_prop*/
+    /*YA FUNCIONA ESTO LETS GOOOOO, por alguna razón la descripción de la carta no ocupada el resto inferior de tarjeta_prop*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     min-height: 307.53px;
 }
 
-.titulo_carta_prop {
+.titulo_tarjeta_prop {
     padding: 20px;
     text-align: center;
 }
 
-.titulo_carta_prop a h3 {
+.titulo_tarjeta_prop a h3 {
     color: #333333;
     text-align: left;
     font-weight: bold;
@@ -853,7 +853,7 @@ linear-gradient(rgba(31, 0, 31, 0.37), rgba(31, 8, 8, 0.37)); GRADIENT ORIGINAL 
     padding-bottom: 10px;
 }
 
-.titulo_carta_prop h3:is(:hover, :focus) {
+.titulo_tarjeta_prop h3:is(:hover, :focus) {
     color: #de2c2f;
     transition: .3s;
 }
@@ -1186,7 +1186,7 @@ footer {
             "tres cuatro";
     }
 
-    .grid-container_destac {
+    .container-tarjetas-prop{
         grid-template-columns: auto auto;
     }
 }
@@ -1200,7 +1200,7 @@ footer {
             "tres"
             "cuatro";
     }
-    .grid-container_destac {
+    .container-tarjetas-prop{
         grid-template-columns: auto;
     }
 }
