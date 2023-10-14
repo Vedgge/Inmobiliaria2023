@@ -32,27 +32,27 @@ article {
     }
 }
 
-.escondido { /*Slide right -> center*/
+.escondido { /*SLIDE DERECHA -> CENTRO*/
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
     transition: all 1s;
 }
 
-.mostrar { /*Slide right -> center*/
+.mostrar { /*SLIDE DERECHA -> CENTRO*/
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
 }
 
-.escondido-1 { /*Slide down -> center*/
+.escondido-1 { /*SLIDE ABAJO -> CENTRO*/
     opacity: 0;
     filter: blur(5px);
     transform: translateY(100%);
     transition: all 1s;
 }
 
-.mostrar-1 { /*Slide down -> center*/
+.mostrar-1 { /*SLIDE ABAJO -> CENTRO*/
     opacity: 1;
     filter: blur(0);
     transform: translateY(0);
@@ -111,7 +111,7 @@ article {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    /*no sé como pero da un diseño + responsivo que space-between, agregar navbar en una hamburguesa*/
+    /*no sé como pero da un diseño + responsivo que space-between*/
     padding: 10px 0 10px;
     background: #eaeaea;
 }
@@ -145,18 +145,14 @@ article {
 
 .navbar_link ul li:hover ul.drowpdown_lista {
     display: block;
-    /*NO SE COMO ME TRAE EL DROPDOWN? ??*/
-    /*me vi un video y creo que entendí como...*/
 }
 
 .navbar_link ul li ul.drowpdown_lista {
     position: absolute;
-    /*ME PERMITE ESCONDER EL DROPDOWN DEBAJO DEL NAVBAR*/
     padding: 20px;
     background: #eaeaea;
     z-index: 10;
     display: none;
-    /*tambien ayuda a esconder el dropdown, no sé como....*/
     border-radius: 8px;
 }
 
@@ -254,9 +250,9 @@ article {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    /*color de fondo oscuro semitransparente*/
+    /*Color de fondo oscuro semitransparente*/
     z-index: 999;
-    /*me asegura que este por encima de todo menos el popup*/
+    /*Me asegura que este por encima de todo menos el popup*/
 }
 
 .overlay.active {
@@ -391,11 +387,11 @@ article {
 
 .popup.active,
 .overlay.active {
-    animation: fade-in 500ms forwards;
+    animation: fade-in 0.5s forwards;
 }
 
 .popup.closing, .overlay.closing {
-    animation: fade-out 500ms forwards;
+    animation: fade-out 0.5s forwards;
 }
 @keyframes fade-in {
     0% {
@@ -417,7 +413,7 @@ article {
     }
 }
 
-@keyframes slide-up { /*Todavía no agregada */
+@keyframes slide-up { /*Todavía no implementada */
     0% {
         transform: translateY(50%);
     }
@@ -704,28 +700,6 @@ article h2 {
 .grid_lugares_popu .overlay_lug:hover {
     transform: scale(1.07);
 }
-
-/* 
-linear-gradient(rgba(31, 0, 31, 0.37), rgba(31, 8, 8, 0.37)); GRADIENT ORIGINAL DEL OVERLAY_LUG NO HOVER
-
-.grid_lugares_popu .overlay_lug:after {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-
-    background-image: linear-gradient(rgba(31, 0, 31, 0.5), rgba(161, 46, 46, 0.274));
-    transition: opacity 0.3s ease-out;
-    z-index: 2;
-    opacity: 0;
-  }
-
-  .grid_lugares_popu .overlay_lug:hover:after {
-    opacity: 0.5;
-  } */
-/* .grid_lugares_popu .overlay_lug:hover { HOVER ORIGINAL SIN ANIMACIÓN DE TRANSICIÓN
-    background-image: linear-gradient(rgba(31, 0, 31, 0.5), rgba(161, 46, 46, 0.274));
-} */
 
 .grid_lugares_popu .overlay_lug:after {
     position: absolute;
