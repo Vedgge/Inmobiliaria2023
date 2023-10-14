@@ -804,11 +804,15 @@ article h2 {
 }
 
 .titulo_tarjeta_prop {
+    max-height: 92.222px;
     padding: 20px;
     text-align: center;
 }
 
 .titulo_tarjeta_prop a h3 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     color: #333333;
     text-align: left;
     font-weight: bold;

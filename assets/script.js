@@ -150,6 +150,8 @@ const tarjetas = document.querySelectorAll('.tarjeta_prop'),
     tarjetaFinal = document.querySelector('.tarjeta_final'),
     botonAnterior = document.getElementById('anterior'),
     botonSiguiente = document.getElementById('siguiente'),
+    botonStopIzq = document.getElementById('boton_stop_izq'),
+    botonStopDer = document.getElementById('boton_stop_der'),
     numTarjetasPorVista = 4; //Máximo n° de tarjetas a mostrar
 let tarjetasIndex = 0; //Inicializo la variable tarjetasIndex dentro de Let porque va a ser mutable, es como un contador o seguimiento
 
@@ -175,13 +177,17 @@ function retrocederTarjetas() {
 function actualizarVisibilidadBotones() {
   if (tarjetaPrimera.style.display === 'block') {
     botonAnterior.style.display = 'none';
+    botonStopIzq.style.display = 'block';
   } else {
+    botonStopIzq.style.display = 'none';
     botonAnterior.style.display = 'block';
   }
 
   if (tarjetaFinal.style.display === 'block') {
     botonSiguiente.style.display = 'none';
+    botonStopDer.style.display = 'block';
   } else {
+    botonStopDer.style.display = 'none';
     botonSiguiente.style.display = 'block';
   }
 }
