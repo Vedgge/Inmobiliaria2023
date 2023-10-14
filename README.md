@@ -41,7 +41,7 @@ El repositorio contiene los siguientes archivos y carpetas:
 
 
 # Check List TPO
-[x] Desarrollar cuatro páginas web en formato HTML, la temática es a elección..
+[x] Desarrollar cuatro páginas web en formato HTML, la temática es a elección.
 
 [x] Diseñar la estructura del sitio usando etiquetas semánticas.
 
