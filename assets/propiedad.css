@@ -1,0 +1,264 @@
+main {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+input::placeholder, textarea::placeholder {
+    padding-left: 10px;
+}
+
+textarea::placeholder {
+    padding-top: 10px;
+}
+
+.sub_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1510px;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.sub_header .ruta a{
+    color: #222;
+    transition: 0.3s;
+}
+
+.sub_header .ruta a:hover {
+    color: #de2c2f;
+}
+
+.contenedor_botones {
+    display: flex;
+    gap: 30px;
+}
+
+.btn_sub_header {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    gap: 5px;
+    padding: 10px;
+    background: transparent;
+    border: 0;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.btn_sub_header:hover {
+    cursor: pointer;
+    border-radius: 12px;
+    background: rgb(199, 199, 199);
+}
+
+.btn_sub_header::after{
+    position: absolute;
+}
+
+.contacto_propiedad {
+    padding: 20px;
+    width: 360px;
+    max-height: 490px;
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 12px;
+    box-shadow: 2px 15px 15px 0 rgba(0, 0, 0, .1);
+    background: #e9e9e9;
+    color: #222;
+}
+
+.contact_form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form_label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form_label label {
+    font-weight: bold;
+}
+
+.form_label input, #mensaje {
+    display: block;
+    height: 41px;
+    width: 100%;
+    background-color: #FFF;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#mensaje {
+    height: auto;
+}
+
+.nombre_telefono {
+    display: flex;
+    gap: 20px;
+}
+
+.informacion_propiedad {
+    max-width: 1060px;
+}
+
+.contenedor_img_prop {  
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "img_prinicpal img-otras-1"
+      "img_prinicpal img-otras-2";
+    width: 1060px;
+    padding-bottom: 15px;
+    
+  }
+  
+.img_prinicpal { grid-area: img_prinicpal; }
+  
+.img-otras-1 { grid-area: img-otras-1; }
+  
+.img-otras-2 { grid-area: img-otras-2; position: relative; overflow: hidden;}
+  
+.contenedor_img_prop img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.img-otras-2 .overlay_lug {
+    border-radius: 12px;
+    top: 0;
+}
+
+.contenedor_precio {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-bottom: 25px;
+}
+
+
+.ubicacion {
+    border-top: 1px solid #c5c5c5;
+    padding: 25px 15px;
+}
+
+/* .contenedor_desc_prop {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+} */
+
+.interior_desc_prop {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 15px;
+    border-top: 1px solid #b4b4b4;
+}
+
+
+.contenedor_desc_interior_esp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor_caracteristicas {
+    padding: 25px 15px;
+    border-top: 1px solid #b4b4b4;
+}
+
+.informacion_anunciante {
+    padding: 25px 15px;
+    border-top: 1px solid #b4b4b4;
+}
+
+.desc_usuario_prop {
+    padding: 25px 15px;
+    border-top: 1px solid #b4b4b4;
+}
+
+.caracteristicas_especificas {
+    display: flex;
+    justify-content: space-around;
+}
+
+.caracteristicas_especificas > div h3{
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.caracteristicas_especificas > div ul li {
+    line-height: 1.5rem;
+}
+.anunciante {
+    padding-bottom: 10px;
+}
+
+.logo_nombre_anunciante, .estrellas_anunciante {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.estrellas_anunciante {
+    
+}
+
+.opiniones_anunciante {
+    display: flex;
+}
+
+.opiniones_anunciante > div {
+    padding: 10px;
+}
+
+.opiniones_anunciante > div > div{
+    padding-top: 10px;
+}
+
+.rating_anunciante {
+    display: flex;
+    align-items: center;
+}
+
+.prolema_aviso {
+    padding: 25px 0;
+    border-top: 1px solid #c4c4c4;
+}
+
+.contenedor_problema {
+    background-color: rgb(216, 215, 215);
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.titulo_problema {
+    display: flex;
+    position: relative;
+}
+
+.fecha_publicacion_visualizaciones {
+    display: flex;
+    align-items: center;
+    padding: 25px 15px;
+    border-top: 1px solid #b4b4b4;
+    gap: 10px;
+}
+
+.wrapper_propiedades_similares {
+    padding: 25px 15px;
+    border-top: 1px solid #b4b4b4;
+}

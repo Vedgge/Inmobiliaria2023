@@ -79,21 +79,21 @@ toggleButton.addEventListener('click', function () {
   navbarLinks.classList.toggle('active');
 });
 
-//TYPEWRITER ANIMATION
+//ANIMACION ESCRITURA
+const frases = ['hogar', 'departamento', 'local'],
+    elementos = document.getElementById("escritura");
+
+let waitTime = 100; //Tiempo para esperar entre letras
+let curFrases = 0; //Index por la frase que queremos empezar, vamos a incrementarla con lógica
+
 function sleep(ms) { //Funcion promesa para esperar unos milisegundos
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-const frases = ['hogar', 'departamento', 'local'],
-  elementos = document.getElementById("escritura");
-
-let waitTime = 100; //Tiempo para esperar entre letras
-
-let curFrases = 0; //Index por la frase que queremos empezar, vamos a incrementarla con lógica
-
 const loopEscritura = async () => { //Función async para llamar a la función waitTime
   while (true) { //loop para escribir las frases letra x letra
     let curLetra = frases[curFrases];
+ 
     for (let i = 0; i < curLetra.length; i++) {
       elementos.innerText = curLetra.substring(0, i + 1);
       await sleep(waitTime);

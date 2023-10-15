@@ -16,7 +16,7 @@ main {
 }
 
 /*--------------------ANIMACION SCROLL-------------------*/
-article {
+/* article {
     animation: fade linear both;
     animation-timeline: view(block);
     animation-range: cover 0% cover 30%;
@@ -30,7 +30,7 @@ article {
     to {
         opacity: 1;
     }
-}
+} */
 
 .escondido { /*SLIDE DERECHA -> CENTRO*/
     opacity: 0;
@@ -73,15 +73,14 @@ article {
 }
 
 .data_header {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 78%;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 68%;
+    margin: 0 auto;
 }
 
 .contendor_data_header {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
 }
 
@@ -114,6 +113,8 @@ article {
     /*no sé como pero da un diseño + responsivo que space-between*/
     padding: 10px 0 10px;
     background: #eaeaea;
+    border-bottom: 1px solid rgb(209, 209, 209);
+    box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, .1);
 }
 
 .navbar_link {
@@ -560,15 +561,12 @@ article h2 {
 }
 
 .btn_submit {
-    flex: 16 16 112px;
     padding: 10px 34px;
-    border: none;
     border-radius: 8px;
     background: #de2c2f;
     border: 2px solid #de2c2f;
     color: #FFF;
     font-size: 16px;
-    font-weight: 500;
     transition: 0.3s;
 }
 
@@ -587,9 +585,6 @@ article h2 {
     font-size: 20px;
 }
 .container_servicios { 
-    margin: 0 auto;
-    max-width: 1420px; 
-    height: 320px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -597,6 +592,9 @@ article h2 {
     grid-auto-flow: row;
     grid-template-areas:
       "hipoteca mudanza tasacion soporte-legal";
+    margin: 0 auto;
+    max-width: 1420px; 
+    height: 320px;
   }
   
 .hipoteca { grid-area: hipoteca; }
@@ -684,7 +682,7 @@ article h2 {
     position: relative;
 }
 
-.grid_lugares_popu .overlay_lug {
+.overlay_lug {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -697,11 +695,11 @@ article h2 {
     transition: 0.3s;
 }
 
-.grid_lugares_popu .overlay_lug:hover {
+.overlay_lug:hover {
     transform: scale(1.07);
 }
 
-.grid_lugares_popu .overlay_lug:after {
+.overlay_lug:after {
     position: absolute;
     content: '';
     width: 100%;
@@ -712,7 +710,7 @@ article h2 {
     opacity: 0;
 }
 
-.grid_lugares_popu .overlay_lug:hover:after {
+.overlay_lug:hover:after {
     opacity: 0.5;
   }
 

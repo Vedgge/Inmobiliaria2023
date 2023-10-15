@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mostrar Datos</title>
+
+    <!--- obtener array de checkbox -->
+    <script src="./assets/tasar.js" defer></script>
 </head>
 
 <body>
@@ -20,7 +23,7 @@
                 cochera = params.get("cochera"),
                 banos = params.get("banos"),
                 area = params.get("area"),
-                otros = params.get("otros"),
+                otros = params.getAll("otros"),
                 correo = params.get("correo");
 
         const datosContainer = document.createElement("div");

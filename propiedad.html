@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inmobiliaria Andes - Elige el lugar de tus sueños</title>
+
+    <!-- custom google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap"
+        rel="stylesheet">
+
+    <!--- custom css -->
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/propiedad.css">
+
+    <!--- custom js -->
+    <script defer src="./assets/script.js" defer></script>
+
+    <!--- custom icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--- favicon -->
+    <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <!--header-->
+    <header class="header">
+
+        <!--Sección superior del header con redes sociales y contacto-->
+        <div class="header-top">
+            <div class="data_header">
+                <div class="contendor_data_header">
+                    <div class="cto_header_top">
+                        <a href="#"><i class='bx bx-envelope'></i>info@andesinmobiliaria.com</a>
+                    </div>
+                    <div class="cto_header_top">
+                        <a href="#"><i class='bx bx-phone'></i>(999) 999-9999</a>
+                    </div>
+                    <div class="social">
+                        <a href="#"><i class='bx bxl-whatsapp'></i></a>
+                        <a href="#"><i class='bx bxl-facebook-square'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-youtube'></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Sección inferior del header con botones de navegación / agregar diseño responsivo y estructura-->
+        <nav class="header-bottom">
+            <div class="brand">
+                <a href="index.html"><img src="./img/andes_fontlogo.png" alt="logo inmobiliaria andes" class="logo"></a>
+            </div>
+
+            <!--Navbar-->
+            <a href="#" class="toggle_button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+
+            <div class="navbar_link">
+                <ul class="navbar_ul">
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li>
+                        <a href="alquilar.html">Alquilar</a>
+                        <ul class="drowpdown_lista">
+                            <div class="dropdown_cont">
+                                <div class="dropdown_titulo">Tipo de propiedades</div>
+                                <ul class="dropdown_prop">
+                                    <li><a href="#">Edificios Comerciales</a></li>
+                                    <li><a href="#">Hoteles</a></li>
+                                    <li><a href="#">Apartamentos</a></li>
+                                    <li><a href="#">Casas</a></li>
+                                    <li><a href="#">Oficinas</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown_cont">
+                                <div class="dropdown_titulo">Provincia</div>
+                                <ul class="dropdown_prop">
+                                    <li><a href="#">Buenos Aires</a></li>
+                                    <li><a href="#">Córdoba</a></li>
+                                    <li><a href="#">Tierra del Fuego</a></li>
+                                    <li><a href="#">Neuquén</a></li>
+                                    <li><a href="#">Santa Fe</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown_cont">
+                                <div class="dropdown_titulo">Ciudades</div>
+                                <ul class="dropdown_prop">
+                                    <li><a href="#">Capital Federal</a></li>
+                                    <li><a href="#">Córdoba Capital</a></li>
+                                    <li><a href="#">Rosario</a></li>
+                                    <li><a href="#">Mar del Plata</a></li>
+                                    <li><a href="#">Neuquén Capital</a></li>
+                                </ul>
+                            </div>
+                        </ul>
+                    </li>
+                    <li><a href="comprar.html">Comprar</a></li>
+                    <li><a href="vender.html">Vender</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="tasar.html">Tasar</a></li>
+                </ul>
+                <div class="btn_user">
+                    <button id="mostrar_popup_li"><a>Iniciar sesión</a></button>
+                    <a class="registrate" id="mostrar_popup_sp">Registrate</a>
+                </div>
+                <div class="overlay"></div>
+                <!-- Popup login form -->
+                <div class="popup login">
+                    <div class="cerrar_btn">&times;</div>
+                    <div class="form">
+                        <h2>Iniciar sesión</h2>
+                        <p>Guarde búsquedas, sus propiedades favoritas y más</p>
+                        <p>¿Nuevo en el sitio? <a href="#" id="registrar">Registra una cuenta</a></p>
+                        <div class="elementos_form">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" placeholder="Ingresa tu email">
+                        </div>
+                        <div class="elementos_form">
+                            <label for="contraseña">Contraseña</label>
+                            <input type="password" id="contraseña" placeholder="Ingresa tu contraseña">
+                        </div>
+                        <div class="elementos_form">
+                            <input type="checkbox" id="checkbox">
+                            <label for="recordarme">Recordar mis datos</label>
+                        </div>
+                        <div class="elementos_form">
+                            <button class="btn_submit">Iniciar sesión</button>
+                        </div>
+                        <div class="elementos_form">
+                            <a href="#">Olvide mi contraseña</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Popup signup form -->
+                <div class="popup signup">
+                    <div class="cerrar_btn">&times;</div>
+                    <div class="form">
+                        <h2>Registrarse</h2>
+                        <p>Guarde búsquedas, sus propiedades favoritas y más</p>
+                        <p>¿Ya tienes una cuenta? <a href="#" id="iniciar_sesion">Inicia sesión</a></p>
+                        <div class="elementos_form">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" placeholder="Ingresa tu email">
+                        </div>
+                        <div class="elementos_form">
+                            <label for="contraseña">Contraseña</label>
+                            <input type="password" id="contraseña" placeholder="Crea tu contraseña">
+                        </div>
+                        <div class="elementos_form">
+                            <label for="contraseña">Confirma contraseña</label>
+                            <input type="password" id="contraseña" placeholder="Confirma tu contraseña">
+                        </div>
+                        <div class="elementos_form" id="term_cond">
+                            <input type="checkbox" id="checkbox">
+                            <label for="checkbox">Estoy de acuerdo con los<a href="#"> Terminos y
+                                    Condiciones</a></label>
+                        </div>
+                        <div class="elementos_form">
+                            <button class="btn_submit">Regsitrate</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+        <div class="sub_header">
+            <div class="ruta">
+                <a href="index.html">Inicio</a> / <a href="#">Búsqueda</a>
+            </div>
+            <div class="contenedor_botones">
+                <div class="contenedor_fav">
+                    <button class="btn_sub_header">Favorito<i class='bx bx-heart'></i></button>
+                </div>
+                <div class="contenedor_compartir">
+                    <button class="btn_sub_header">Compartir propiedad<i class='bx bx-share'></i></button>
+                </div>
+                <div class="contenedor_ocultar">
+                    <button class="btn_sub_header">Ocultar propiedad<i class='bx bx-low-vision'></i></button>
+                </div>
+            </div>
+    </header>
+
+    <main>
+
+        </div>
+        <section class="informacion_propiedad">
+            <!-- <div class="contenedor_img_prop">
+                <div class="img_prinicpal">
+                    <img src="./img/depto_4dorm/ejemplo_depto 7 (1).webp" alt="">
+                </div>
+                <div class="img-otras-1"> <img src="./img/depto_4dorm/ejemplo_depto 7 (1).webp" alt=""></div>
+                <div class="img-otras-2"> <img src="./img/depto_4dorm/ejemplo_depto 7 (1).webp" alt=""></div>
+                <div class="img-otras-3"> <img src="./img/depto_4dorm/ejemplo_depto 7 (1).webp" alt=""></div>
+                <div class="img-otras-4"> <img src="./img/depto_4dorm/ejemplo_depto 7 (1).webp" alt=""></div>
+            </div> -->
+
+            <div class="contenedor_img_prop">
+                <div class="img_prinicpal"><img src="./img/depto_4dorm/ejemplo_depto 7 (1).webp" alt=""></div>
+                <div class="img-otras-1"><img src="./img/depto_4dorm/ejemplo_depto 7 (2).webp" alt=""></div>
+                <div class="img-otras-2"><img src="./img/depto_4dorm/ejemplo_depto 7 (3).webp" alt=""> <a href="#"
+                        class="overlay_lug">
+                        <h3>+3</h3>
+                    </a></div>
+            </div>
+
+            <article class="contenedor_desc_prop">
+
+                <div class="contenedor_precio">
+                    <p>Departamento 119m² - 3 Ambientes - 1 Cochera</p>
+                    <h2>Alquiler USD 3.500</h2>
+                    <h3>Expensas $ 30.000</h3>
+                </div>
+
+                <!-- <div class="contenedor_consulta"></div> -->
+
+                <div class="ubicacion">
+                    <h4 style="padding-bottom: 15px;"><i class='bx bx-map'></i>Julieta Lanteri 1200, Puerto Madero,
+                        Capital Federal</h4>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.6638545971514!2d-58.36137252333042!3d-34.61266065797212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334d847bde0cf%3A0xd966db4f82f4e1e4!2sJulieta%20Lanteri%201200%2C%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1697382070643!5m2!1sen!2sar"
+                        width="100%" height="284px" style="border: 1px solid rgb(209, 209, 209); border-radius: 12px;"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+
+                <div class="interior_desc_prop">
+                    <div class="contenedor_desc_interior_esp">
+                        <i class='bx bx-area' style="font-size: 35px;"></i>
+                        <h4>119 m²</h4>
+                    </div>
+                    <div class="contenedor_desc_interior_esp">
+                        <i class='bx bx-door-open' style="font-size: 35px;"></i>
+                        <h4>3 Ambientes</h4>
+                    </div>
+                    <div class="contenedor_desc_interior_esp">
+                        <i class='bx bx-bath' style="font-size: 35px;"></i>
+                        <h4>2 Baños</h4>
+                    </div>
+                    <div class="contenedor_desc_interior_esp">
+                        <i class='bx bx-car' style="font-size: 35px;"></i>
+                        <h4>1 Cochera</h4>
+                    </div>
+                    <div class="contenedor_desc_interior_esp">
+                        <i class='bx bx-bed' style="font-size: 35px;"></i>
+                        <h4>2 Dormitorios</h4>
+                    </div>
+                    <div class="contenedor_desc_interior_esp">
+                        <i class='bx bx-calendar' style="font-size: 35px;"></i>
+                        <h4>14 Años</h4>
+                    </div>
+                </div>
+
+                <div class="desc_usuario_prop">
+                    <h1 style="padding-bottom: 15px;">Julieta Lanteri 1200 El Faro</h1>
+                    <p>
+                        HERMOSO TRES AMBIENTES DE EXCELENTE CATEGORIA CON COCHERA
+                        SUPER LUMINOSO
+                        PALIER PRIVADO
+                        HALL DE DISTRIBUCIÓN
+                        GRAN LIVING-COMEDOR CON IMPONENTE VISTA AL RIO Y A LA RESERVA ECOLÓGICA
+                        BALCON CERRADO
+                        TOILETTE DE RECEPCIÓN
+                        ENTRADA DE SERVICIO
+                        DOS DORMITORIOS EN SUITE CON VESTIDOR Y VISTA AL RIO Y A LA RESERVA ECOLÓGICA
+                        AMPLIA COCINA-COMEDOR CON LAVADERO APARTE
+                        DEPENDENCIA DE SERVICIO COMPLETA
+
+                        EL EDIFICIO CUENTA CON VIG 24HS, PILETA AL AIRE LIBRE Y TECHADA, PARQUE PARA CHICOS, SUM,
+                        SAUNA,
+                        JACUZZI, CANCHA DE TENIS, PARRILLA, LAVADERO DE AUTOS, ETC
+
+                        VISITAS CON CITA PREVIA
+                        DIEGO MOHADEB NEGOCIOS INMOBILIARIOS CORREDOR INMOBILIARIO CUCICBA MATRICULA N° 3122
+                        TELEFONO
+                    </p>
+                </div>
+
+                <div class="contenedor_caracteristicas">
+                    <h1 style="padding-bottom: 15px;">Características especificas de la propiedad</h1>
+                    <div class="caracteristicas_especificas">
+                        <div class="edificio">
+                            <h3><i class='bx bx-building'></i>Características del Edificio</h3>
+                            <ul>
+                                <li>Cantidad de plantas 1</li>
+                                <li>Vigilancia</li>
+                                <li>Ascensor</li>
+                                <li>Gimnasio</li>
+                                <li>Piscina</li>
+                            </ul>
+                        </div>
+                        <div class="ambientes">
+                            <h3><i class='bx bx-door-open'></i>Acerca de los Ambientes</h3>
+                            <ul>
+                                <li>Balcón</li>
+                                <li>Lavadero</li>
+                                <li>Living comedor</li>
+                                <li>Toilette</li>
+                            </ul>
+                        </div>
+                        <div class="servicios">
+                            <h3><i class='bx bx-hard-hat'></i>Acerca de los servicios</h3>
+                            <ul>
+                                <li>Aire acondicionado</li>
+                                <li>Calefacción</li>
+                                <li>SUM</li>
+                                <li>Ventilación</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="informacion_anunciante">
+                    <div class="anunciante">
+                        <div class="logo_nombre_anunciante">
+                            <a href="#"><img src="./img/icon.png" alt="anunciante" width="130px" height="70px"></a>
+                            <a href="#" style="color: #222;">
+                                <h3>GIOVANNI PROPIEDADES</h3>
+                            </a>
+                        </div>
+                        <div class="estatus_anunciante">
+
+                        </div>
+                    </div>
+                    <div class="calificaciones_anunciante">
+                        <div class="estrellas_anunciante">
+                            <div class="estrellas_de_5">
+                                <i class='bx bxs-star' style="color: gold; padding-right: 5px;"></i>
+                                <span><strong>4.8</strong>/5</span>
+                            </div>
+                            <div class="cantidad_calificaciones"><span><strong>43</strong> Calificaciones</span></div>
+                        </div>
+                        <div class="opiniones_anunciante">
+                            <div class="atencion_anunciante">
+                                <h4 style="padding-bottom: 5px;">Atención</h4>
+                                <p>¿Cómo fue la atención de la inmobiliaria?</p>
+                                <div class="rating_anunciante">
+                                    <i class='bx bxs-star' style="color: gold; padding-right: 5px;"></i>
+                                    <i class='bx bxs-star' style="color: gold; padding-right: 5px;"></i>
+                                    <i class='bx bxs-star' style="color: gold; padding-right: 5px;"></i>
+                                    <i class='bx bxs-star' style="color: gold; padding-right: 5px;"></i>
+                                    <i class='bx bxs-star' style="color: gold; padding-right: 5px;"></i>
+                                    <span>5</span>
+                                </div>
+                            </div>
+                            <div class="tiempo_respuesta_anunciante">
+                                <h4 style="padding-bottom: 5px;">Tiempo de respuesta</h4>
+                                <p>¿Te parecio adecuado el tiempo de respuesta de la inmobiliaria</p>
+                                <div class="rating_anunciante">
+                                    <i class='bx bxs-star' style="color: gold; padding-right: 5px;"></i>
+                                    <i class='bx bxs-star' style="color: gold; padding-right: 5px;"></i>
+                                    <i class='bx bxs-star' style="color: gold; padding-right: 5px;"></i>
+                                    <i class='bx bxs-star' style="color: gold; padding-right: 5px;"></i>
+                                    <i class='bx bxs-star' style="color: gold; padding-right: 5px;"></i>
+                                    <span>5</span>
+                                </div>
+                            </div>
+                            <div class="contenido_aviso_anunciante">
+                                <h4 style="padding-bottom: 5px;">Contenido del aviso</h4>
+                                <p>¿Encontraste las fotos, información y la ubicación del aviso claras?</p>
+                                <div class="rating_anunciante">
+                                    <i class='bx bxs-star' style="color: gold; padding-right: 5px;"></i>
+                                    <i class='bx bxs-star' style="color: gold; padding-right: 5px;"></i>
+                                    <i class='bx bxs-star' style="color: gold; padding-right: 5px;"></i>
+                                    <i class='bx bxs-star' style="color: gold; padding-right: 5px;"></i>
+                                    <i class='bx bxs-star' style="color: gold; padding-right: 5px;"></i>
+                                    <span>5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="prolema_aviso">
+                    <div class="contenedor_problema">
+                        <div class="titulo_problema">
+                            <i class='bx bx-error'
+                                style="font-size: 30px; position: absolute; top: -3px; color: #de2c2f;"></i>
+                            <h1 style="padding-bottom: 10px; margin-left: 35px;">¿Tienes algún problema con este aviso?
+                            </h1>
+                        </div>
+                        <div class="contenedor_botones_problema">
+                            <button class="btn_submit">Es fraudulento</button>
+                            <button class="btn_submit">No me puedo contactar</button>
+                            <button class="btn_submit">Otro motivo</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fecha_publicacion_visualizaciones">
+                    <div class="fecha_publicacion">
+                        <p>Publicado hace 24 días</p>
+                    </div>
+                    <i class='bx bx-dots-horizontal-rounded' ></i>
+                    <div class="visualizaciones">
+                        <p>45 visualizaciones</p>
+                    </div>
+                </div>
+
+                <div class="wrapper_propiedades_similares">
+                    <h1>Propiedades similares</h1>
+                    <div class="contenedor_propiedades_similares">
+
+                    </div>
+                </div>
+            </article>
+        </section>
+        <aside class="contacto_propiedad">
+            <div class="contenedor_contacto_prop">
+                <form action="mostrar-datos-propiedad-cto.html" class="contact_form">
+                    <h3>Contactate con GIOVANNI PROPIEDADES por la propiedad en Puerto Madero, Capital Federal</h3>
+                    <div class="form_label">
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" name="email" id="emailForm" placeholder="Ingresa tu email acá">
+                        <p id="emailFormError" class="error-message"></p>
+                    </div>
+                    <div class="nombre_telefono">
+                        <div class="form_label">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre">
+                            <p id="nombreError" class="error-message"></p>
+                        </div>
+                        <div class="form_label">
+                            <label for="telefono">Teléfono:</label>
+                            <input type="number" name="telefono" id="telefono" placeholder="Ingresa tu teléfono">
+                            <p id="telefonoError" class="error-message"></p>
+                        </div>
+                    </div>
+                    <div class="form_label">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea name="mensaje" id="mensaje" cols="30" rows="10"
+                            placeholder="¡Quiero obtener más información acerca de esta propiedad!"></textarea>
+                    </div>
+                    <input type="submit" value="Enviar" class="btn_submit" style="width: 100%;">
+                </form>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <hr>
+        <div class="footer_contenedor">
+            <div>
+                <div class="titulo_cf">
+                    <h3>Navegación</h3>
+                </div>
+                <div class="lista_footer">
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="alquilar.html">Alquilar</a></li>
+                        <li><a href="comprar.html">Comprar</a></li>
+                        <li><a href="vender.html">Vender</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="tasar.html">Tasar</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="titulo_cf">
+                    <h3>Ayuda</h3>
+                </div>
+                <div class="lista_footer">
+                    <ul>
+                        <li><a href="#">Preguntas frecuentes (FAQ)</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Política de cookies</a></li>
+                        <li><a href="#">Condiciones generales</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="titulo_cf">
+                    <h3>Inmobiliaria Andes</h3>
+                </div>
+                <div class="lista_footer">
+                    <ul>
+                        <li><a href="nosotros.html">Acerca de nosotros</a></li>
+                        <li><a href="contacto.html">Contáctanos</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">¡Trabaja con nosotros!</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="titulo_cf">
+                    <h3>¡Se el primero en recibir noticias de las mejores propiedades!</h3>
+                </div>
+                <div class="newsletter_social">
+                    <form action="#">
+                        <div class="form_newsletter">
+                            <div class="email_newsletter">
+                                <input type="email" name="EMAIL" required placeholder="Escribe tu email aquí">
+                            </div>
+                            <button class="btn_submit">Enviar</button>
+                        </div>
+                    </form>
+                    <div class="social_footer">
+                        <h3>Seguinos y contáctanos por</h3>
+                        <a href="#"><i class='bx bxl-whatsapp'></i></a>
+                        <a href="#"><i class='bx bxl-facebook-square'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-youtube'></i></a>
+                        <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

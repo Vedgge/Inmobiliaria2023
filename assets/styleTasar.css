@@ -1,4 +1,7 @@
 /*---------ARTICULOS TASAR-------------*/
+input::placeholder {
+    padding-left: 10px;
+}
 
 .articulos_tasar {
     align-items: center;
@@ -195,7 +198,7 @@ input:last-of-type:checked~.switch_button {
 }
 
 #checkbox_contenedor {
-    width: 98.5%;
+    width: 96%;
     padding: 8px;
     border: 1px solid #aaa;
     border-radius: 12px;
@@ -273,7 +276,7 @@ input[type=number]::-webkit-outer-spin-button {
 .number_input input[type=number] {
     font-family: sans-serif;
     max-width: 4.5rem;
-    padding: .5rem ;
+    padding: 0.5rem 0;
     border: 0;
     text-align: center;
     outline: none;
@@ -285,6 +288,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .contenedor_switch_cochera {
+    max-width: 90%;
     padding: 6px;
     border: 1px solid #aaa;
     border-radius: 12px;
@@ -292,14 +296,15 @@ input[type=number]::-webkit-outer-spin-button {
 
 .switch_cochera {
     display: flex;
+    justify-content: space-between;
     position: relative;
     z-index: 2;
-    padding: 6px;
+    padding: 6px 0;
     border-radius: 12px;
 }
 
 .switch_cochera .switch_button {
-    width: 45.5% !important;
+    width: 50% !important;
 }
 
 .switch_cochera label {
@@ -312,11 +317,11 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 #si_radio {
-    padding-left: 15px;
+    padding-left: 17%;
 }
 
 #no_radio {
-    padding-left: 45px;
+    padding-right: 16.5%;
 }
 
 .switch_cochera input:checked+label {
@@ -328,7 +333,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .switch_cochera input:last-of-type:checked~.switch_button {
-    left: 45%;
+    left: 50%;
 }
 
 .switch_cochera .switch_button {
@@ -357,7 +362,6 @@ input[type=number]::-webkit-outer-spin-button {
     border: 1px solid #aaa;
     border-radius: 5px;
     font-size: 16px;
-    padding-left: 10px;
 }
 
 .otros {
@@ -436,11 +440,10 @@ input[type=number]::-webkit-outer-spin-button {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    padding: 10px 10px 10px 20px;
 }
 
 .botones_tasar button {
-    width: 102%;
+    width: 100%;
 }
 
 .botones_estilo {
