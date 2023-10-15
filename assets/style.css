@@ -32,31 +32,36 @@ main {
     }
 } */
 
-.escondido { /*SLIDE DERECHA -> CENTRO*/
+.escondido {
+    /*SLIDE DERECHA -> CENTRO*/
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
     transition: all 1s;
 }
 
-.mostrar { /*SLIDE DERECHA -> CENTRO*/
+.mostrar {
+    /*SLIDE DERECHA -> CENTRO*/
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
 }
 
-.escondido-1 { /*SLIDE ABAJO -> CENTRO*/
+.escondido-1 {
+    /*SLIDE ABAJO -> CENTRO*/
     opacity: 0;
     filter: blur(5px);
     transform: translateY(100%);
     transition: all 1s;
 }
 
-.mostrar-1 { /*SLIDE ABAJO -> CENTRO*/
+.mostrar-1 {
+    /*SLIDE ABAJO -> CENTRO*/
     opacity: 1;
     filter: blur(0);
     transform: translateY(0);
 }
+
 /*--------------------PRELOAD-------------------*/
 
 /*--------------------LOGO-------------------*/
@@ -96,11 +101,12 @@ main {
     color: #de2c2f;
 }
 
-.social a .bx{
+.social a .bx {
     font-size: 22px;
     color: #333333;
     transition: 0.3s;
 }
+
 .social a .bx:hover {
     color: #de2c2f;
 }
@@ -130,6 +136,7 @@ main {
 }
 
 .navbar_link li a {
+    position: relative;
     padding: 10px;
     color: #333333;
 }
@@ -139,6 +146,27 @@ main {
     color: #de2c2f;
     transition: 0.3s;
 }
+
+
+.navbar_ul a:after, .btn_user button a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    height: 1em;
+    width: 100%;
+    border-bottom: 1px solid #de2c2f;
+    margin-top: 10px;
+    opacity: 0;
+    transition: 0.35s;
+    transform: scale(0, 1);
+}
+
+.navbar_link a:hover:after {
+    opacity: 1;
+    transform: scale(1);
+}
+
 
 .navbar_link ul li ul a:hover {
     color: #de2c2f;
@@ -180,6 +208,7 @@ main {
 }
 
 .btn_user a {
+    position: relative;
     padding: 10px;
 }
 
@@ -196,6 +225,7 @@ main {
 }
 
 .btn_user .registrate {
+    position: relative;
     color: #FFF;
     background: #de2c2f;
     border: 2px solid #de2c2f;
@@ -231,17 +261,18 @@ main {
     transform: rotate(45deg);
     transform-origin: top left;
     width: 45px;
-  }
-  
+}
+
 .x:nth-of-type(2) {
     opacity: 0;
 }
-  
+
 .x:nth-of-type(3) {
     transform: rotate(-45deg);
     transform-origin: bottom left;
     width: 45px;
-} 
+}
+
 /*--------------------POPUP INICIO DE SESIÓN-----------------*/
 .overlay {
     display: none;
@@ -285,9 +316,10 @@ main {
     box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, .15);
     border-radius: 10px;
 }
-#term_cond{
+
+#term_cond {
     display: flex;
-    align-items: center; 
+    align-items: center;
 }
 
 #term_cond label {
@@ -295,10 +327,12 @@ main {
     align-items: center;
     font-size: 15px;
 }
-#term_cond label a{
+
+#term_cond label a {
     margin-left: 5px;
     font-size: 15px;
 }
+
 .popup.active {
     display: block;
     z-index: 1000;
@@ -340,7 +374,8 @@ main {
     font-style: italic;
 }
 
-#registrar, #iniciar_sesion {
+#registrar,
+#iniciar_sesion {
     color: #1a79ca;
     font-weight: 600;
 }
@@ -391,9 +426,11 @@ main {
     animation: fade-in 0.5s forwards;
 }
 
-.popup.closing, .overlay.closing {
+.popup.closing,
+.overlay.closing {
     animation: fade-out 0.5s forwards;
 }
+
 @keyframes fade-in {
     0% {
         opacity: 0;
@@ -414,7 +451,9 @@ main {
     }
 }
 
-@keyframes slide-up { /*Todavía no implementada */
+@keyframes slide-up {
+
+    /*Todavía no implementada */
     0% {
         transform: translateY(50%);
     }
@@ -584,28 +623,37 @@ article h2 {
 #more_flecha {
     font-size: 20px;
 }
-.container_servicios { 
+
+.container_servicios {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 10px;
     grid-auto-flow: row;
     grid-template-areas:
-      "hipoteca mudanza tasacion soporte-legal";
+        "hipoteca mudanza tasacion soporte-legal";
     margin: 0 auto;
-    max-width: 1420px; 
+    max-width: 1420px;
     height: 320px;
-  }
-  
-.hipoteca { grid-area: hipoteca; }
-  
-.mudanza { grid-area: mudanza; }
-  
-.tasacion { grid-area: tasacion; }
-  
-.soporte-legal { grid-area: soporte-legal; }
+}
 
-.container_servicios > div {
+.hipoteca {
+    grid-area: hipoteca;
+}
+
+.mudanza {
+    grid-area: mudanza;
+}
+
+.tasacion {
+    grid-area: tasacion;
+}
+
+.soporte-legal {
+    grid-area: soporte-legal;
+}
+
+.container_servicios>div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -615,7 +663,7 @@ article h2 {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, .15);
 }
 
-.container_servicios > div .bx {
+.container_servicios>div .bx {
     color: #242424;
     font-size: 100px;
 }
@@ -652,33 +700,49 @@ article h2 {
     gap: 10px;
     grid-auto-flow: row;
     grid-template-areas:
-      "Rosario Cordoba Cordoba"
-      "Buenos-aires Buenos-aires Mar-del-plata";
+        "Rosario Cordoba Cordoba"
+        "Buenos-aires Buenos-aires Mar-del-plata";
     overflow: hidden;
 }
 
-.Rosario { grid-area: Rosario; position: relative;}
-  
-.Cordoba { grid-area: Cordoba; position: relative; transition-delay: 0.1s;}
-  
-.Buenos-aires { grid-area: Buenos-aires; position: relative; transition-delay: 0.2s;}
-  
-.Mar-del-plata { grid-area: Mar-del-plata; position: relative; transition-delay: 0.3s;}
+.Rosario {
+    grid-area: Rosario;
+    position: relative;
+}
 
-.grid_lugares_popu > div {
+.Cordoba {
+    grid-area: Cordoba;
+    position: relative;
+    transition-delay: 0.1s;
+}
+
+.Buenos-aires {
+    grid-area: Buenos-aires;
+    position: relative;
+    transition-delay: 0.2s;
+}
+
+.Mar-del-plata {
+    grid-area: Mar-del-plata;
+    position: relative;
+    transition-delay: 0.3s;
+}
+
+.grid_lugares_popu>div {
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    border: 1px solid #ccc; 
+    border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
 }
 
-.grid_lugares_popu > div img {
-    width: 1050px; /*La imagen se ajusta al ancho del div*/
+.grid_lugares_popu>div img {
+    width: 1050px;
+    /*La imagen se ajusta al ancho del div*/
     /*Asegura la relación de aspecto*/
-    height: auto; 
+    height: auto;
     position: relative;
 }
 
@@ -712,9 +776,10 @@ article h2 {
 
 .overlay_lug:hover:after {
     opacity: 0.5;
-  }
+}
 
-.overlay_lug h3, .overlay_lug p {
+.overlay_lug h3,
+.overlay_lug p {
     letter-spacing: 2px;
     color: #FFF;
     font-size: 26px;
@@ -764,14 +829,14 @@ article h2 {
 .container-tarjetas-prop {
     max-width: 1420px;
     display: flex;
-    align-items: center; 
-    gap: 20px; 
+    align-items: center;
+    gap: 20px;
 }
 
 .tarjeta_prop {
     background-color: transparent;
     border-radius: 12px;
-    max-width: 307px;
+    width: 307px;
     /*n° magico que saque de no sé donde*/
     min-height: 510px;
     overflow: hidden;
@@ -864,15 +929,15 @@ article h2 {
 }
 
 /* NUESTRO EQUIPO DE ANIMALES EXPERTOS */
-.contendor_tarjetas_nosotros .dos{
+.contendor_tarjetas_nosotros .dos {
     transition-delay: 0.2s;
 }
 
-.contendor_tarjetas_nosotros .tres{
+.contendor_tarjetas_nosotros .tres {
     transition-delay: 0.4s;
 }
 
-.contendor_tarjetas_nosotros .cuatro{
+.contendor_tarjetas_nosotros .cuatro {
     transition-delay: 0.6s;
 }
 
@@ -964,18 +1029,32 @@ article h2 {
     gap: 10px;
     grid-auto-flow: row;
     grid-template-areas:
-      "testimonio-1 testimonio-2 testimonio-3 testimonio-4 testimonio-5";
-  }
-  
-  .testimonio-1 { grid-area: testimonio-1; }
-  
-  .testimonio-2 { grid-area: testimonio-2; transition-delay: 0.2s;}
-  
-  .testimonio-3 { grid-area: testimonio-3; transition-delay: 0.4s;}
-  
-  .testimonio-4 { grid-area: testimonio-4; transition-delay: 0.6s;}
-  
-  .testimonio-5 { grid-area: testimonio-5; transition-delay: 0.8s;}
+        "testimonio-1 testimonio-2 testimonio-3 testimonio-4 testimonio-5";
+}
+
+.testimonio-1 {
+    grid-area: testimonio-1;
+}
+
+.testimonio-2 {
+    grid-area: testimonio-2;
+    transition-delay: 0.2s;
+}
+
+.testimonio-3 {
+    grid-area: testimonio-3;
+    transition-delay: 0.4s;
+}
+
+.testimonio-4 {
+    grid-area: testimonio-4;
+    transition-delay: 0.6s;
+}
+
+.testimonio-5 {
+    grid-area: testimonio-5;
+    transition-delay: 0.8s;
+}
 
 .testimonios {
     display: flex;
@@ -1022,7 +1101,8 @@ article h2 {
     padding: 30px 0;
 }
 
-.logos:before, .logos:after {
+.logos:before,
+.logos:after {
     position: absolute;
     width: 200px;
     height: 84px;
@@ -1065,11 +1145,13 @@ article h2 {
     from {
         transform: translateX(0);
     }
+
     to {
         transform: translateX(-100%);
     }
-    
+
 }
+
 /*--------------------FOOTER-------------------*/
 footer {
     background: #d1d1d1;
@@ -1128,9 +1210,11 @@ footer {
     color: #333333;
     transition: 0.3s;
 }
+
 .social_footer a:hover {
     color: #de2c2f;
 }
+
 /*--------------------MEDIA QUERIES-------------------*/
 
 .uno {
@@ -1162,7 +1246,7 @@ footer {
             "tres cuatro";
     }
 
-    .container-tarjetas-prop{
+    .container-tarjetas-prop {
         grid-template-columns: auto auto;
     }
 }
@@ -1176,7 +1260,8 @@ footer {
             "tres"
             "cuatro";
     }
-    .container-tarjetas-prop{
+
+    .container-tarjetas-prop {
         grid-template-columns: auto;
     }
 }
@@ -1198,7 +1283,7 @@ footer {
     .navbar_link.active {
         display: flex;
     }
-   
+
     .navbar_link .btn_user {
         display: flex;
         flex-direction: column;
@@ -1210,7 +1295,7 @@ footer {
         align-items: flex-start;
     }
 
-    #mostrar_popup_li{
+    #mostrar_popup_li {
         padding: 10px;
     }
 
@@ -1233,7 +1318,7 @@ footer {
         width: 100%;
         padding: 12px 0;
     }
-   
+
     .navbar_link li {
         text-align: center;
         padding: 5px 1rem;
