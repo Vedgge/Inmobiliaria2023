@@ -3,7 +3,7 @@ const dataContainer = document.getElementById("dataContainer");
 
 // URL de la API que deseas llamar
 const apiUrl = "https://randomuser.me/api/?results=20";
-const commentsUrl = "./assets/comentarios.json"
+const commentsUrl = "./assets/frases.json"
 
 // Realiza una solicitud a la API de comentarios
 fetch(commentsUrl)
