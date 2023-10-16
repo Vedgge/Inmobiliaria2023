@@ -19,7 +19,7 @@ Desarrollar un sitio web de inmobiliaria que sea atractivo, funcional y fácil d
 - Incluye un favicon personalizado.
 - Contiene un total de 4 páginas totalmente estilizadas y funcionales usando HTML, CSS y JavaScript.
 - La página index es completamente responsive, adaptándose a diferentes tamaños de pantalla.
-- Contiene además un formulario para el envío de datos los cuales serán almacenados para su futuro tratamiento.
+- Contiene además un total de 5 formularios para el envío de datos los cuales serán almacenados para su futuro tratamiento.
 
 ## Instrucciones de uso
 
