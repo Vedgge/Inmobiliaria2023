@@ -151,8 +151,9 @@ const tarjetas = document.querySelectorAll('.tarjeta_prop'),
     botonAnterior = document.getElementById('anterior'),
     botonSiguiente = document.getElementById('siguiente'),
     botonStopIzq = document.getElementById('boton_stop_izq'),
-    botonStopDer = document.getElementById('boton_stop_der'),
-    numTarjetasPorVista = 4; //Máximo n° de tarjetas a mostrar
+    botonStopDer = document.getElementById('boton_stop_der');
+ //Máximo n° de tarjetas a mostrar
+let numTarjetasPorVista = 4;
 let tarjetasIndex = 0; //Inicializo la variable tarjetasIndex dentro de Let porque va a ser mutable, es como un contador o seguimiento
 
 function mostrarTarjetas(index) { //Toma parametro index que especifica el indice de la tarjeta a mostrar
@@ -161,6 +162,21 @@ function mostrarTarjetas(index) { //Toma parametro index que especifica el indic
     //Se usa para configurar la propiedad display del style de la tarjeta
   });
 }
+
+function ajustarNumeroDeTarjetasPorVista() {
+  if (window.innerWidth < 800) {
+    numTarjetasPorVista = 1;
+  } else if (window.innerWidth < 1130) {
+    numTarjetasPorVista = 2;
+  } else if (window.innerWidth < 1450) {
+    numTarjetasPorVista = 3;
+  } else {
+    numTarjetasPorVista = 4;
+  }
+  mostrarTarjetas(tarjetasIndex);
+}
+
+window.addEventListener('resize', ajustarNumeroDeTarjetasPorVista);
 
 function avanzarTarjetas() {
   tarjetasIndex = (tarjetasIndex + 1) % tarjetas.length; //Aumenta tarjetasIndex en +1 para avanzar al siguiente, cuando currentIndex + 1 = 4, el módulo con tarjetas.length me da 0, volviendo al primer bucle
@@ -195,6 +211,9 @@ function actualizarVisibilidadBotones() {
 botonAnterior.addEventListener('click', retrocederTarjetas);
 botonSiguiente.addEventListener('click', avanzarTarjetas);
 
-mostrarTarjetas(tarjetasIndex); //Mostrar las primeras tarjetas al cargar la página
+
+// Mostrar las primeras tarjetas al cargar la página y ajustar el número de tarjetas por vista
+mostrarTarjetas(tarjetasIndex);
+ajustarNumeroDeTarjetasPorVista();
 actualizarVisibilidadBotones();
 });

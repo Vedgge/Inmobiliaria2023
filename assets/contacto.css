@@ -173,3 +173,27 @@ input:last-of-type:checked~.switch_button {
     height: 1px;
     width: 1px;
 }
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1325px) {
+    .contenedor_contacto {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .otros_contacto, .form {
+        margin: 0 auto;
+    }
+
+    .form_contacto {
+       width: auto;
+    }
+    .email_newsletter input  {
+        width: auto;
+    }
+
+    .form_newsletter {
+        gap: 10px;
+    }
+}
