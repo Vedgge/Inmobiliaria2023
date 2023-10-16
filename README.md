@@ -14,11 +14,12 @@ Desarrollar un sitio web de inmobiliaria que sea atractivo, funcional y fácil d
 ## Características
 
 - Utiliza HTML, CSS y JavaScript para la estructura, diseño y funcionalidad de la página.
-- Incluye fuentes personalizadas de Google Fonts.
+- Incluye fuentes personalizadas de Google Fonts y el uso de mapas embedidos de Google Maps.
 - Utiliza iconos de Boxicons para los elementos visuales.
 - Incluye un favicon personalizado.
-- La página es completamente responsive, adaptándose a diferentes tamaños de pantalla.
-- Contiene además un formulario para el envío de datos los cuales serán almacenados para su futuro tratamiento.
+- Contiene un total de 4 páginas HTML totalmente estilizadas y funcionales.
+- La página index es completamente responsive, adaptándose a diferentes tamaños de pantalla.
+- Contiene además un total de 5 formularios para el envío de datos los cuales serán almacenados para su futuro tratamiento.
 
 ## Instrucciones de uso
 
@@ -59,7 +60,7 @@ El repositorio contiene los siguientes archivos y carpetas:
 
 [o] Si se utiliza Bootstrap, solo en la página del formulario.
 
-[ ] Publicar el sitio en línea (GitHub Pages, Netlify, u otro).
+[x] Publicar el sitio en línea (GitHub Pages, Netlify, u otro).
 
 [ ] Sincronizar el código en un repositorio Git y compartir el enlace con el instructor.
 
