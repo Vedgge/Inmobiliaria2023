@@ -17,7 +17,8 @@ Desarrollar un sitio web de inmobiliaria que sea atractivo, funcional y fácil d
 - Incluye fuentes personalizadas de Google Fonts.
 - Utiliza iconos de Boxicons para los elementos visuales.
 - Incluye un favicon personalizado.
-- La página es completamente responsive, adaptándose a diferentes tamaños de pantalla.
+- Contiene un total de 4 páginas totalmente estilizadas y funcionales usando HTML, CSS y JavaScript.
+- La página index es completamente responsive, adaptándose a diferentes tamaños de pantalla.
 - Contiene además un formulario para el envío de datos los cuales serán almacenados para su futuro tratamiento.
 
 ## Instrucciones de uso
