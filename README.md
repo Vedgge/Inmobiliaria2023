@@ -14,10 +14,10 @@ Desarrollar un sitio web de inmobiliaria que sea atractivo, funcional y fácil d
 ## Características
 
 - Utiliza HTML, CSS y JavaScript para la estructura, diseño y funcionalidad de la página.
-- Incluye fuentes personalizadas de Google Fonts.
+- Incluye fuentes personalizadas de Google Fonts y el uso de mapas embedidos de Google Maps.
 - Utiliza iconos de Boxicons para los elementos visuales.
 - Incluye un favicon personalizado.
-- Contiene un total de 4 páginas totalmente estilizadas y funcionales usando HTML, CSS y JavaScript.
+- Contiene un total de 4 páginas HTML totalmente estilizadas y funcionales.
 - La página index es completamente responsive, adaptándose a diferentes tamaños de pantalla.
 - Contiene además un total de 5 formularios para el envío de datos los cuales serán almacenados para su futuro tratamiento.
 
