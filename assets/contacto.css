@@ -177,9 +177,9 @@ input:last-of-type:checked~.switch_button {
 /* MEDIA QUERIES */
 
 @media (max-width: 1325px) {
+
     .contenedor_contacto {
-        display: flex;
-        flex-direction: column;
+        gap: 10px;
     }
 
     .otros_contacto, .form {
@@ -195,5 +195,13 @@ input:last-of-type:checked~.switch_button {
 
     .form_newsletter {
         gap: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    .contenedor_contacto {
+       display: flex;
+       flex-direction: column;
+       gap: 20px;
     }
 }

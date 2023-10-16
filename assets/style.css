@@ -659,6 +659,7 @@ article h2 {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    background: #f3f3f3;
     border: 1px solid rgb(209, 209, 209);
     border-radius: 8px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, .15);
@@ -835,7 +836,7 @@ article h2 {
 }
 
 .tarjeta_prop {
-    background-color: transparent;
+    background-color: #f3f3f3;
     border-radius: 12px;
     width: 307px;
     /*n° magico que saque de no sé donde*/
@@ -977,7 +978,7 @@ article h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #e9e9e9;
+    background-color: #f3f3f3;
     border: 1px solid #d8d8d8;
     border-radius: 8px;
     box-shadow: 2px 15px 15px 0 rgba(0, 0, 0, .1);
@@ -1316,7 +1317,6 @@ footer {
         grid-area: Mar-del-plata;
     }
 
-
     .testimonios_contenedor {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -1352,6 +1352,13 @@ footer {
         grid-area: testimonio-5;
     }
 
+    .email_newsletter input  {
+        width: auto;
+    }
+
+    .form_newsletter {
+        gap: 10px;
+    }
 }
 
 @media (max-width: 1184px) {
@@ -1466,6 +1473,7 @@ footer {
             "email_footer";
         max-width: 1060px;
         height: 50%;
+        gap: 10px;
     }
 
     .navegacion_footer {
@@ -1497,9 +1505,36 @@ footer {
 
     .logo {
         max-width: 70%;
+        height: auto;
+        padding: 10px 0 0 20px;
     }
 
     .slogan_hero {
+        display: none;
+    }
+
+    .contenido h1 {
+        display: none;
+    }
+
+    .form_contenedor form {
+        border-top-right-radius: 0;
+    }
+
+    #propiedades_destac h2{
+        padding-left: 10px;
+        font-size: 23px;
+    }
+
+    .contenedor_title_prop {
+        padding-bottom: 15px;
+    }
+
+    .contenedor_title_prop .cto_header_top a{
+        font-size: 15px;
+    }
+
+    #first_desc {
         display: none;
     }
 
@@ -1534,4 +1569,41 @@ footer {
         grid-area: soporte-legal;
     }
 
+    .tarjeta_prop {
+        max-width: 270px;
+    }
+
+    .propiedades_destacadas button {
+        margin: 0 5px;
+    }
+
+    .testimonios_contenedor {  display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        gap: 10px 10px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "testimonio-1"
+          "testimonio-2"
+          "testimonio-3"
+          "testimonio-4"
+          "testimonio-5";
+        max-width: 328px;
+        height: 50%;
+      }
+      
+      .testimonio-1 { grid-area: testimonio-1; }
+      
+      .testimonio-2 { grid-area: testimonio-2; }
+      
+      .testimonio-3 { grid-area: testimonio-3; }
+      
+      .testimonio-4 { grid-area: testimonio-4; }
+      
+      .testimonio-5 { grid-area: testimonio-5; }
+
+      .logos:before, .logos:after {
+        width: 100px;
+      }
+      
 }

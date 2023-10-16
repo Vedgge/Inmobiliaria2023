@@ -22,7 +22,7 @@ input::placeholder {
     max-width: 350px;
 }
 .contenedor_articulos_tasar img {
-    width: 100%;
+    width: 350px;
     border-radius: 8px;
     box-shadow: 2px 15px 15px 0 rgba(0, 0, 0, .1);
 }
@@ -468,52 +468,29 @@ footer {
 
 /*--------------------MEDIA QUERIES---------------------*/
 
-/* Default styles for all screen sizes */
-
-/* Add your existing CSS here */
-
-/* Media query for screens with a maximum width of 768px */
-@media (max-width: 768px) {
-    .contenido_tasar {
-        padding: 20px;
-    }
-
-    .contenedor_tasar_form {
-        max-width: 100%;
-        margin-left: 0;
-    }
-
-    .articulos_tasar {
-        margin-left: 0;
-        text-align: center;
+@media (max-width: 1775px) {
+    .articulos_tasar{
+        position: relative;
+        margin-left: 50%;
+        z-index: -1;
     }
 
     .contenedor_articulos_tasar {
-        flex-direction: column;
-    }
-
-    .contenedor_articulos_tasar > div {
-        max-width: 100%;
-        margin: 20px 0;
-    }
-
-    .contenedor_articulos_tasar img {
-        border-radius: 0;
+        gap: 50px;
     }
 }
 
-/* Media query for screens with a maximum width of 480px */
-@media (max-width: 480px) {
-    .contenido_tasar {
+@media (max-width: 1530px){
+    .articulos_tasar {
+        display: flex;
+        flex-direction: column;
+        z-index: -1;
         height: auto;
+        margin: 500px 0 0 -12.5%;
     }
 
-    .contenido_tasar .contenedor_tasar_form {
-        max-width: 100%;
-        padding: 10px;
-    }
-
-    .contenedor_articulos_tasar > div {
-        max-width: 100%;
+    .contenedor_articulos_tasar {
+        display: flex;
+        flex-direction: column;
     }
 }
