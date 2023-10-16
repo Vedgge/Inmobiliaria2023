@@ -59,7 +59,7 @@ El repositorio contiene los siguientes archivos y carpetas:
 
 [o] Si se utiliza Bootstrap, solo en la página del formulario.
 
-[ ] Publicar el sitio en línea (GitHub Pages, Netlify, u otro).
+[x] Publicar el sitio en línea (GitHub Pages, Netlify, u otro).
 
 [ ] Sincronizar el código en un repositorio Git y compartir el enlace con el instructor.
 
