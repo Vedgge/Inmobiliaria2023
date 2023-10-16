@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #de2c2f;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+#dataContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.user-card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+}
+
+.user-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.user-card p {
+    font-size: 1.2em;
+    margin: 0;
+}
+/* Agrega estilo a los comentarios */
+.user-card ul {
+    list-style: none; /* Elimina el punto de la lista */
+    padding: 0;
+}
+
+.user-card ul li {
+    margin: 5px 0; /* Agrega espacio entre los comentarios */
+    font-size: 1.1em; /* Tamaño de fuente para los comentarios */
+}
