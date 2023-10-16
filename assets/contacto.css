@@ -205,3 +205,11 @@ input:last-of-type:checked~.switch_button {
        gap: 20px;
     }
 }
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
