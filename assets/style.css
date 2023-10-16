@@ -242,7 +242,7 @@ main {
 .toggle_button {
     position: absolute;
     top: 56px;
-    right: 40px;
+    right: 30px;
     display: none;
     flex-direction: column;
     justify-content: space-between;
@@ -1542,14 +1542,14 @@ footer {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
-        gap: 10px 10px;
+        gap: 15px;
         grid-auto-flow: row;
         grid-template-areas:
             "hipoteca"
             "mudanza"
             "tasacion"
             "soporte-legal";
-        max-width: 1060px;
+        max-width: 328px;
         height: auto;
     }
 
@@ -1575,6 +1575,10 @@ footer {
 
     .propiedades_destacadas button {
         margin: 0 5px;
+    }
+
+    .grid_lugares_popu {
+        max-width: 330px;
     }
 
     .testimonios_contenedor {  display: grid;
