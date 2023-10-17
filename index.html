@@ -18,6 +18,7 @@
 
   <!--- custom js -->
   <script defer src="./assets/script.js" defer></script>
+  
 
   <!--- custom icons -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -357,7 +358,7 @@
         <!--Cartas de propiedades destacadas hecho con grid-->
         <div class="container-tarjetas-prop">
           <!--Descripción de las cartas de propiedades destacadas-->
-          <div class="tarjeta_prop tarjeta_primera">
+          <div class="tarjeta_prop tarjeta_primera escondido-1">
             <figure>
               <a href="propiedad.html" title="Semipiso 4 Ambientes Cochera Doble"><img src="./img/depto_4dorm/ejemplo_propiedad.jpg" alt=""></a>
               <div class="fav_dest">
@@ -389,7 +390,7 @@
               </div>
             </div>
           </div>
-          <div class="tarjeta_prop">
+          <div class="tarjeta_prop tarjeta_prop_2 escondido-1">
             <figure>
               <a href="propiedad.html"><img src="./img/depto_4dorm/ejemplo_casa.jpg" alt=""></a>
               <div class="fav_dest">
@@ -421,7 +422,7 @@
               </div>
             </div>
           </div>
-          <div class="tarjeta_prop">
+          <div class="tarjeta_prop tarjeta_prop_3 escondido-1">
             <figure>
               <a href="propiedad.html" title="Distrito Audiovisual! Edificio Comporativo de Categoría"><img src="./img/depto_4dorm/ejemplo_oficina.jpg" alt=""></a>
               <div class="fav_dest">
@@ -453,7 +454,7 @@
               </div>
             </div>
           </div>
-          <div class="tarjeta_prop">
+          <div class="tarjeta_prop tarjeta_prop_4 escondido-1">
             <figure>
               <a href="propiedad.html"><img src="./img/depto_4dorm/ejemplo_edificiocomercial" alt=""></a>
               <div class="fav_dest">
@@ -485,7 +486,7 @@
               </div>
             </div>
           </div>
-          <div class="tarjeta_prop">
+          <div class="tarjeta_prop escondido-1">
             <figure>
               <a href="propiedad.html" title="Casa de Tres Dorm. con Amarra"><img src="./img/depto_4dorm/ejemplo_casa(2) 1.jpg" alt=""></a>
               <div class="fav_dest">
@@ -517,7 +518,7 @@
               </div>
             </div>
           </div>
-          <div class="tarjeta_prop">
+          <div class="tarjeta_prop escondido-1">
             <figure>
               <a href="propiedad.html" title="Casa Al Rio en Venta y Alquiler - Barrio Santa Maria de Tigre"><img src="./img/depto_4dorm/ejemplo_casa(3) 1.jpg" alt=""></a>
               <div class="fav_dest">
@@ -549,7 +550,7 @@
               </div>
             </div>
           </div>
-          <div class="tarjeta_prop">
+          <div class="tarjeta_prop escondido-1">
             <figure>
               <a href="propiedad.html" title="Quartier Boulevard - Hermoso Departamento de 3 Ambientes Super Luminoso - Palermo Hollywood"><img src="./img/depto_4dorm/ejemplo_depto 5 (1).webp" alt="departamento"></a>
               <div class="fav_dest">
@@ -581,7 +582,7 @@
               </div>
             </div>
           </div>
-          <div class="tarjeta_prop">
+          <div class="tarjeta_prop escondido-1">
             <figure>
               <a href="propiedad.html"><img src="./img/depto_4dorm/ejemplo_depto 7 (1).webp" alt=""></a>
               <div class="fav_dest">
@@ -613,7 +614,7 @@
               </div>
             </div>
           </div>
-          <div class="tarjeta_prop tarjeta_final">
+          <div class="tarjeta_prop tarjeta_final escondido-1">
             <figure>
               <a href="propiedad.html"><img src="./img/depto_4dorm/ejemplo_depto(8) 1.jpg" alt="depto"></a>
               <div class="fav_dest">
@@ -754,54 +755,56 @@
         <p id="first_desc">Estamos muy orgullosos del servicio que brindamos. Vea lo que nuestros clientes tienen que
           decir sobre nosotros, nuestras ubicaciones y servicios.</p>
 
-        <div class="testimonios_contenedor">
-          <div class="testimonio-1 testimonios escondido-1">
+        <div id="testimonios_contenedor" class="testimonios_contenedor">
+          <div class="testimonio-1 testimonios">
             <i class='bx bxs-quote-right'></i>
-            <p id="quote">"Excelente servicio. ¡Encontré la casa de mis sueños con su ayuda!"</p>
+            <div class="quote"></div>
             <div class="autor_desc">
-              <img src="./img/testimonios/testi 1.jpg" alt="" width="80px" height="80px">
+              <div class="image">
+              </div>
               <div class="text_autor">
-                <p class="autor"><strong>Ana Pérez</strong></p>
-                <p>Buenos Aires</p>
+                <p class="autor"></p>
+                <p class="ubicacion">Buenos Aires</p>
               </div>
             </div>
           </div>
-          <div class="testimonio-2 testimonios escondido-1">
+          <div class="testimonio-2 testimonios">
             <i class='bx bxs-quote-right'></i>
-            <p id="quote">"El equipo de esta inmobiliaria es increíble. Me ayudaron a vender mi propiedad rápidamente."
-            </p>
+            <div class="quote"></div>
             <div class="autor_desc">
-              <img src="./img/testimonios/testi 2.jpg" alt="" width="80px" height="80px">
+              <div class="image">
+              </div>
               <div class="text_autor">
-                <p class="autor"><strong>Juan Rodríguez</strong></p>
-                <p>Rawson</p>
+                <p class="autor"></p>
+                <p class="ubicacion">Rawson</p>
               </div>
             </div>
           </div>
-          <div class="testimonio-3 testimonios escondido-1">
+          <div class="testimonio-3 testimonios">
             <i class='bx bxs-quote-right'></i>
-            <p id="quote">"Muy profesionales. Me ayudaron a encontrar un apartamento que se ajusta a mis necesidades."
-            </p>
+            <div class="quote"></div>
             <div class="autor_desc">
-              <img src="./img/testimonios/testi 3.jpg" alt="" width="80px" height="80px">
+              <div class="image">
+              </div>
               <div class="text_autor">
-                <p class="autor"><strong>María López</strong></p>
-                <p>Ushuaia</p>
+                <p class="autor"></p>
+                <p class="ubicacion">Ushuaia</p>
               </div>
             </div>
           </div>
-          <div class="testimonio-4 testimonios escondido-1">
+          <div class="testimonio-4 testimonios ">
             <i class='bx bxs-quote-right'></i>
-            <p id="quote">"Excelente atención al cliente. Recomiendo sus servicios a todos."</p>
+            <div class="quote"></div>
             <div class="autor_desc">
-              <img src="./img/testimonios/testi 4.jpg" alt="" width="80px" height="80px">
+              <div class="image">
+              </div>
               <div class="text_autor">
-                <p class="autor"><strong>Luciano Matuz</strong></p>
-                <p>Neuquén Capital</p>
+                <p class="autor"></p>
+                <p class="ubicacion">Neuquén Capital</p>
               </div>
             </div>
           </div>
-          <div class="testimonio-5 testimonios escondido-1">
+          <div class="testimonio-5 testimonios">
             <i class='bx bxs-quote-right'></i>
             <p id="quote">"Una inmobiliaria de confianza. Me ayudaron a vender mi casa rápido y a un buen precio."
             </p>
@@ -921,6 +924,7 @@
       </div>
     </div>
   </footer>
+  <script src="./assets/clientesAPI.js"></script>
 </body>
 
 </html>

@@ -846,6 +846,18 @@ article h2 {
     box-shadow: 2px 15px 15px 0 rgba(0, 0, 0, .1);
 }
 
+.tarjeta_prop_2{ 
+    transition-delay: 0.2s;
+}
+
+.tarjeta_prop_3{ 
+    transition-delay: 0.4s;
+}
+
+.tarjeta_prop_4{ 
+    transition-delay: 0.6s;
+}
+
 .tarjeta_prop figure {
     overflow: hidden;
 }
@@ -1040,22 +1052,18 @@ article h2 {
 
 .testimonio-2 {
     grid-area: testimonio-2;
-    transition-delay: 0.2s;
 }
 
 .testimonio-3 {
     grid-area: testimonio-3;
-    transition-delay: 0.4s;
 }
 
 .testimonio-4 {
     grid-area: testimonio-4;
-    transition-delay: 0.6s;
 }
 
 .testimonio-5 {
     grid-area: testimonio-5;
-    transition-delay: 0.8s;
 }
 
 .testimonios {
@@ -1076,6 +1084,9 @@ article h2 {
 }
 
 .autor_desc img {
+    float: left;
+    width: 80px; 
+    height: 80px;
     border: 5px solid #de2c2f;
     border-radius: 50%;
 }
@@ -1094,6 +1105,8 @@ article h2 {
 
 #quote {
     padding: 10px;
+    max-height: 57px;
+    overflow: hidden;
 }
 
 /*COMPAÑEROS*/
