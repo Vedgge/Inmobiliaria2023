@@ -1,6 +1,6 @@
 # Inmobiliaria23
  
-Este repositorio contiene el código fuente de la página web de Inmobiliaria Andes, donde podrás encontrar propiedades para alquilar, comprar y vender.
+Este repositorio contiene el código fuente de la página web de Inmobiliaria Andes, donde podrás encontrar listados de propiedades para alquilar, comprar y vender.
 Forma parte de un Tabajo práctico para el curso **Full Stack 2023** del programa [codo a codo](https://aulasvirtuales.edu.ar)
 
 ## Objetivo
