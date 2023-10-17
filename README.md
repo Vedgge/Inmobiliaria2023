@@ -35,7 +35,7 @@ El repositorio contiene los siguientes archivos y carpetas:
 - `index.html`: Página principal de la web.
 - `tasar.html`: Página de tasación de propiedades a la cual se accede desde el navbar "Tasar".
 - `contacto.html`: Página de contacto con la inmobiliaria a la cual se accede desde el navbar "Contacto".
-- `propiedad.html`: Página de un listado ejemplo de una propiedad a la cual es posible acceder al clickear una porpiedad del carrusel en la página index.html.
+- `propiedad.html`: Página de un listado ejemplo de una propiedad a la cual es posible acceder clickeando una propiedad del carrusel en la página index.html.
 - `assets/`: Carpeta que contiene los archivos de estilo CSS y los scripts JavaScript utilizados.
 - `img/`: Carpeta que contiene las imágenes utilizadas en la página.
 
