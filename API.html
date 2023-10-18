@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clientes Satisfechos</title>
+
+  <!-- custom google fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap"
+    rel="stylesheet">
+
+  <!--- custom css -->
+  <link rel="stylesheet" href="./assets/style.css">
+
+  <!--- custom js -->
+  <script defer src="./assets/script.js" defer></script>
+
+
+  <!--- custom icons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!--- favicon -->
+  <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
+
+  <!-- llamado a API -->
+  <link rel="stylesheet" href="./assets/llamadoApi.css">
+</head>
+
+<body>
+  <!--header-->
+  <header class="header">
+
+    <!--Sección superior del header con redes sociales y contacto-->
+    <div class="header-top">
+      <div class="data_header">
+        <div class="contendor_data_header">
+          <div class="cto_header_top">
+            <a href="#"><i class='bx bx-envelope'></i><span>info@andesinmobiliaria.com</span></a>
+          </div>
+          <div class="cto_header_top">
+            <a href="#"><i class='bx bx-phone'></i><span>(999) 999-9999</span></a>
+          </div>
+          <div class="social">
+            <a href="#"><i class='bx bxl-whatsapp'></i></a>
+            <a href="#"><i class='bx bxl-facebook-square'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-youtube'></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Sección inferior del header con botones de navegación / agregar diseño responsivo y estructura-->
+    <nav class="header-bottom">
+      <div class="brand">
+        <a href="index.html"><img src="./img/andes_fontlogo.png" alt="logo inmobiliaria andes" class="logo"></a>
+      </div>
+
+      <!--Navbar-->
+      <a href="#" class="toggle_button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+
+      <div class="navbar_link">
+        <ul class="navbar_ul">
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li>
+            <a href="alquilar.html">Alquilar</a>
+            <ul class="drowpdown_lista">
+              <div class="dropdown_cont">
+                <div class="dropdown_titulo">Tipo de propiedades</div>
+                <ul class="dropdown_prop">
+                  <li><a href="#">Edificios Comerciales</a></li>
+                  <li><a href="#">Hoteles</a></li>
+                  <li><a href="#">Apartamentos</a></li>
+                  <li><a href="#">Casas</a></li>
+                  <li><a href="#">Oficinas</a></li>
+                </ul>
+              </div>
+              <div class="dropdown_cont">
+                <div class="dropdown_titulo">Provincia</div>
+                <ul class="dropdown_prop">
+                  <li><a href="#">Buenos Aires</a></li>
+                  <li><a href="#">Córdoba</a></li>
+                  <li><a href="#">Tierra del Fuego</a></li>
+                  <li><a href="#">Neuquén</a></li>
+                  <li><a href="#">Santa Fe</a></li>
+                </ul>
+              </div>
+              <div class="dropdown_cont">
+                <div class="dropdown_titulo">Ciudades</div>
+                <ul class="dropdown_prop">
+                  <li><a href="#">Capital Federal</a></li>
+                  <li><a href="#">Córdoba Capital</a></li>
+                  <li><a href="#">Rosario</a></li>
+                  <li><a href="#">Mar del Plata</a></li>
+                  <li><a href="#">Neuquén Capital</a></li>
+                </ul>
+              </div>
+            </ul>
+          </li>
+          <li><a href="comprar.html">Comprar</a></li>
+          <li><a href="vender.html">Vender</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="tasar.html">Tasar</a></li>
+        </ul>
+        <div class="btn_user">
+          <button id="mostrar_popup_li"><a>Iniciar sesión</a></button>
+          <a class="registrate" id="mostrar_popup_sp">Registrate</a>
+        </div>
+        <div class="overlay"></div>
+        <!-- Popup login form -->
+        <div class="popup login">
+          <div class="cerrar_btn">&times;</div>
+          <div class="form">
+            <h2>Iniciar sesión</h2>
+            <p>Guarde búsquedas, sus propiedades favoritas y más</p>
+            <p>¿Nuevo en el sitio? <a href="#" id="registrar">Registra una cuenta</a></p>
+            <div class="elementos_form">
+              <label for="email">Email</label>
+              <input type="text" id="email" placeholder="Ingresa tu email">
+            </div>
+            <div class="elementos_form">
+              <label for="contraseña">Contraseña</label>
+              <input type="password" id="contraseña" placeholder="Ingresa tu contraseña">
+            </div>
+            <div class="elementos_form">
+              <input type="checkbox" id="checkbox">
+              <label for="recordarme">Recordar mis datos</label>
+            </div>
+            <div class="elementos_form">
+              <button class="btn_submit">Iniciar sesión</button>
+            </div>
+            <div class="elementos_form">
+              <a href="#">Olvide mi contraseña</a>
+            </div>
+          </div>
+        </div>
+        <!-- Popup signup form -->
+        <div class="popup signup">
+          <div class="cerrar_btn">&times;</div>
+          <div class="form">
+            <h2>Registrarse</h2>
+            <p>Guarde búsquedas, sus propiedades favoritas y más</p>
+            <p>¿Ya tienes una cuenta? <a href="#" id="iniciar_sesion">Inicia sesión</a></p>
+            <div class="elementos_form">
+              <label for="email">Email</label>
+              <input type="text" id="email" placeholder="Ingresa tu email">
+            </div>
+            <div class="elementos_form">
+              <label for="contraseña">Contraseña</label>
+              <input type="password" id="contraseña" placeholder="Crea tu contraseña">
+            </div>
+            <div class="elementos_form">
+              <label for="contraseña">Confirma contraseña</label>
+              <input type="password" id="contraseña" placeholder="Confirma tu contraseña">
+            </div>
+            <div class="elementos_form" id="term_cond">
+              <input type="checkbox" id="checkbox">
+              <label for="checkbox">Estoy de acuerdo con los<a href="#"> Terminos y Condiciones</a></label>
+            </div>
+            <div class="elementos_form">
+              <button class="btn_submit">Regsitrate</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="contenedor_title_prop">
+      <h1>Testimonios de nuestros clientes</h1>
+      
+      </div>
+    </div>
+    <div id="dataDiv">
+      <div id="dataContainer" class="user-cards"></div>
+    </div>
+    <script src="./assets/llamadoApi.js"></script>
+  </main>
+
+  <footer>
+    <hr>
+    <div class="footer_contenedor">
+      <div class="navegacion_footer">
+        <div class="titulo_cf">
+          <h3>Navegación</h3>
+        </div>
+        <div class="lista_footer">
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="alquilar.html">Alquilar</a></li>
+            <li><a href="comprar.html">Comprar</a></li>
+            <li><a href="vender.html">Vender</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="tasar.html">Tasar</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="ayuda_footer">
+        <div class="titulo_cf">
+          <h3>Ayuda</h3>
+        </div>
+        <div class="lista_footer">
+          <ul>
+            <li><a href="#">Preguntas frecuentes (FAQ)</a></li>
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Política de cookies</a></li>
+            <li><a href="#">Condiciones generales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="inmobiliaria_footer">
+        <div class="titulo_cf">
+          <h3>Inmobiliaria Andes</h3>
+        </div>
+        <div class="lista_footer">
+          <ul>
+            <li><a href="nosotros.html">Acerca de nosotros</a></li>
+            <li><a href="contacto.html">Contáctanos</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">¡Trabaja con nosotros!</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="email_footer">
+        <div class="titulo_cf">
+          <h3>¡Se el primero en recibir noticias de las mejores propiedades!</h3>
+        </div>
+        <div class="newsletter_social">
+          <form action="#">
+            <div class="form_newsletter">
+              <div class="email_newsletter">
+                <input type="email" name="EMAIL" required placeholder="Escribe tu email aquí">
+              </div>
+              <button class="btn_submit">Enviar</button>
+            </div>
+          </form>
+          <div class="social_footer">
+            <h3>Seguinos y contáctanos por</h3>
+            <a href="#"><i class='bx bxl-whatsapp'></i></a>
+            <a href="#"><i class='bx bxl-facebook-square'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-youtube'></i></a>
+            <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="./assets/clientesAPI.js"></script>
+</body>
+
+</html>
