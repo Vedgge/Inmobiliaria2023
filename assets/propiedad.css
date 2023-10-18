@@ -65,7 +65,7 @@ textarea::placeholder {
     border: 1px solid rgb(209, 209, 209);
     border-radius: 12px;
     box-shadow: 2px 15px 15px 0 rgba(0, 0, 0, .1);
-    background: #e9e9e9;
+    background: #f3f3f3;
     color: #222;
 }
 
@@ -166,11 +166,6 @@ textarea::placeholder {
     padding: 25px 15px;
 }
 
-/* .contenedor_desc_prop {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-} */
 
 .contenedor_desc_prop>div h1 {
     padding-left: 20px;
@@ -314,13 +309,6 @@ textarea::placeholder {
     border-top: 1px solid #b4b4b4;
     max-width: 100%;
 }
-
-/* .carrusel_propiedades_similares {
-    display: flex;
-    gap: 20px;
-    text-align: center;
-    overflow: auto;
-} */
 
 .tarjeta_prop {
     min-width: 307px !important;

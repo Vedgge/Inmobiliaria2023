@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const formulario = document.querySelector(".contact_form"),
-    contactoPropiedad = document.querySelector(".contacto_propiedad");   
+        contactoPropiedad = document.querySelector(".contacto_propiedad");
 
     formulario.addEventListener("submit", function (event) {
         if (!validarFormulario()) {
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         contactoPropiedad.style.height = "610px";
-    });    
+    });
 
     function validarFormulario() {
         const nombre = document.getElementById("nombre").value,
@@ -144,7 +144,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     toggleBtn.addEventListener('click', animHam)
-
 
     //AGREGAR CLASE DE NAVBAR_LINK
     const toggleButton = document.querySelector(".toggle_button"),
