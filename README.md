@@ -1,6 +1,6 @@
 # Inmobiliaria23
  
-Este repositorio contiene el código fuente de la página web de Inmobiliaria Andes, donde podrás encontrar propiedades para alquilar, comprar y vender.
+Este repositorio contiene el código fuente de la página web de Inmobiliaria Andes, donde podrás encontrar listados de propiedades para alquilar, comprar y vender.
 Forma parte de un Tabajo práctico para el curso **Full Stack 2023** del programa [codo a codo](https://aulasvirtuales.edu.ar)
 
 ## Objetivo
@@ -17,7 +17,7 @@ Desarrollar un sitio web de inmobiliaria que sea atractivo, funcional y fácil d
 - Incluye fuentes personalizadas de Google Fonts y el uso de mapas embedidos de Google Maps.
 - Utiliza iconos de Boxicons para los elementos visuales.
 - Incluye un favicon personalizado.
-- Contiene un total de 4 páginas HTML totalmente estilizadas y funcionales.
+- Contiene un total de 4 páginas HTML totalmente estilizadas, animadas y funcionales.
 - La página index es completamente responsive, adaptándose a diferentes tamaños de pantalla.
 - Contiene además un total de 5 formularios para el envío de datos los cuales serán almacenados para su futuro tratamiento.
 
@@ -33,6 +33,9 @@ Desarrollar un sitio web de inmobiliaria que sea atractivo, funcional y fácil d
 El repositorio contiene los siguientes archivos y carpetas:
 
 - `index.html`: Página principal de la web.
+- `tasar.html`: Página de tasación de propiedades a la cual se accede desde el navbar "Tasar".
+- `contacto.html`: Página de contacto con la inmobiliaria a la cual se accede desde el navbar "Contacto".
+- `propiedad.html`: Página de un listado ejemplo de una propiedad a la cual es posible acceder clickeando una propiedad del carrusel en la página index.html.
 - `assets/`: Carpeta que contiene los archivos de estilo CSS y los scripts JavaScript utilizados.
 - `img/`: Carpeta que contiene las imágenes utilizadas en la página.
 
@@ -56,7 +59,7 @@ El repositorio contiene los siguientes archivos y carpetas:
 
 [x] Utilizar Flexbox y/o CSS Grid para la maquetación.
 
-[ ] Realizar una solicitud a una API Rest desde JavaScript.
+[x] Realizar una solicitud a una API Rest desde JavaScript.
 
 [o] Si se utiliza Bootstrap, solo en la página del formulario.
 
@@ -66,7 +69,7 @@ El repositorio contiene los siguientes archivos y carpetas:
 
 [x] Aplicar diseño integral, incluyendo maquetación, tipografía, imágenes, colores, logo, e íconos.
 
-[ ] Preparar un archivo de documentación preliminar en PDF que describa el proyecto.
+[x] Preparar un archivo de documentación preliminar en PDF que describa el proyecto.
 
 ### Notas Check List
 - "x" Completado 
