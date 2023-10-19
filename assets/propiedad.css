@@ -69,7 +69,6 @@ textarea::placeholder {
     color: #222;
 }
 
-
 .contact_form {
     display: flex;
     flex-direction: column;
