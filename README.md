@@ -1,7 +1,7 @@
 # Inmobiliaria23
  
 Este repositorio contiene el código fuente de la página web de Inmobiliaria Andes, donde podrás encontrar listados de propiedades para alquilar, comprar y vender.
-Forma parte de un Tabajo práctico para el curso **Full Stack 2023** del programa [codo a codo](https://aulasvirtuales.edu.ar)
+Forma parte de un Trabajo práctico para el curso **Full Stack 2023** del programa [codo a codo](https://aulasvirtuales.edu.ar)
 
 ## Objetivo
 Desarrollar un sitio web de inmobiliaria que sea atractivo, funcional y fácil de usar.
@@ -17,27 +17,29 @@ Desarrollar un sitio web de inmobiliaria que sea atractivo, funcional y fácil d
 - Incluye fuentes personalizadas de Google Fonts y el uso de mapas embedidos de Google Maps.
 - Utiliza iconos de Boxicons para los elementos visuales.
 - Incluye un favicon personalizado.
-- Contiene un total de 4 páginas HTML totalmente estilizadas, animadas y funcionales.
-- La página index es completamente responsive, adaptándose a diferentes tamaños de pantalla.
+- Contiene un total de 4 páginas HTML totalmente estilizadas, animadas y funcionales, las mismas son: index.html, tasar.html, contacto.html y propiedad.html.
 - Contiene además un total de 5 formularios para el envío de datos los cuales serán almacenados para su futuro tratamiento.
 
 ## Instrucciones de uso
 
-1. Descarga todos los archivos de este repositorio.
-2. Abre el archivo "index.html" en tu navegador web para ver la página.
+- Vía Github:
+    1. Descarga todos los archivos de este repositorio.
+    2. Abre el archivo "index.html" en tu navegador web para ver la página.
 
-<!-- Eventualmente habrá una página web aquí -->
+- Vía Netlify, abriendo https://deft-conkies-47fdb5.netlify.app/
 
 ## Estructura de archivos
 
 El repositorio contiene los siguientes archivos y carpetas:
 
-- `index.html`: Página principal de la web.
+- `index.html`: Página principal de la web es completamente responsiva.
 - `tasar.html`: Página de tasación de propiedades a la cual se accede desde el navbar "Tasar".
 - `contacto.html`: Página de contacto con la inmobiliaria a la cual se accede desde el navbar "Contacto".
 - `propiedad.html`: Página de un listado ejemplo de una propiedad a la cual es posible acceder clickeando una propiedad del carrusel en la página index.html.
+- `API.html`: Conecta con una API "https://randomuser.me" y la conecta con una base de datos JSON llamada **frases.json**, y trae para cada usuario generado con la API, un comentario aleatorio.
 - `assets/`: Carpeta que contiene los archivos de estilo CSS y los scripts JavaScript utilizados.
 - `img/`: Carpeta que contiene las imágenes utilizadas en la página.
+- `layout posibles/`: Contiene distintos layouts de la web de prueba
 
 ## Notas finales
 
@@ -65,7 +67,7 @@ El repositorio contiene los siguientes archivos y carpetas:
 
 [x] Publicar el sitio en línea (GitHub Pages, Netlify, u otro).
 
-[ ] Sincronizar el código en un repositorio Git y compartir el enlace con el instructor.
+[x] Sincronizar el código en un repositorio Git y compartir el enlace con el instructor.
 
 [x] Aplicar diseño integral, incluyendo maquetación, tipografía, imágenes, colores, logo, e íconos.
 
