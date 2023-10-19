@@ -394,7 +394,7 @@ main {
     color: #222;
 }
 
-.popup .form .elementos_form input[type="text"],
+.popup .form .elementos_form input[type="email"],
 .popup .form .elementos_form input[type="password"] {
     display: block;
     width: 356px;
@@ -1294,7 +1294,6 @@ footer {
         grid-area: soporte-legal;
         padding: 10px;
     }
-
 
     .grid_lugares_popu {
         display: grid;

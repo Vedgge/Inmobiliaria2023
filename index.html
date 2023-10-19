@@ -18,7 +18,9 @@
 
   <!--- custom js -->
   <script defer src="./assets/script.js" defer></script>
-  
+
+  <!--- validacion -->
+  <script src="./assets/sesionRegistroInicio.js" defer></script>
 
   <!--- custom icons -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -112,65 +114,77 @@
           <button id="mostrar_popup_li"><a>Iniciar sesión</a></button>
           <a class="registrate" id="mostrar_popup_sp">Registrate</a>
         </div>
+
         <div class="overlay"></div>
+
         <!-- Popup login form -->
         <div class="popup login">
           <div class="cerrar_btn">&times;</div>
-          <div class="form">
+
+          <form class="form form_iniciarsesion">
             <h2>Iniciar sesión</h2>
             <p>Guarde búsquedas, sus propiedades favoritas y más</p>
             <p>¿Nuevo en el sitio? <a href="#" id="registrar">Registra una cuenta</a></p>
             <div class="elementos_form">
               <label for="email">Email</label>
-              <input type="text" id="email" placeholder="Ingresa tu email">
+              <input type="email" name="email" id="emailForm" placeholder="Ingresa tu email">
+              <p id="emailFormError" class="error-message"></p>
             </div>
             <div class="elementos_form">
-              <label for="contraseña">Contraseña</label>
-              <input type="password" id="contraseña" placeholder="Ingresa tu contraseña">
+              <label for="contraseña_ingreso">Contraseña</label>
+              <input type="password" id="contraseña_ingreso" placeholder="Ingresa tu contraseña">
+              <p id="contraseñaFormError" class="error-message"></p>
             </div>
             <div class="elementos_form">
-              <input type="checkbox" id="checkbox">
+              <input type="checkbox" id="recordar_datos" name="recordar_datos" >
               <label for="recordarme">Recordar mis datos</label>
             </div>
-            <div class="elementos_form">
-              <button class="btn_submit">Iniciar sesión</button>
-            </div>
+              <input type="submit" value="Iniciar sesión" class="btn_submit" style="width: 100%;">
             <div class="elementos_form">
               <a href="#">Olvide mi contraseña</a>
             </div>
-          </div>
+          </form>
+
         </div>
+
         <!-- Popup signup form -->
         <div class="popup signup">
           <div class="cerrar_btn">&times;</div>
-          <div class="form">
+
+          <form class="form contact_form">
             <h2>Registrarse</h2>
             <p>Guarde búsquedas, sus propiedades favoritas y más</p>
             <p>¿Ya tienes una cuenta? <a href="#" id="iniciar_sesion">Inicia sesión</a></p>
             <div class="elementos_form">
               <label for="email">Email</label>
-              <input type="text" id="email" placeholder="Ingresa tu email">
+              <input type="email" name="email" id="emailForm" placeholder="Ingresa tu email">
+              <p id="emailFormError" class="error-message"></p>
             </div>
             <div class="elementos_form">
-              <label for="contraseña">Contraseña</label>
-              <input type="password" id="contraseña" placeholder="Crea tu contraseña">
+              <label for="contraseña_registro">Contraseña</label>
+              <input type="password" id="contraseña_registro" placeholder="Ingresa tu contraseña">
+              <p id="contraseñaFormError" class="error-message"></p>
             </div>
             <div class="elementos_form">
-              <label for="contraseña">Confirma contraseña</label>
-              <input type="password" id="contraseña" placeholder="Confirma tu contraseña">
+              <label for="contraseña_confirma">Confirma contraseña</label>
+              <input type="password" id="contraseña_confirma" placeholder="Confirma tu contraseña">
+              <p id="contraseñaFormError" class="error-message"></p>
             </div>
             <div class="elementos_form" id="term_cond">
               <input type="checkbox" id="checkbox">
               <label for="checkbox">Estoy de acuerdo con los<a href="#"> Terminos y Condiciones</a></label>
+              <p id="contraseñaFormError" class="error-message"></p>
             </div>
             <div class="elementos_form">
-              <button class="btn_submit">Regsitrate</button>
+              <input type="submit" value="Registrate" class="btn_submit" style="width: 100%;">
             </div>
-          </div>
-        </div>
+          </form>
 
+        </div>
       </div>
+
     </nav>
+
   </header>
 
   <!-- Contenido main de la página -->
@@ -178,6 +192,7 @@
     <div class="contenido">
       <h1>Descubre tu futuro <span id="escritura"></span><span id="cursor">|</span></h1>
       <p class="slogan_hero">Descubre hogares desde la majestuosa Tierra del Fuego hasta la vibrante Buenos Aires</p>
+
       <!--Botones del buscador de propiedades-->
       <div class="form_contenedor">
         <div class="busqueda">
@@ -185,6 +200,7 @@
           <button class="type-btn" data-tab-btn>Comprar</button>
           <button class="type-btn" data-tab-btn>Vender</button>
         </div>
+
         <!--Variables básicas para el buscador de propiedades - Son expandidas al buscar propiedades-->
         <form action="">
           <div class="input-box">
@@ -239,6 +255,8 @@
       </div>
     </div>
 
+
+    <!-- Servicios ofrecidos por la inmobiliaria -->
     <article>
       <div class="contenedor_div_grid" id="propiedades_destac">
         <div class="contenedor_title_prop">
@@ -295,6 +313,7 @@
 
     <div class="espaciador"></div>
 
+    <!-- Lugares más populares según la cantidad de listados -->
     <article>
       <div class="contenedor_div_grid" id="propiedades_destac">
         <div class="contenedor_title_prop">
@@ -340,6 +359,7 @@
 
     <div class="espaciador"></div>
 
+    <!-- Las propiedades más visitadas en la página -->
     <article>
       <div class="contenedor_div_grid" id="propiedades_destac">
         <div class="contenedor_title_prop">
@@ -351,12 +371,15 @@
         <p id="first_desc">Explore propiedades destacadas y encuentre su hogar ideal. Nuestro equipo de expertos se
           dedica a brindar el mejor servicio.</p>
       </div>
+
       <!--Propiedades destacadas del mes-->
       <div class="propiedades_destacadas">
         <button id="boton_stop_izq" class="boton-slide"><i class='bx bx-minus' style="transform: rotate(90deg); height: 43px;"></i></button>
         <button id="anterior" class="boton-slide"><i class='bx bx-chevron-left'></i></button>
+
         <!--Cartas de propiedades destacadas hecho con grid-->
         <div class="container-tarjetas-prop">
+
           <!--Descripción de las cartas de propiedades destacadas-->
           <div class="tarjeta_prop tarjeta_primera escondido-1">
             <figure>
@@ -654,6 +677,7 @@
 
     <div class="espaciador"></div>
 
+    <!-- Equipo de agentes expertos que trabajan en la inmobiliaria -->
     <article>
       <div class="contenedor_div_grid" id="propiedades_destac">
         <div class="contenedor_title_prop">
@@ -689,7 +713,7 @@
           <div class="foto_experto_inicio"><a href="#"><img src="./img/integrantes/int2.jpg" alt="foto experto"></a>
           </div>
           <div class="np_nosotros">
-            <a href="#">Zebastian</a>
+            <a href="#">Sebastian Scheverin</a>
             <div class="prof_nosotros">
               <p>AGENTE INMOBILIARIO</p>
             </div>
@@ -725,7 +749,7 @@
           <div class="foto_experto_inicio"><a href="#"><img src="./img/integrantes/int4.jpg" alt="foto experto"></a>
           </div>
           <div class="np_nosotros">
-            <a href="#">Isaac Farache</a>
+            <a href="#">Ariel Palazzesi</a>
             <div class="prof_nosotros">
               <p>AGENTE INMOBILIARIO</p>
             </div>
@@ -743,6 +767,8 @@
     </article>
 
     <div class="espaciador"></div>
+
+    <!-- Testimonios de clientes satisfechos API -->
 
     <article>
       <div class="contenedor_div_grid" id="propiedades_destac">
@@ -821,6 +847,8 @@
     </article>
     
     <div class="espaciador"></div>
+
+    <!-- Compañías con las que se trabaja -->
 
     <article>
       <div class="contenedor_div_grid" id="propiedades_destac">

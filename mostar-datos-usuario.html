@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Datos</title>
+</head>
+<body>
+    <h1>Datos del Formulario enviados correctamente</h1>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const params = new URLSearchParams(location.search);
+            const email = params.get("email");
+            const contraseña = params.get("contraseña");
+            const recordarDatos = params.get("recordar_datos");
+
+            const datosContainer = document.createElement("div");
+            datosContainer.innerHTML = `
+                <p>Email: ${email}</p>
+                <p>Contraseña: ${contraseña}</p>
+                <p>Recordar datos: ${recordarDatos}</p>
+            `;
+
+            document.body.appendChild(datosContainer);
+        });
+    </script>
+
+    <a href="index.html">Volver al inicio</a>
+</body>
+</html>
