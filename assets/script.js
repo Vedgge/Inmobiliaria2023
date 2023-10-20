@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
-  //VARIAR CLASS ACTIVE EN NAVBAR
+  //VARIAR CLASS ACTIVE EN NAVBAR, 
   const URLActual = window.location.href,
     URLMapeadoElemento = {
-      "index.html": ".navbar_ul li a[href='index.html']",
-      "alquilar.html": ".navbar_ul li a[href='alquilar.html']",
-      "comprar.html": ".navbar_ul li a[href='comprar.html']",
-      "vender.html": ".navbar_ul li a[href='vender.html']",
-      "nosotros.html": ".navbar_ul li a[href='nosotros.html']",
-      "contacto.html": ".navbar_ul li a[href='contacto.html']",
-      "tasar.html": ".navbar_ul li a[href='tasar.html']",
+      "index": ".navbar_ul li a[href='index.html']",
+      "alquilar": ".navbar_ul li a[href='alquilar.html']",
+      "comprar": ".navbar_ul li a[href='comprar.html']",
+      "vender": ".navbar_ul li a[href='vender.html']",
+      "nosotros": ".navbar_ul li a[href='nosotros.html']",
+      "contacto": ".navbar_ul li a[href='contacto.html']",
+      "tasar": ".navbar_ul li a[href='tasar.html']",
     };
 
   for (const URLPatron in URLMapeadoElemento) {
