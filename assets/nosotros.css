@@ -59,6 +59,20 @@ article {
     padding-top: 100px;
 }
 
+/*-------------MEDIA QUERIES---------------*/
+
+@media (max-width: 800px) {
+    .nuestras_sedes {
+        display: flex;
+        flex-direction:column-reverse;
+    }
+
+    .descripcion_sedes img{
+        padding: 0;
+        margin: 40px 0;
+    }
+
+}
 
 /* .nosotros {
     display: grid;

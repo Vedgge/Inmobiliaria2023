@@ -156,33 +156,34 @@
         <div class="popup signup">
           <div class="cerrar_btn">&times;</div>
 
-          <form class="form registro_form">
+          <form class="form form_registro">
             <h2>Registrarse</h2>
             <p>Guarde búsquedas, sus propiedades favoritas y más</p>
             <p>¿Ya tienes una cuenta? <a href="#" id="iniciar_sesion">Inicia sesión</a></p>
             <div class="elementos_form">
               <label for="email">Email</label>
-              <input type="email" name="email" id="emailFormRegistro" placeholder="Ingresa tu email">
+              <input type="email" name="emailFormRegistro" id="emailFormRegistro" placeholder="Ingresa tu email">
               <p id="emailFormErrorRegistro" class="error-message"></p>
             </div>
             <div class="elementos_form">
               <label for="contraseña_registro">Contraseña</label>
-              <input type="password" id="contraseña_registro" placeholder="Ingresa tu contraseña">
-              <p id="contraseñaFormError" class="error-message"></p>
+              <input type="password" name="contraseña_registro" id="contraseña_registro"
+                placeholder="Ingresa tu contraseña">
+              <p id="contraseñaFormErrorRegistro" class="error-message"></p>
             </div>
             <div class="elementos_form">
               <label for="contraseña_confirma">Confirma contraseña</label>
               <input type="password" id="contraseña_confirma" placeholder="Confirma tu contraseña">
-              <p id="contraseñaFormError" class="error-message"></p>
+              <p id="contraseñaFormErrorConfirma" class="error-message"></p>
             </div>
             <div class="elementos_form" id="term_cond">
-              <input type="checkbox" id="checkbox">
-              <label for="checkbox">Estoy de acuerdo con los<a href="#"> Terminos y Condiciones</a></label>
-              <p id="contraseñaFormError" class="error-message"></p>
+              <input type="checkbox" id="terminos_condiciones">
+              <label for="terminos_condiciones">Estoy de acuerdo con los<a href="#"> Terminos y Condiciones</a></label>
             </div>
-            <div class="elementos_form">
-              <input type="submit" value="Registrate" class="btn_submit" style="width: 100%;">
-            </div>
+            <p id="terminosCondicionesError" class="error-message"></p>
+
+            <input type="submit" value="Registrate" class="btn_submit" style="width: 100%; margin: 15px 0;">
+
           </form>
 
         </div>
