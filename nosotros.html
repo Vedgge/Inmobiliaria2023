@@ -20,6 +20,9 @@
   <!--- custom js -->
   <script src="./assets/script.js" defer></script>
 
+  <!--- validacion inicio y registro -->
+  <script src="./assets/sesionRegistroInicio.js" defer></script>
+
   <!--- custom icons -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -222,22 +225,22 @@
           expandido nuestras operaciones a múltiples provincias de Argentina, construyendo relaciones sólidas y
           duraderas con nuestros clientes, colaboradores y socios.
           <br><br>
-          <h2> <span style="border-bottom: 4px solid #de2c2f;">Actualidad</span></h2>
-          <p>En el presente, Inmobiliaria Andes se enorgullece de contar con una presencia en todo el territorio
-            argentino, desde la vibrante Buenos Aires hasta las escarpadas bellezas de Mendoza, San Juan y Salta. Nuestra
-            misión de ayudar a las personas a encontrar su lugar en el mundo sigue siendo tan apasionada como el día en
-            que comenzamos.
-            <br><br>
-            Hemos evolucionado con el tiempo, adoptando tecnologías innovadoras para brindar a nuestros clientes una
-            experiencia inmobiliaria excepcional. Desde el lanzamiento de nuestra plataforma en línea de última generación
-            hasta la creación de una red global de expertos en bienes raíces, seguimos siendo fieles a nuestro compromiso
-            de superar las expectativas de quienes confían en nosotros.
-            <br><br>
-            En Inmobiliaria Andes, el futuro es prometedor. Nuestro enfoque en la excelencia, la integridad y la pasión
-            por el hogar continúa guiando cada uno de nuestros pasos, y esperamos con entusiasmo las próximas décadas de
-            ayudar a las personas a encontrar el lugar donde construirán sus sueños y recuerdos eternos. Gracias por ser
-            parte de nuestra historia y nuestro emocionante viaje hacia el futuro.
-          </p>
+        <h2> <span style="border-bottom: 4px solid #de2c2f;">Actualidad</span></h2>
+        <p>En el presente, Inmobiliaria Andes se enorgullece de contar con una presencia en todo el territorio
+          argentino, desde la vibrante Buenos Aires hasta las escarpadas bellezas de Mendoza, San Juan y Salta. Nuestra
+          misión de ayudar a las personas a encontrar su lugar en el mundo sigue siendo tan apasionada como el día en
+          que comenzamos.
+          <br><br>
+          Hemos evolucionado con el tiempo, adoptando tecnologías innovadoras para brindar a nuestros clientes una
+          experiencia inmobiliaria excepcional. Desde el lanzamiento de nuestra plataforma en línea de última generación
+          hasta la creación de una red global de expertos en bienes raíces, seguimos siendo fieles a nuestro compromiso
+          de superar las expectativas de quienes confían en nosotros.
+          <br><br>
+          En Inmobiliaria Andes, el futuro es prometedor. Nuestro enfoque en la excelencia, la integridad y la pasión
+          por el hogar continúa guiando cada uno de nuestros pasos, y esperamos con entusiasmo las próximas décadas de
+          ayudar a las personas a encontrar el lugar donde construirán sus sueños y recuerdos eternos. Gracias por ser
+          parte de nuestra historia y nuestro emocionante viaje hacia el futuro.
+        </p>
         </p>
       </article>
 
@@ -245,7 +248,8 @@
 
       <article>
         <h2><span style="border-bottom: 4px solid #de2c2f;">Nuestro equipo</span></h2>
-        <p>Nuestro equipo de agentes expertos garantiza servicios excepcionales y ubicaciones privilegiadas. Deja que te asesoremos mientras encontras el hogar de tus sueños.</p>
+        <p>Nuestro equipo de agentes expertos garantiza servicios excepcionales y ubicaciones privilegiadas. Deja que te
+          asesoremos mientras encontras el hogar de tus sueños.</p>
         <div class="contendor_tarjetas_nosotros">
           <div class="tarjetas_ind_nosotros uno escondido">
             <div class="foto_experto_inicio"><a href="#"><img src="./img/integrantes/int1.jpg" alt="foto experto"></a>
@@ -264,7 +268,7 @@
               <div class="btn_user"><a href="#" class="registrate">Contactar agente</a></div>
             </div>
           </div>
-  
+
           <div class="tarjetas_ind_nosotros dos escondido">
             <div class="foto_experto_inicio"><a href="#"><img src="./img/integrantes/int2.jpg" alt="foto experto"></a>
             </div>
@@ -282,7 +286,7 @@
               <div class="btn_user"><a href="#" class="registrate">Contactar agente</a></div>
             </div>
           </div>
-  
+
           <div class="tarjetas_ind_nosotros tres escondido">
             <div class="foto_experto_inicio"><a href="#"><img src="./img/integrantes/int3.jpg" alt="foto experto"></a>
             </div>
@@ -300,7 +304,7 @@
               <div class="btn_user"><a href="#" class="registrate">Contactar agente</a></div>
             </div>
           </div>
-  
+
           <div class="tarjetas_ind_nosotros cuatro escondido">
             <div class="foto_experto_inicio"><a href="#"><img src="./img/integrantes/int4.jpg" alt="foto experto"></a>
             </div>
@@ -325,7 +329,7 @@
       <article>
         <h2><span style="border-bottom: 4px solid #de2c2f;">Nuestras sedes</span></h2>
         <div class="nuestras_sedes">
-          <div class="mapa_argentina">
+          <div class="mapa_argentina escondido">
             <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
               xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
               xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -491,23 +495,28 @@
               los bienes raíces. </p>
             <ul>
               <li>
-                <i class='bx bx-map' style="color: #de2c2f; font-weight: bold;"></i><strong>Buenos Aires:</strong> Nuestra sede principal, ubicada en el bullicioso corazón de
+                <i class='bx bx-map' style="color: #de2c2f; font-weight: bold;"></i><strong>Buenos Aires:</strong>
+                Nuestra sede principal, ubicada en el bullicioso corazón de
                 Buenos Aires, es un
                 testimonio de la tradición y la innovación. Aquí, encontrará un equipo de expertos listos para guiarlo
                 en cada paso de su búsqueda de propiedad o inversión.
               </li>
-              <li><i class='bx bx-map' style="color: #de2c2f; font-weight: bold;"></i><strong>Córdoba Capital:</strong> En la región central de Argentina, nuestra sede en Córdoba
+              <li><i class='bx bx-map' style="color: #de2c2f; font-weight: bold;"></i><strong>Córdoba Capital:</strong>
+                En la región central de Argentina, nuestra sede en Córdoba
                 Capital es el centro de
                 las propiedades de lujo en esta provincia, donde la historia y la modernidad se fusionan.</li>
-              <li><i class='bx bx-map' style="color: #de2c2f; font-weight: bold;"></i><strong>Rosario:</strong> A orillas del río Paraná, nuestra sede en Rosario nos conecta con la
+              <li><i class='bx bx-map' style="color: #de2c2f; font-weight: bold;"></i><strong>Rosario:</strong> A
+                orillas del río Paraná, nuestra sede en Rosario nos conecta con la
                 energía vibrante de la
                 ciudad y sus alrededores. Aquí, descubrirá propiedades únicas en un entorno en constante evolución.</li>
-              <li><i class='bx bx-map' style="color: #de2c2f; font-weight: bold;" ></i><strong>Neuquén:</strong> En la tierra de la Patagonia, nuestra sede en Neuquén celebra la
+              <li><i class='bx bx-map' style="color: #de2c2f; font-weight: bold;"></i><strong>Neuquén:</strong> En la
+                tierra de la Patagonia, nuestra sede en Neuquén celebra la
                 belleza natural y la aventura
                 al aire libre. Nuestros agentes están aquí para ayudarlo a encontrar su refugio en esta región única.
               </li>
               <li>
-                <p><strong>Y muchas más:</strong> Además de nuestras sedes en las provincias mencionadas, también tenemos presencia en
+                <p><strong>Y muchas más:</strong> Además de nuestras sedes en las provincias mencionadas, también
+                  tenemos presencia en
                   otras regiones de Argentina. Cada una de nuestras sedes es un punto de acceso a un mundo de
                   oportunidades en bienes raíces, con un equipo dedicado a comprender sus necesidades y ayudarlo a
                   lograr sus sueños inmobiliarios.</p>

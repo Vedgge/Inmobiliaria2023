@@ -11,8 +11,8 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const params = new URLSearchParams(location.search);
-            const email = params.get("email");
-            const contraseña = params.get("contraseña");
+            const email = params.get("emailFormInicioSesion");
+            const contraseña = params.get("contraseña_ingreso");
             const recordarDatos = params.get("recordar_datos");
 
             const datosContainer = document.createElement("div");

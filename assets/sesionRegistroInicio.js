@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const formularioIniciarSesion = document.querySelector(".form_iniciarsesion"),
-    formularioRegistro = document.querySelector(".form_registro");
+        formularioRegistro = document.querySelector(".form_registro");
 
     formularioIniciarSesion.addEventListener("submit", function (event) {
         if (!validarInicioSesion()) {
@@ -16,19 +16,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     function validarInicioSesion() {
-        const email = document.getElementById("emailForm").value,
+        const email = document.getElementById("emailFormInicioSesion").value,
             contraseña = document.getElementById("contraseña_ingreso").value;
-
+            
         let esValido = true;
 
         if (email.trim() === "") {
-            mostrarError("emailFormError", "Por favor, ingrese su dirección de correo electrónico.");
+            mostrarError("emailFormErrorInicioSesion", "Por favor, ingrese su dirección de correo electrónico.");
             esValido = false;
         } else if (!isValidEmail(email)) {
-            mostrarError("emailFormError", "Por favor, ingrese una dirección de correo electrónico valida.");
+            mostrarError("emailFormErrorInicioSesion", "Por favor, ingrese una dirección de correo electrónico valida.");
             esValido = false;
         } else {
-            ocultarError("emailFormError");
+            ocultarError("emailFormErrorInicioSesion");
         }
 
         if (contraseña.trim() === "") {
@@ -45,41 +45,49 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function validarRegistro() {
-        const email = document.getElementById("emailForm").value,
+        const email = document.getElementById("emailFormRegistro").value,
             contraseñaRegistro = document.getElementById("contraseña_registro").value,
-            contraseñaConfirmada = document.getElementById("contraseña_confirma").value;
+            contraseñaConfirmada = document.getElementById("contraseña_confirma").value,
+            terminosCondicionesCheckbox = document.querySelector("#terminos_condiciones");
 
         let esValido = true;
 
         if (email.trim() === "") {
-            mostrarError("emailFormError", "Por favor, ingrese su dirección de correo electrónico.");
+            mostrarError("emailFormErrorRegistro", "Por favor, ingrese su dirección de correo electrónico.");
             esValido = false;
         } else if (!isValidEmail(email)) {
-            mostrarError("emailFormError", "Por favor, ingrese una dirección de correo electrónico valida.");
+            mostrarError("emailFormErrorRegistro", "Por favor, ingrese una dirección de correo electrónico valida.");
             esValido = false;
         } else {
-            ocultarError("emailFormError");
+            ocultarError("emailFormErrorRegistro");
         }
 
         if (contraseñaRegistro.trim() === "") {
-            mostrarError("contraseñaFormError", "Por favor, ingrese su contraseña.");
+            mostrarError("contraseñaFormErrorRegistro", "Por favor, ingrese su contraseña.");
             esValido = false;
         } else if (contraseñaRegistro.trim().length < 15) {
-            mostrarError("contraseñaFormError", "Por favor, ingrese una contraseña con al menos 15 caracteres.");
+            mostrarError("contraseñaFormErrorRegistro", "Por favor, ingrese una contraseña con al menos 15 caracteres.");
             esValido = false;
         } else {
-            ocultarError("contraseñaFormError");
+            ocultarError("contraseñaFormErrorRegistro");
         }
 
 
         if (contraseñaConfirmada.trim() === "") {
-            mostrarError("contraseñaFormError", "Por favor, confirme su contraseña.");
+            mostrarError("contraseñaFormErrorConfirma", "Por favor, confirme su contraseña.");
             esValido = false;
-        } else if (contraseñaConfirmada !== contraseñaRegistro) {
-            mostrarError("contraseñaFormError", "Las contraseñas no coinciden.");
+        } else if (contraseñaConfirmada.value !== contraseñaRegistro.value) {
+            mostrarError("contraseñaFormErrorConfirma", "Las contraseñas no coinciden.");
             esValido = false;
         } else {
-            ocultarError("contraseñaFormError");
+            ocultarError("contraseñaFormErrorConfirma");
+        }
+
+        if (!terminosCondicionesCheckbox.checked) {
+            mostrarError("terminosCondicionesError", "Debes estar de acuerdo con los terminos y condiciones.");
+            esValido = false;
+        } else {
+            ocultarError("terminosCondicionesError");
         }
 
         return esValido;

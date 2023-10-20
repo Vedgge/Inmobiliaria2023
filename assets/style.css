@@ -409,6 +409,13 @@ main {
     margin-right: 5px;
 }
 
+.error-message {
+    color: red !important;
+    font-weight: bold;
+    margin: 0 !important;
+    padding: 0;
+}
+
 .popup .form .elementos_form button {
     width: 100%;
 }

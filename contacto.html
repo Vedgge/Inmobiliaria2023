@@ -20,19 +20,22 @@
   <!--- custom js -->
   <script src="./assets/script.js" defer></script>
 
+  <!--- validacion -->
+  <script src="./assets/contacto.js"></script>
+
+  <!--- validacion inicio y registro -->
+  <script src="./assets/sesionRegistroInicio.js" defer></script>
+
   <!--- custom icons -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
   <!--- favicon -->
   <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
 
-  <!--- validacion -->
-  <script src="./assets/contacto.js"></script>
-
 </head>
 
 <body>
-   <!--header-->
+  <!--header-->
   <header class="header">
 
     <!--Sección superior del header con redes sociales y contacto-->
@@ -129,8 +132,8 @@
             <p>¿Nuevo en el sitio? <a href="#" id="registrar">Registra una cuenta</a></p>
             <div class="elementos_form">
               <label for="email">Email</label>
-              <input type="email" name="email" id="emailForm" placeholder="Ingresa tu email">
-              <p id="emailFormError" class="error-message"></p>
+              <input type="email" name="email" id="emailFormInicioSesion" placeholder="Ingresa tu email">
+              <p id="emailFormErrorInicioSesion" class="error-message"></p>
             </div>
             <div class="elementos_form">
               <label for="contraseña_ingreso">Contraseña</label>
@@ -138,10 +141,10 @@
               <p id="contraseñaFormError" class="error-message"></p>
             </div>
             <div class="elementos_form">
-              <input type="checkbox" id="recordar_datos" name="recordar_datos" >
+              <input type="checkbox" id="recordar_datos" name="recordar_datos">
               <label for="recordarme">Recordar mis datos</label>
             </div>
-              <input type="submit" value="Iniciar sesión" class="btn_submit" style="width: 100%;">
+            <input type="submit" value="Iniciar sesión" class="btn_submit" style="width: 100%;">
             <div class="elementos_form">
               <a href="#">Olvide mi contraseña</a>
             </div>
@@ -153,14 +156,14 @@
         <div class="popup signup">
           <div class="cerrar_btn">&times;</div>
 
-          <form class="form contact_form">
+          <form class="form registro_form">
             <h2>Registrarse</h2>
             <p>Guarde búsquedas, sus propiedades favoritas y más</p>
             <p>¿Ya tienes una cuenta? <a href="#" id="iniciar_sesion">Inicia sesión</a></p>
             <div class="elementos_form">
               <label for="email">Email</label>
-              <input type="email" name="email" id="emailForm" placeholder="Ingresa tu email">
-              <p id="emailFormError" class="error-message"></p>
+              <input type="email" name="email" id="emailFormRegistro" placeholder="Ingresa tu email">
+              <p id="emailFormErrorRegistro" class="error-message"></p>
             </div>
             <div class="elementos_form">
               <label for="contraseña_registro">Contraseña</label>
@@ -208,11 +211,11 @@
           <div class="estilo_contenedor contenedor_mail_num_redes">
             <div class="ubicacion">
               <h4>Ubicación</h4>
-              <p><i class='bx bx-map' ></i>Av. Sta. Fe 1860, C1123 CABA</p>
+              <p><i class='bx bx-map'></i>Av. Sta. Fe 1860, C1123 CABA</p>
             </div>
             <div class="telefono">
               <h4>Teléfono</h4>
-              <p><i class='bx bx-phone' ></i>+54 351 432 964</p>
+              <p><i class='bx bx-phone'></i>+54 351 432 964</p>
             </div>
             <div class="email_contacto">
               <h4>Email de negocios</h4>
@@ -225,10 +228,10 @@
             <div class="otras_redes_sociales">
               <h4>Encontranos en las redes sociales</h4>
               <div class="contenedor_redes_sociales">
-                <a href="#"><i class='bx bxl-twitter' ></i></a>
-                <a href="#"><i class='bx bxl-facebook' ></i></a>
-                <a href="#"><i class='bx bxl-instagram' ></i></a>
-                <a href="#"><i class='bx bxl-linkedin' ></i></a>   
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
               </div>
 
             </div>
@@ -254,8 +257,8 @@
                   <label for="email">
                     <h4>Correo electrónico:</h4>
                   </label>
-                  <input type="email" name="email" id="emailForm" placeholder="Ingresa tu email acá">
-                  <p id="emailFormError" class="error-message"></p>
+                  <input type="email" name="email" id="emailFormContacto" placeholder="Ingresa tu email acá">
+                  <p id="emailFormErrorContacto" class="error-message"></p>
                 </div>
 
                 <div class="form_label">

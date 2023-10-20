@@ -20,6 +20,9 @@
     <!--- custom js -->
     <script defer src="./assets/propiedad.js"></script>
 
+    <!--- validacion inicio y registro -->
+    <script src="./assets/sesionRegistroInicio.js" defer></script>
+
     <!--- custom icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -149,7 +152,7 @@
                 <div class="popup signup">
                     <div class="cerrar_btn">&times;</div>
 
-                    <form class="form contact_form">
+                    <form class="form contact_form_registro">
                         <h2>Registrarse</h2>
                         <p>Guarde búsquedas, sus propiedades favoritas y más</p>
                         <p>¿Ya tienes una cuenta? <a href="#" id="iniciar_sesion">Inicia sesión</a></p>
@@ -753,8 +756,8 @@
                     <h3>Contactate con GIOVANNI PROPIEDADES por la propiedad en Puerto Madero, Capital Federal</h3>
                     <div class="form_label">
                         <label for="email">Correo electrónico:</label>
-                        <input type="email" name="email" id="emailForm" placeholder="Ingresa tu email acá">
-                        <p id="emailFormError" class="error-message"></p>
+                        <input type="email" name="email" id="emailFormPropiedad" placeholder="Ingresa tu email acá">
+                        <p id="emailFormErrorPropiedad" class="error-message"></p>
                     </div>
                     <div class="nombre_telefono">
                         <div class="form_label">

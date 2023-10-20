@@ -23,14 +23,15 @@
   <!--- validacion -->
   <script src="./assets/tasar.js" defer></script>
 
+  <!--- validacion inicio y registro -->
+  <script src="./assets/sesionRegistroInicio.js" defer></script>
+
   <!--- custom icons -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
   <!--- favicon -->
   <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
 
-  <!--- validacion -->
-  <script src="./assets/tasar.js" defer></script>
 </head>
 
 <body>
@@ -140,10 +141,10 @@
               <p id="contraseñaFormError" class="error-message"></p>
             </div>
             <div class="elementos_form">
-              <input type="checkbox" id="recordar_datos" name="recordar_datos" >
+              <input type="checkbox" id="recordar_datos" name="recordar_datos">
               <label for="recordarme">Recordar mis datos</label>
             </div>
-              <input type="submit" value="Iniciar sesión" class="btn_submit" style="width: 100%;">
+            <input type="submit" value="Iniciar sesión" class="btn_submit" style="width: 100%;">
             <div class="elementos_form">
               <a href="#">Olvide mi contraseña</a>
             </div>
@@ -155,7 +156,7 @@
         <div class="popup signup">
           <div class="cerrar_btn">&times;</div>
 
-          <form class="form contact_form">
+          <form class="form contact_form_registro">
             <h2>Registrarse</h2>
             <p>Guarde búsquedas, sus propiedades favoritas y más</p>
             <p>¿Ya tienes una cuenta? <a href="#" id="iniciar_sesion">Inicia sesión</a></p>
@@ -208,7 +209,8 @@
 
               <div class="direccion campo_rellenar ">
                 <label for="direccion" style="font-weight: bold;">Dirección</label>
-                <input type="text" id="direccion" name="direccion" required placeholder="Escribe tu calle y número, barrio, ciudad y provincia">
+                <input type="text" id="direccion" name="direccion" required
+                  placeholder="Escribe tu calle y número, barrio, ciudad y provincia">
 
               </div>
 

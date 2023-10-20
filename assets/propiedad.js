@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function validarFormulario() {
         const nombre = document.getElementById("nombre").value,
-            email = document.getElementById("emailForm").value,
+            email = document.getElementById("emailFormPropiedad").value,
             telefono = document.getElementById("telefono").value,
             mensaje = document.getElementById("mensaje").value;
 
@@ -26,13 +26,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (email.trim() === "") {
-            mostrarError("emailFormError", "Por favor, ingrese su dirección de correo electrónico.");
+            mostrarError("emailFormErrorPropiedad", "Por favor, ingrese su dirección de correo electrónico.");
             esValido = false;
         } else if (!isValidEmail(email)) {
-            mostrarError("emailFormError", "Por favor, ingrese una dirección de correo electrónico valida.");
+            mostrarError("emailFormErrorPropiedad", "Por favor, ingrese una dirección de correo electrónico valida.");
             esValido = false;
         } else {
-            ocultarError("emailFormError");
+            ocultarError("emailFormErrorPropiedad");
         }
 
         if (telefono.trim() === "") {
