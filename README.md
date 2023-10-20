@@ -26,7 +26,7 @@ Desarrollar un sitio web de inmobiliaria que sea atractivo, funcional y fácil d
     1. Descarga todos los archivos de este repositorio.
     2. Abre el archivo "index.html" en tu navegador web para ver la página.
 
-- Vía Netlify, abriendo https://deft-conkies-47fdb5.netlify.app/
+- Vía Netlify, abriendo https://cheery-cupcake-cbb950.netlify.app/
 
 ## Estructura de archivos
 
