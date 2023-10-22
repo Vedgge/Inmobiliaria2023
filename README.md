@@ -1,7 +1,7 @@
 # Inmobiliaria23
  
 Este repositorio contiene el código fuente de la página web de Inmobiliaria Andes, donde podrás encontrar listados de propiedades para alquilar, comprar y vender.
-Forma parte de un Trabajo práctico para el curso **Full Stack 2023** del programa [codo a codo](https://aulasvirtuales.edu.ar)
+Su fecha de inicio fue alrededor del 10 de Septiembre y forma parte de un Trabajo Práctico Obligatorio para el curso **Full Stack 2023** del programa [codo a codo](https://aulasvirtuales.edu.ar)
 
 ## Objetivo
 Desarrollar un sitio web de inmobiliaria que sea atractivo, funcional y fácil de usar.
@@ -13,8 +13,9 @@ Desarrollar un sitio web de inmobiliaria que sea atractivo, funcional y fácil d
 
 ## Características
 
+- Los principales colores utilizados son #de2c2f, #333333, #eaeaea y diferentes tonos de blanco y gris.
 - Utiliza HTML, CSS y JavaScript para la estructura, diseño y funcionalidad de la página.
-- Incluye fuentes personalizadas de Google Fonts y el uso de mapas embedidos de Google Maps.
+- Incluye tipografía Raleways de Google Fonts, el uso de mapas embedidos de Google Maps.
 - Utiliza iconos de Boxicons para los elementos visuales.
 - Incluye un favicon personalizado.
 - Contiene un total de 4 páginas HTML totalmente estilizadas, animadas y funcionales, las mismas son: index.html, tasar.html, contacto.html y propiedad.html.
@@ -40,6 +41,12 @@ El repositorio contiene los siguientes archivos y carpetas:
 - `assets/`: Carpeta que contiene los archivos de estilo CSS y los scripts JavaScript utilizados.
 - `img/`: Carpeta que contiene las imágenes utilizadas en la página.
 - `layout posibles/`: Contiene distintos layouts de la web de prueba
+
+## Desarrollos Futuros y Mejoras Potenciales
+
+- Estructurado y estilizado de documentos HTML de alquiler, compra, venta y agentes.
+- Motor de búsqueda de propiedades.
+- Dropdown fluido de navbar.
 
 ## Notas finales
 
