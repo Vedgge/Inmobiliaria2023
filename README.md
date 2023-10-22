@@ -44,7 +44,7 @@ El repositorio contiene los siguientes archivos y carpetas:
 
 ## Desarrollos Futuros y Mejoras Potenciales
 
-- Estructurado y estilizado de documentos HTML de alquiler, compra, venta y agentes.
+- Estructurado y estilizado de documentos HTML de alquiler, compra, venta, agentes y demás.
 - Motor de búsqueda de propiedades.
 - Dropdown fluido de navbar.
 
