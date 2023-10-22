@@ -15,7 +15,7 @@ Desarrollar un sitio web de inmobiliaria que sea atractivo, funcional y fácil d
 
 - Los principales colores utilizados son #de2c2f, #333333, #eaeaea y diferentes tonos de blanco y gris.
 - Utiliza HTML, CSS y JavaScript para la estructura, diseño y funcionalidad de la página.
-- Incluye tipografía Raleways de Google Fonts, el uso de mapas embedidos de Google Maps.
+- Incluye tipografía Raleways de Google Fonts y el uso de mapas embedidos de Google Maps.
 - Utiliza iconos de Boxicons para los elementos visuales.
 - Incluye un favicon personalizado.
 - Contiene un total de 4 páginas HTML totalmente estilizadas, animadas y funcionales, las mismas son: index.html, tasar.html, contacto.html y propiedad.html.
