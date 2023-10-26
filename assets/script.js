@@ -21,6 +21,33 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  //DROPDOWNS NAVBAR
+  const botonNavbar = document.querySelector('.alquilar_dropdown'),
+    navbarDropdown = document.querySelector('.drowpdown_lista');
+  let timeoutDropdown;
+
+  function cerrarDropdown(){
+    navbarDropdown.classList.remove("active");
+  }
+
+  botonNavbar.addEventListener('mouseenter', function () {
+    clearTimeout(timeoutDropdown);
+    navbarDropdown.classList.add("active");
+  });
+
+  botonNavbar.addEventListener('mouseleave', function () {
+    timeoutDropdown = setTimeout(cerrarDropdown, 500);
+  });
+
+  navbarDropdown.addEventListener('mouseenter', function () {
+    clearTimeout(timeoutDropdown);
+    navbarDropdown.classList.add("active");
+  });
+
+  navbarDropdown.addEventListener('mouseleave', function () {
+    timeoutDropdown = setTimeout(cerrarDropdown, 200);
+  });
+
   //INICIAR SESIÓN MODAL POPUP Y OVERLAY GRIS
   const mostrarPopupLi = document.querySelector("#mostrar_popup_li"),
     popupLogin = document.querySelector(".login"),

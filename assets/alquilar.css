@@ -1,28 +1,358 @@
-.error_404 {
+.pagina_busqueda_contenido {
     display: flex;
+    flex-direction: column;
+}
+
+.buscador_propiedades {
+    display: flex;
+    align-items: center;
     justify-content: center;
+    padding: 0px 12px;
+    min-height: 55px;
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+.input_busqueda {
+    position: relative;
+    display: flex;
     align-items: center;
 }
 
-.error_404_text {
-    color: #dddddd;
+.input_busqueda input {
+    width: 400px;
+    height: 40px;
+    background-color: #FFF;
+    padding-left: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-.error_404_text h2 {
-    font-size: 200px;
+.input_busqueda label {
+    position: absolute;
+    right: 0;
+    height: 40px !important;
+    width: 40px;
+    border-left: 1px dotted #aaa;
 }
 
-.error_404_text h3 {
-    font-size: 25px;
+.input_busqueda svg {
+    position: relative;
+    top: 8px;
+    left: 8px;
+    cursor: pointer;
+}
+
+.input_botones_caracteristicas_busqueda {
+    display: flex;
+    gap: 12px;
+    margin: 0 12px;
+}
+
+.estilo_filtros_busqueda {
+    position: relative;
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 8px;
+    border: 2px solid #aaa;
+    cursor: pointer;
+}
+
+.select_filtros {
+    display: flex;
+    gap: 20px;
+}
+
+.select_filtros select {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.icono_dropdown {
+    position: relative;
+    margin-left: 5px;
+    top: 3px;
+    height: 14px;
+    width: 14px;
+}
+
+.aplicar_filtros_busqueda button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown_prop_busq {
+    display: none;
+    position: absolute;
+    top: 55px;
+    padding: 10px;
+    background-color: #f3f3f3;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom: 1px solid #aaa;
+    box-shadow: 2px 5px 5px 0 rgba(0, 0, 0, .1);
+}
+
+.dropdown_prop_busq.active {
+    display: block;
+}
+
+.dropdown_prop_busq fieldset{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: none;
+}
+
+.contenedor_fs {
+    display: flex;
+    gap: 5px;
+}
+
+.dropdown_prop_busq input[type=radio] {
+    -webkit-appearance: none;
+    appearance: none;
+    vertical-align: middle;
+    background: #fff;
+    font-size: 1.8em;
+    border-radius: 0.125em;
+    display: inline-block;
+    border: 2px solid #de2c2f;
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+.dropdown_prop_busq input[type=radio]:before,
+.dropdown_prop_busq input[type=radio]:after {
+    content: "";
+    position: absolute;
+    background: #de2c2f;
+    width: calc(3px * 3);
+    height: 3px;
+    top: 50%;
+    left: 10%;
+    transform-origin: left center;
+}
+
+.dropdown_prop_busq input[type=radio]:before {
+    transform: rotate(45deg) translate(calc(3px / -2), calc(3px / -2)) scaleX(0);
+    transition: transform 100ms ease-in 200ms;
+}
+
+.dropdown_prop_busq input[type=radio]:after {
+    width: calc(3px * 5);
+    transform: rotate(-45deg) translateY(calc(3px * 2)) scaleX(0);
+    transform-origin: left center;
+    transition: transform 100ms ease-in;
+}
+
+.dropdown_prop_busq input[type=radio]:checked:before {
+    transform: rotate(45deg) translate(calc(3px / -2), calc(3px / -2)) scaleX(1);
+    transition: transform 100ms ease-in;
+}
+
+.dropdown_prop_busq input[type=radio]:checked:after {
+    width: calc(3px * 5);
+    transform: rotate(-45deg) translateY(calc(3px * 2)) scaleX(1);
+    transition: transform 100ms ease-out 100ms;
+}
+
+.contenedor_min {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contenedor_max {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dropdown_prop_busq fieldset select {
+    padding: 5px 48px 5px 16px;
+    background-color: rgb(246, 246, 250);
+    border: 1px solid rgb(209, 209, 213);
+}
+
+
+
+.contenedor_resultados_propiedades {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.resultados_propiedades {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    width: 1000px;
+    height: 900px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.resultados_propiedades::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+}
+
+.resultados_propiedades::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+.resultados_propiedades::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #de2c2f;
+}
+
+.contenedor_header_resultados_prop {
+    padding: 10px 0;
+}
+
+.cantidad_orden {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8px;
+}
+
+.orden_btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #de2c2f;
+    font-weight: 800;
+}
+
+.contenedor_orden {
+    position: relative;
+}
+
+.contenedor_btn_orden{
+    background-color: #eaeaea;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    right: 0px;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 2px 5px 5px 0 rgba(0, 0, 0, .1);
+}
+
+.contenedor_btn_orden.active {
+    display: flex;
+}
+
+.btn_estilizado_ordenado{
+    background: transparent;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn_estilizado_ordenado:hover {
+    background-color: #d88e8f;
+    border-radius: 8px;
+}
+
+.contenedor_scroll_propiedades {
+    padding-bottom: 10px;
+}
+
+.contenedor_propiedades {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "tarjeta-prop-1 tarjeta-prop-2"
+        "tarjeta-prop-3 tarjeta-prop-4"
+        "tarjeta-prop-5 tarjeta-prop-6"
+        "tarjeta-prop-7 tarjeta-prop-8"
+        "tarjeta-prop-9 tarjeta-prop-10";
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+.tarjeta-prop-1 {
+    grid-area: tarjeta-prop-1;
+}
+
+.tarjeta-prop-2 {
+    grid-area: tarjeta-prop-2;
+}
+
+.tarjeta-prop-3 {
+    grid-area: tarjeta-prop-3;
+}
+
+.tarjeta-prop-4 {
+    grid-area: tarjeta-prop-4;
+}
+
+.tarjeta-prop-5 {
+    grid-area: tarjeta-prop-5;
+}
+
+.tarjeta-prop-6 {
+    grid-area: tarjeta-prop-6;
+}
+
+.tarjeta-prop-7 {
+    grid-area: tarjeta-prop-7;
+}
+
+.tarjeta-prop-8 {
+    grid-area: tarjeta-prop-8;
+}
+
+.tarjeta-prop-9 {
+    grid-area: tarjeta-prop-9;
+}
+
+.tarjeta-prop-10 {
+    grid-area: tarjeta-prop-10;
+}
+
+.tarjeta_prop_busqueda {
+    background-color: #f3f3f3;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgb(209, 209, 209);
+    box-shadow: 2px 5px 5px 0 rgba(0, 0, 0, .1);
+}
+
+.tarjeta_prop_busqueda picture img {
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+}
+
+.precio_tarjeta_propiedad {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.desc_tarjeta_propiedad {
+    color: #333;
+    padding: 10px;
+}
+
+
+.mapa_resultados_propiedades {
+    width: 100%;
 }
 
 footer {
-    margin-top: 0;
-}
-
-@media (max-width: 1365px){
-    .error_404 {
-        display: flex;
-        flex-direction: column;
-    }
+    margin: 0;
 }
