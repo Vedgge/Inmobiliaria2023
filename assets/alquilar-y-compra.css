@@ -101,6 +101,10 @@
     display: block;
 }
 
+.dropdown_prop_busq .opciones_tipo_op, .dropdown_prop_busq .prop_tipo {
+    width: 170px;
+}
+
 .dropdown_prop_busq fieldset{
     display: flex;
     flex-direction: column;
@@ -110,10 +114,10 @@
 
 .contenedor_fs {
     display: flex;
-    gap: 5px;
+    gap: 15px;
 }
 
-.dropdown_prop_busq input[type=radio] {
+.dropdown_prop_busq input[type=radio], .dropdown_prop_busq input[type=checkbox] {
     -webkit-appearance: none;
     appearance: none;
     vertical-align: middle;
@@ -128,7 +132,8 @@
 }
 
 .dropdown_prop_busq input[type=radio]:before,
-.dropdown_prop_busq input[type=radio]:after {
+.dropdown_prop_busq input[type=radio]:after, .dropdown_prop_busq input[type=checkbox]:before,
+.dropdown_prop_busq input[type=checkbox]:after {
     content: "";
     position: absolute;
     background: #de2c2f;
@@ -139,24 +144,24 @@
     transform-origin: left center;
 }
 
-.dropdown_prop_busq input[type=radio]:before {
+.dropdown_prop_busq input[type=radio]:before, .dropdown_prop_busq input[type=checkbox]:before  {
     transform: rotate(45deg) translate(calc(3px / -2), calc(3px / -2)) scaleX(0);
     transition: transform 100ms ease-in 200ms;
 }
 
-.dropdown_prop_busq input[type=radio]:after {
+.dropdown_prop_busq input[type=radio]:after, .dropdown_prop_busq input[type=checkbox]:after {
     width: calc(3px * 5);
     transform: rotate(-45deg) translateY(calc(3px * 2)) scaleX(0);
     transform-origin: left center;
     transition: transform 100ms ease-in;
 }
 
-.dropdown_prop_busq input[type=radio]:checked:before {
+.dropdown_prop_busq input[type=radio]:checked:before, .dropdown_prop_busq input[type=checkbox]:checked:before {
     transform: rotate(45deg) translate(calc(3px / -2), calc(3px / -2)) scaleX(1);
     transition: transform 100ms ease-in;
 }
 
-.dropdown_prop_busq input[type=radio]:checked:after {
+.dropdown_prop_busq input[type=radio]:checked:after, .dropdown_prop_busq input[type=checkbox]:checked:after {
     width: calc(3px * 5);
     transform: rotate(-45deg) translateY(calc(3px * 2)) scaleX(1);
     transition: transform 100ms ease-out 100ms;
@@ -180,7 +185,26 @@
     border: 1px solid rgb(209, 209, 213);
 }
 
+.aplicar_filtro {
+    margin-top: 20px;
+}
 
+.aplicar_filtro button {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    color: #FFF;
+    background: #de2c2f;
+    border: 2px solid #de2c2f;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.aplicar_filtro button:hover {
+    background: transparent;
+    color: #333333;
+}
 
 .contenedor_resultados_propiedades {
     display: flex;

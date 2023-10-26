@@ -15,7 +15,7 @@
 
   <!--- custom css -->
   <link rel="stylesheet" href="./assets/style.css">
-  <link rel="stylesheet" href="./assets/alquilar.css">
+  <link rel="stylesheet" href="./assets/alquilar-y-compra.css">
 
   <!--- custom js -->
   <script src="./assets/script.js" defer></script>
@@ -232,12 +232,15 @@
                       <input id="comprar" name="operacion" type="radio" value="comprar">
                       <label for="comprar" id="comprar">Comprar</label>
                     </div>
-
                   </fieldset>
                 </form>
+                <div class="aplicar_filtro">
+                  <button class="aplicar_btn">Aplicar</button>
+                </div>
               </div>
             </section>
           </div>
+
           <div class="tipo_propiedad_busqueda">
             <button class="estilo_filtros_busqueda propiedad_btn">Departamento<span><svg viewBox="0 0 32 32"
                   aria-hidden="true" focusable="false" role="img" class="icono_dropdown">
@@ -250,27 +253,30 @@
                 <form action="" autocomplete="on">
                   <fieldset>
                     <div class="contenedor_fs">
-                      <input id="depto" name="prop_tipo" type="radio" value="depto" checked>
+                      <input id="depto" name="prop_tipo" type="checkbox" value="depto" checked>
                       <label for="depto" id="depto">Departamento</label>
                     </div>
                     <div class="contenedor_fs">
-                      <input id="casa" name="prop_tipo" type="radio" value="casa">
+                      <input id="casa" name="prop_tipo" type="checkbox" value="casa" checked>
                       <label for="casa" id="casa">Casa</label>
                     </div>
                     <div class="contenedor_fs">
-                      <input id="oficina" name="prop_tipo" type="radio" value="oficina">
+                      <input id="oficina" name="prop_tipo" type="checkbox" value="oficina" checked>
                       <label for="oficina" id="oficina">Oficina</label>
                     </div>
                     <div class="contenedor_fs">
-                      <input id="edificio" name="prop_tipo" type="radio" value="edificio">
+                      <input id="edificio" name="prop_tipo" type="checkbox" value="edificio" checked>
                       <label for="edificio" id="edificio">Edificio</label>
                     </div>
                     <div class="contenedor_fs">
-                      <input id="hoteles" name="prop_tipo" type="radio" value="hoteles">
+                      <input id="hoteles" name="prop_tipo" type="checkbox" value="hoteles">
                       <label for="hoteles" id="hoteles">Hoteles</label>
                     </div>
                   </fieldset>
                 </form>
+                <div class="aplicar_filtro">
+                  <button class="aplicar_btn">Aplicar</button>
+                </div>
               </div>
             </section>
           </div>
@@ -329,6 +335,9 @@
                   </div>
                 </div>
               </fieldset>
+              <div class="aplicar_filtro">
+                <button class="aplicar_btn">Aplicar</button>
+              </div>
             </section>
           </div>
 
@@ -386,6 +395,9 @@
                     </div>
                   </fieldset>
                 </form>
+                <div class="aplicar_filtro">
+                  <button class="aplicar_btn">Aplicar</button>
+                </div>
               </div>
             </section>
           </div>
@@ -455,7 +467,7 @@
                 <a href="propiedad.html">
                   <div class="desc_tarjeta_propiedad">
                     <div class="precio_tarjeta_propiedad">
-                      <span>$280.000</span>
+                      <span>$2.500/mensual</span>
                     </div>
                     <div class="caracteristicas_propiedad" style="font-size: 14px;">
                       <span>3 <i class='bx bx-bed'></i> |</span>
