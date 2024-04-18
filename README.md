@@ -50,7 +50,7 @@ The repository contains the following files and folders:
 
 We hope you enjoy browsing our website and find the property of your dreams!
 
-# TPO Checklist
+# Checklist
 [x] Develop four HTML web pages, the theme is of choice.
 
 [x] Design the site structure using semantic tags.
