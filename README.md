@@ -1,85 +1,82 @@
 # Inmobiliaria23
- 
-Este repositorio contiene el código fuente de la página web de Inmobiliaria Andes, donde podrás encontrar listados de propiedades para alquilar, comprar y vender.
-Su fecha de inicio fue alrededor del 10 de Septiembre y forma parte de un Trabajo Práctico Obligatorio para el curso **Full Stack 2023** del programa [codo a codo](https://aulasvirtuales.edu.ar)
 
-## Objetivo
-Desarrollar un sitio web de inmobiliaria que sea atractivo, funcional y fácil de usar.
-&emsp; 
+This repository contains the source code of the Inmobiliaria Andes website, where you can find listings of properties for rent, sale, and purchase. It was initiated around September 10 and is part of a Mandatory Practical Work for the **Full Stack 2023** course of the [codo a codo](https://aulasvirtuales.edu.ar) program.
 
-    Desarrollar un sitio web que sea responsive y se vea bien en diferentes dispositivos.
-    Desarrollar un sitio web que incluya un formulario de contacto que sea fácil de usar y que recopile información relevante de los clientes potenciales.
-    Desarrollar un sitio web que incluya una galería de imágenes de las propiedades disponibles.
+## About
 
-## Características
+Inmobiliaria23 is a real estate website aimed at providing an attractive, functional, and user-friendly experience for users looking for properties. 
 
-- Los principales colores utilizados son #de2c2f, #333333, #eaeaea y diferentes tonos de blanco y gris.
-- Utiliza HTML, CSS y JavaScript para la estructura, diseño y funcionalidad de la página.
-- Incluye tipografía Raleways de Google Fonts y el uso de mapas embedidos de Google Maps.
-- Utiliza iconos de Boxicons para los elementos visuales.
-- Incluye un favicon personalizado.
-- Contiene un total de 4 páginas HTML totalmente estilizadas, animadas y funcionales, las mismas son: index.html, tasar.html, contacto.html y propiedad.html.
-- Contiene además un total de 5 formularios para el envío de datos los cuales serán almacenados para su futuro tratamiento.
+## Objective
 
-## Instrucciones de uso
+Develop a real estate website that is responsive and visually appealing across different devices. The website should include an easy-to-use contact form that collects relevant information from potential clients, as well as a gallery of images showcasing available properties.
 
-- Vía Github:
-    1. Descarga todos los archivos de este repositorio.
-    2. Abre el archivo "index.html" en tu navegador web para ver la página.
+## Features
 
-- Vía Netlify, abriendo https://cheery-cupcake-cbb950.netlify.app/
+- Utilizes HTML, CSS, and JavaScript for page structure, design, and functionality.
+- Main colors used: #de2c2f, #333333, #eaeaea, and various shades of white and gray.
+- Includes Google Fonts' Raleway typography and embedded Google Maps.
+- Utilizes Boxicons for visual elements and a custom favicon.
+- Contains a total of 4 fully stylized, animated, and functional HTML pages: index.html, tasar.html, contacto.html, and propiedad.html.
+- Includes 5 forms for data submission, which will be stored for future processing.
 
-## Estructura de archivos
+## Usage
 
-El repositorio contiene los siguientes archivos y carpetas:
+- Via Github:
+    1. Download all files from this repository.
+    2. Open the "index.html" file in your web browser to view the page.
 
-- `index.html`: Página principal de la web es completamente responsiva.
-- `tasar.html`: Página de tasación de propiedades a la cual se accede desde el navbar "Tasar".
-- `contacto.html`: Página de contacto con la inmobiliaria a la cual se accede desde el navbar "Contacto".
-- `propiedad.html`: Página de un listado ejemplo de una propiedad a la cual es posible acceder clickeando una propiedad del carrusel en la página index.html.
-- `API.html`: Conecta con una API "https://randomuser.me" y la conecta con una base de datos JSON llamada **frases.json**, y trae para cada usuario generado con la API, un comentario aleatorio.
-- `assets/`: Carpeta que contiene los archivos de estilo CSS y los scripts JavaScript utilizados.
-- `img/`: Carpeta que contiene las imágenes utilizadas en la página.
-- `layout posibles/`: Contiene distintos layouts de la web de prueba
+- Via Netlify, by opening [Inmobiliaria23](https://cheery-cupcake-cbb950.netlify.app/)
 
-## Desarrollos Futuros y Mejoras Potenciales
+## File Structure
 
-- Estructurado y estilizado de documentos HTML de alquiler, compra, venta, agentes y demás.
-- Motor de búsqueda de propiedades.
-- Dropdown fluido de navbar.
+The repository contains the following files and folders:
 
-## Notas finales
+- `index.html`: Main page of the website, fully responsive.
+- `tasar.html`: Property appraisal page accessed from the "Tasar" navbar.
+- `contacto.html`: Contact page with the real estate agency accessed from the "Contacto" navbar.
+- `propiedad.html`: Example property listing page accessible by clicking on a property from the carousel on the index.html page.
+- `API.html`: Connects to an API "https://randomuser.me" and connects it to a JSON database named **frases.json**, bringing a random comment for each user generated with the API.
+- `assets/`: Folder containing CSS style files and JavaScript scripts used.
+- `img/`: Folder containing images used on the page.
+- `layout posibles/`: Contains different layouts of the test website.
 
-¡Esperamos que disfrutes navegando por nuestra página web y encuentres la propiedad de tus sueños!
+## Future Developments and Potential Improvements
 
+- Structuring and styling of HTML documents for rental, purchase, sale, agents, and more.
+- Property search engine.
+- Fluid dropdown navbar.
 
-# Check List TPO
-[x] Desarrollar cuatro páginas web en formato HTML, la temática es a elección.
+## Final Notes
 
-[x] Diseñar la estructura del sitio usando etiquetas semánticas.
+We hope you enjoy browsing our website and find the property of your dreams!
 
-[x] Crear un formulario de contacto con validación en JavaScript.
+# TPO Checklist
+[x] Develop four HTML web pages, the theme is of choice.
 
-[x] Incluir al menos un iframe, íconos (FontAwesome, Flaticon), y fuentes (locales o Google Fonts).
+[x] Design the site structure using semantic tags.
 
-[x] Hacer al menos una página completamente adaptable a tres tamaños de dispositivos (Mobile, Tablet, Escritorio).
+[x] Create a contact form with validation in JavaScript.
 
-[x] Agregar una animación, transformación o transición en alguna parte del sitio.
+[x] Include at least one iframe, icons (FontAwesome, Flaticon), and fonts (local or Google Fonts).
 
-[x] Utilizar Flexbox y/o CSS Grid para la maquetación.
+[x] Make at least one page fully adaptable to three device sizes (Mobile, Tablet, Desktop).
 
-[x] Realizar una solicitud a una API Rest desde JavaScript.
+[x] Add an animation, transformation, or transition somewhere on the site.
 
-[o] Si se utiliza Bootstrap, solo en la página del formulario.
+[x] Use Flexbox and/or CSS Grid for layout.
 
-[x] Publicar el sitio en línea (GitHub Pages, Netlify, u otro).
+[x] Make a request to a REST API from JavaScript.
 
-[x] Sincronizar el código en un repositorio Git y compartir el enlace con el instructor.
+[o] If Bootstrap is used, only on the form page.
 
-[x] Aplicar diseño integral, incluyendo maquetación, tipografía, imágenes, colores, logo, e íconos.
+[x] Publish the site online (GitHub Pages, Netlify, or another).
 
-[x] Preparar un archivo de documentación preliminar en PDF que describa el proyecto.
+[x] Sync the code in a Git repository and share the link with the instructor.
 
-### Notas Check List
-- "x" Completado 
-- "o" No ocurre
+[x] Apply comprehensive design, including layout, typography, images, colors, logo, and icons.
+
+[x] Prepare a preliminary documentation file in PDF describing the project.
+
+### Checklist Notes
+- "x" Completed
+- "o" Not applicable
