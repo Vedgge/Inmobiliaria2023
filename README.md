@@ -1,6 +1,6 @@
 # Inmobiliaria23
 
-This repository contains the source code of the Inmobiliaria Andes website, where you can find listings of properties for rent, sale, and purchase. It was initiated around September 10 and is part of a Mandatory Practical Work for the **Full Stack 2023** course of the [codo a codo](https://aulasvirtuales.edu.ar) program.
+This repository contains the source code of the Inmobiliaria Andes website, where you can find listings of properties for rent, sale, and purchase. It was initiated around September 10.
 
 ## About
 
